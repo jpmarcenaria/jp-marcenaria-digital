@@ -14,7 +14,248 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      blog_posts: {
+        Row: {
+          body_md: string | null
+          cover_url: string | null
+          created_at: string | null
+          excerpt: string | null
+          id: string
+          published: boolean | null
+          slug: string
+          title: string
+        }
+        Insert: {
+          body_md?: string | null
+          cover_url?: string | null
+          created_at?: string | null
+          excerpt?: string | null
+          id?: string
+          published?: boolean | null
+          slug: string
+          title: string
+        }
+        Update: {
+          body_md?: string | null
+          cover_url?: string | null
+          created_at?: string | null
+          excerpt?: string | null
+          id?: string
+          published?: boolean | null
+          slug?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      finishes: {
+        Row: {
+          brand: string | null
+          collection: string | null
+          color_hex: string | null
+          created_at: string | null
+          id: string
+          image_url: string | null
+          name: string
+        }
+        Insert: {
+          brand?: string | null
+          collection?: string | null
+          color_hex?: string | null
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          name: string
+        }
+        Update: {
+          brand?: string | null
+          collection?: string | null
+          color_hex?: string | null
+          created_at?: string | null
+          id?: string
+          image_url?: string | null
+          name?: string
+        }
+        Relationships: []
+      }
+      leads: {
+        Row: {
+          budget_range: string | null
+          city: string | null
+          created_at: string | null
+          desired_date: string | null
+          email: string | null
+          id: string
+          media: Json | null
+          message: string | null
+          name: string
+          phone_whatsapp: string
+          source: string | null
+        }
+        Insert: {
+          budget_range?: string | null
+          city?: string | null
+          created_at?: string | null
+          desired_date?: string | null
+          email?: string | null
+          id?: string
+          media?: Json | null
+          message?: string | null
+          name: string
+          phone_whatsapp: string
+          source?: string | null
+        }
+        Update: {
+          budget_range?: string | null
+          city?: string | null
+          created_at?: string | null
+          desired_date?: string | null
+          email?: string | null
+          id?: string
+          media?: Json | null
+          message?: string | null
+          name?: string
+          phone_whatsapp?: string
+          source?: string | null
+        }
+        Relationships: []
+      }
+      media_gallery: {
+        Row: {
+          created_at: string | null
+          dominant_hex: string | null
+          height: number | null
+          id: string
+          tags: string[] | null
+          title: string | null
+          url: string
+          width: number | null
+        }
+        Insert: {
+          created_at?: string | null
+          dominant_hex?: string | null
+          height?: number | null
+          id?: string
+          tags?: string[] | null
+          title?: string | null
+          url: string
+          width?: number | null
+        }
+        Update: {
+          created_at?: string | null
+          dominant_hex?: string | null
+          height?: number | null
+          id?: string
+          tags?: string[] | null
+          title?: string | null
+          url?: string
+          width?: number | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string | null
+          id: string
+          name: string | null
+          phone: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id: string
+          name?: string | null
+          phone?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          name?: string | null
+          phone?: string | null
+        }
+        Relationships: []
+      }
+      projects: {
+        Row: {
+          created_at: string | null
+          description: string | null
+          environment: string | null
+          gallery: string[] | null
+          hero_image: string | null
+          id: string
+          mdf_finish_id: string | null
+          size_m2: number | null
+          slug: string
+          status: string | null
+          title: string
+        }
+        Insert: {
+          created_at?: string | null
+          description?: string | null
+          environment?: string | null
+          gallery?: string[] | null
+          hero_image?: string | null
+          id?: string
+          mdf_finish_id?: string | null
+          size_m2?: number | null
+          slug: string
+          status?: string | null
+          title: string
+        }
+        Update: {
+          created_at?: string | null
+          description?: string | null
+          environment?: string | null
+          gallery?: string[] | null
+          hero_image?: string | null
+          id?: string
+          mdf_finish_id?: string | null
+          size_m2?: number | null
+          slug?: string
+          status?: string | null
+          title?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "projects_mdf_finish_id_fkey"
+            columns: ["mdf_finish_id"]
+            isOneToOne: false
+            referencedRelation: "finishes"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      testimonials: {
+        Row: {
+          approved: boolean | null
+          author: string
+          city: string | null
+          created_at: string | null
+          id: string
+          photo_url: string | null
+          rating: number | null
+          text: string | null
+        }
+        Insert: {
+          approved?: boolean | null
+          author: string
+          city?: string | null
+          created_at?: string | null
+          id?: string
+          photo_url?: string | null
+          rating?: number | null
+          text?: string | null
+        }
+        Update: {
+          approved?: boolean | null
+          author?: string
+          city?: string | null
+          created_at?: string | null
+          id?: string
+          photo_url?: string | null
+          rating?: number | null
+          text?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
