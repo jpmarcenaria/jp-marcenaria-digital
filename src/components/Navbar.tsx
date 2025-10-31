@@ -8,9 +8,8 @@ const Navbar = () => {
 
   const navLinks = [
     { label: 'Portfólio', href: '/portfolio' },
-    { label: 'Tecnologia', href: '/tecnologia' },
-    { label: 'Sobre', href: '/sobre' },
-    { label: 'Blog', href: '/blog' },
+    { label: 'Para Arquitetos', href: '/arquitetos' },
+    { label: 'Materiais', href: '/materiais' },
   ];
 
   return (
@@ -37,7 +36,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button asChild variant="default" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
-              <Link to="/orcamento">Pedir Orçamento</Link>
+              <Link to="/briefing">Enviar Briefing</Link>
             </Button>
           </div>
 
@@ -66,8 +65,8 @@ const Navbar = () => {
                 </Link>
               ))}
               <Button asChild variant="default" className="bg-secondary text-secondary-foreground">
-                <Link to="/orcamento" onClick={() => setIsOpen(false)}>
-                  Pedir Orçamento
+                <Link to="/briefing" onClick={() => setIsOpen(false)}>
+                  Enviar Briefing
                 </Link>
               </Button>
             </div>

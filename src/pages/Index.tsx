@@ -8,26 +8,21 @@ import heroImage from '@/assets/hero-ripado-led.jpg';
 import ripadoDetail from '@/assets/ripado-detail.jpg';
 
 const Index = () => {
-  const services = [
+  const highlights = [
     {
-      icon: Lightbulb,
-      title: 'Painéis Ripados LED',
-      description: 'Painéis ripados em MDF premium com iluminação LED 2700K que criam ambientes sofisticados',
+      icon: Clock,
+      title: 'Prazo Previsível',
+      description: 'SLA de 48h para orçamento. Cronograma detalhado desde o primeiro dia.',
     },
     {
       icon: Award,
-      title: 'Cozinhas Planejadas',
-      description: 'Cozinhas sob medida com ferragens de primeira linha e acabamentos premium',
-    },
-    {
-      icon: Clock,
-      title: 'Home Office',
-      description: 'Escritórios funcionais e elegantes com gestão inteligente de cabos',
+      title: 'Execução Premium',
+      description: 'CNC de precisão, marcas especificadas (Arauco, Duratex, Blum, Hettich).',
     },
     {
       icon: Shield,
-      title: 'Área Gourmet',
-      description: 'Móveis resistentes e estilosos para sua área de lazer',
+      title: 'Assistência Pós-Obra',
+      description: 'Garantia de 12 meses e suporte técnico para ajustes.',
     },
   ];
 
@@ -68,13 +63,13 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
             <div className="inline-block mb-4 px-4 py-1 bg-secondary/20 rounded-full">
-              <span className="text-secondary text-sm font-medium">30 anos de excelência</span>
+              <span className="text-secondary text-sm font-medium">Parceiro técnico de arquitetos</span>
             </div>
             <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Móveis planejados com padrão de fábrica
+              Execução técnica para projetos de arquitetura
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Ripados perfeitos, iluminação quente e acabamento premium. Se for madeira, deixe conosco.
+              Prazos previsíveis, execução premium e assistência pós-obra. Sua especificação, nossa precisão.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button 
@@ -82,38 +77,54 @@ const Index = () => {
                 size="lg" 
                 className="bg-secondary text-secondary-foreground hover:bg-secondary/90 glow-warm-hover"
               >
-                <Link to="/orcamento">
-                  Pedir Orçamento
+                <Link to="/portfolio">
+                  Ver Portfólio Técnico
                   <ArrowRight className="ml-2" size={20} />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link to="/portfolio">Ver Portfólio</Link>
+                <Link to="/briefing">Enviar Briefing</Link>
               </Button>
+            </div>
+            
+            {/* Social Proof */}
+            <div className="mt-12 flex items-center gap-8 flex-wrap">
+              <div className="text-sm text-muted-foreground">
+                <div className="text-2xl font-bold text-foreground mb-1">200+</div>
+                <div>Projetos executados</div>
+              </div>
+              <div className="text-sm text-muted-foreground">
+                <div className="text-2xl font-bold text-foreground mb-1">15 dias</div>
+                <div>Prazo médio</div>
+              </div>
+              <div className="text-sm text-muted-foreground">
+                <div className="text-2xl font-bold text-foreground mb-1">95%</div>
+                <div>Satisfação</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Highlights */}
       <section className="py-20 bg-card/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">Nossos Serviços</h2>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">Por que arquitetos nos escolhem</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Soluções completas em marcenaria para transformar seus ambientes
+              Entendemos as exigências técnicas e prazos de projetos profissionais
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {highlights.map((highlight, index) => (
               <Card 
                 key={index} 
-                className="p-6 bg-card hover:bg-card/80 transition-all glow-warm-hover cursor-pointer"
+                className="p-8 bg-card hover:bg-card/80 transition-all glow-warm-hover"
               >
-                <service.icon className="text-secondary mb-4" size={32} />
-                <h3 className="font-heading text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-muted-foreground text-sm">{service.description}</p>
+                <highlight.icon className="text-secondary mb-4" size={40} />
+                <h3 className="font-heading text-2xl font-semibold mb-3">{highlight.title}</h3>
+                <p className="text-muted-foreground">{highlight.description}</p>
               </Card>
             ))}
           </div>

@@ -47,6 +47,143 @@ export type Database = {
         }
         Relationships: []
       }
+      briefings: {
+        Row: {
+          ambientes: string[] | null
+          anexos_urls: string[] | null
+          created_at: string | null
+          email: string | null
+          id: string
+          materiais_desejados: string[] | null
+          medidas: string | null
+          nome: string
+          obra: string | null
+          observacoes: string | null
+          prazo: string | null
+          telefone: string
+          whatsapp_link: string | null
+        }
+        Insert: {
+          ambientes?: string[] | null
+          anexos_urls?: string[] | null
+          created_at?: string | null
+          email?: string | null
+          id?: string
+          materiais_desejados?: string[] | null
+          medidas?: string | null
+          nome: string
+          obra?: string | null
+          observacoes?: string | null
+          prazo?: string | null
+          telefone: string
+          whatsapp_link?: string | null
+        }
+        Update: {
+          ambientes?: string[] | null
+          anexos_urls?: string[] | null
+          created_at?: string | null
+          email?: string | null
+          id?: string
+          materiais_desejados?: string[] | null
+          medidas?: string | null
+          nome?: string
+          obra?: string | null
+          observacoes?: string | null
+          prazo?: string | null
+          telefone?: string
+          whatsapp_link?: string | null
+        }
+        Relationships: []
+      }
+      case_media: {
+        Row: {
+          alt: string | null
+          case_id: string
+          created_at: string | null
+          id: string
+          ordem: number | null
+          tipo: string
+          url: string
+        }
+        Insert: {
+          alt?: string | null
+          case_id: string
+          created_at?: string | null
+          id?: string
+          ordem?: number | null
+          tipo: string
+          url: string
+        }
+        Update: {
+          alt?: string | null
+          case_id?: string
+          created_at?: string | null
+          id?: string
+          ordem?: number | null
+          tipo?: string
+          url?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "case_media_case_id_fkey"
+            columns: ["case_id"]
+            isOneToOne: false
+            referencedRelation: "cases"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      cases: {
+        Row: {
+          acabamento: string | null
+          area_m2: number | null
+          arquiteto: string | null
+          capa_url: string | null
+          categoria: string | null
+          cidade: string | null
+          created_at: string | null
+          ficha_pdf_url: string | null
+          id: string
+          materiais_principais: string[] | null
+          prazo_dias: number | null
+          resumo: string | null
+          slug: string
+          titulo: string
+        }
+        Insert: {
+          acabamento?: string | null
+          area_m2?: number | null
+          arquiteto?: string | null
+          capa_url?: string | null
+          categoria?: string | null
+          cidade?: string | null
+          created_at?: string | null
+          ficha_pdf_url?: string | null
+          id?: string
+          materiais_principais?: string[] | null
+          prazo_dias?: number | null
+          resumo?: string | null
+          slug: string
+          titulo: string
+        }
+        Update: {
+          acabamento?: string | null
+          area_m2?: number | null
+          arquiteto?: string | null
+          capa_url?: string | null
+          categoria?: string | null
+          cidade?: string | null
+          created_at?: string | null
+          ficha_pdf_url?: string | null
+          id?: string
+          materiais_principais?: string[] | null
+          prazo_dias?: number | null
+          resumo?: string | null
+          slug?: string
+          titulo?: string
+        }
+        Relationships: []
+      }
       finishes: {
         Row: {
           brand: string | null
@@ -116,6 +253,42 @@ export type Database = {
           name?: string
           phone_whatsapp?: string
           source?: string | null
+        }
+        Relationships: []
+      }
+      materials: {
+        Row: {
+          acabamento: string | null
+          cor: string | null
+          created_at: string | null
+          espessura: string | null
+          ficha_url: string | null
+          fornecedor: string | null
+          id: string
+          imagem_url: string | null
+          nome: string
+        }
+        Insert: {
+          acabamento?: string | null
+          cor?: string | null
+          created_at?: string | null
+          espessura?: string | null
+          ficha_url?: string | null
+          fornecedor?: string | null
+          id?: string
+          imagem_url?: string | null
+          nome: string
+        }
+        Update: {
+          acabamento?: string | null
+          cor?: string | null
+          created_at?: string | null
+          espessura?: string | null
+          ficha_url?: string | null
+          fornecedor?: string | null
+          id?: string
+          imagem_url?: string | null
+          nome?: string
         }
         Relationships: []
       }
