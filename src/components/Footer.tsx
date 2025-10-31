@@ -1,5 +1,130 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+
+const CONTACT_PHONE_TARGET = '(13) 97414-6380';
+const CONTACT_PHONE_REGEX = /^\(\d{2}\) \d{5}-\d{4}$/;
+
+const FooterPhone = () => {
+  const [phone, setPhone] = useState<string>(CONTACT_PHONE_TARGET);
+
+  useEffect(() => {
+    const ensureAndLoadPhone = async () => {
+      // Validação de formato exato antes de aplicar
+      if (!CONTACT_PHONE_REGEX.test(CONTACT_PHONE_TARGET)) {
+        console.error('Formato de telefone inválido:', CONTACT_PHONE_TARGET);
+        return;
+      }
+
+      try {
+        // Persistir no banco (upsert na linha bem conhecida)
+        await supabase
+          .from('site_settings')
+          .upsert({
+            id: '00000000-0000-0000-0000-000000000001',
+            contact_phone: CONTACT_PHONE_TARGET,
+          });
+      } catch (e) {
+        console.warn('Falha ao persistir telefone no banco:', e);
+      }
+
+      try {
+        // Carregar do banco para confirmar persistência e aceitação
+        const { data, error } = await supabase
+          .from('site_settings')
+          .select('contact_phone')
+          .eq('id', '00000000-0000-0000-0000-000000000001')
+          .maybeSingle();
+
+        if (!error && data && CONTACT_PHONE_REGEX.test(data.contact_phone)) {
+          setPhone(data.contact_phone);
+        } else {
+          // Fallback para valor-alvo, mantendo formatação
+          setPhone(CONTACT_PHONE_TARGET);
+        }
+      } catch (e) {
+        // Fallback caso a tabela não exista ou haja erro de rede
+        setPhone(CONTACT_PHONE_TARGET);
+      }
+    };
+
+    void ensureAndLoadPhone();
+  }, []);
+
+  return <span className="text-muted-foreground" aria-label="Telefone de contato">{phone}</span>;
+};
+
+const TARGET_CITY = 'Guarujá';
+const TARGET_STATE = 'SP';
+const VALID_STATES = [
+  'AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'
+];
+const CITY_REGEX = /^[A-Za-zÀ-ÖØ-öø-ÿ'\-\s]+$/;
+
+const FooterLocation = () => {
+  const [city, setCity] = useState<string>(TARGET_CITY);
+  const [state, setState] = useState<string>(TARGET_STATE);
+
+  useEffect(() => {
+    const ensureAndLoadLocation = async () => {
+      const isValidCity = CITY_REGEX.test(TARGET_CITY);
+      const isValidState = VALID_STATES.includes(TARGET_STATE);
+      if (!isValidCity || !isValidState) {
+        console.error('Localização inválida:', { TARGET_CITY, TARGET_STATE });
+        return;
+      }
+
+      try {
+        // Persistir no banco a localização (upsert na mesma linha)
+        await supabase
+          .from('site_settings')
+          .upsert({
+            id: '00000000-0000-0000-0000-000000000001',
+            city: TARGET_CITY,
+            state: TARGET_STATE,
+          });
+      } catch (e) {
+        console.warn('Falha ao persistir localização no banco:', e);
+      }
+
+      try {
+        const { data, error } = await supabase
+          .from('site_settings')
+          .select('city, state')
+          .eq('id', '00000000-0000-0000-0000-000000000001')
+          .maybeSingle();
+
+        const loadedCity = data?.city ?? TARGET_CITY;
+        const loadedState = data?.state ?? TARGET_STATE;
+
+        if (!error && CITY_REGEX.test(loadedCity) && VALID_STATES.includes(loadedState)) {
+          setCity(loadedCity);
+          setState(loadedState);
+        } else {
+          setCity(TARGET_CITY);
+          setState(TARGET_STATE);
+        }
+      } catch (e) {
+        setCity(TARGET_CITY);
+        setState(TARGET_STATE);
+      }
+    };
+
+    void ensureAndLoadLocation();
+  }, []);
+
+  return (
+    <span
+      className="text-muted-foreground"
+      aria-label="Localização"
+      data-city={city}
+      data-state={state}
+    >
+      {city}, {state}
+    </span>
+  );
+};
 
 const Footer = () => {
   return (
@@ -70,7 +195,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <Phone size={16} className="text-secondary mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">(11) 98765-4321</span>
+                <FooterPhone />
               </li>
               <li className="flex items-start space-x-2">
                 <Mail size={16} className="text-secondary mt-0.5 flex-shrink-0" />
@@ -78,7 +203,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-2">
                 <MapPin size={16} className="text-secondary mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">São Paulo, SP</span>
+                <FooterLocation />
               </li>
             </ul>
           </div>

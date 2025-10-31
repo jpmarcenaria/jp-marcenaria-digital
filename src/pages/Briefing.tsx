@@ -13,6 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 import { ClipboardCheck, Upload } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useSitePhone } from '@/hooks/useSitePhone';
 
 const formSchema = z.object({
   nome: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres').max(100),
@@ -79,13 +80,13 @@ const Briefing = () => {
     );
   };
 
+  const { buildWhatsAppWebUrl, buildWhatsAppAppUrl, openWhatsAppWithFallback } = useSitePhone();
+
   const onSubmit = async (data: FormData) => {
     setLoading(true);
 
-    const whatsappMessage = encodeURIComponent(
-      `Olá! Enviei um briefing técnico pelo site.\n\nNome: ${data.nome}\nTelefone: ${data.telefone}\nAmbientes: ${selectedAmbientes.join(', ')}\nMateriais: ${selectedMateriais.join(', ')}`
-    );
-    const whatsappLink = `https://wa.me/5511987654321?text=${whatsappMessage}`;
+    const whatsappMessage = `Olá! Enviei um briefing técnico pelo site.\n\nNome: ${data.nome}\nTelefone: ${data.telefone}\nAmbientes: ${selectedAmbientes.join(', ')}\nMateriais: ${selectedMateriais.join(', ')}`;
+    const whatsappLink = buildWhatsAppWebUrl(whatsappMessage);
 
     const { error } = await supabase.from('briefings').insert([
       {
@@ -119,7 +120,7 @@ const Briefing = () => {
         description: 'Retornaremos em até 48 horas com orçamento detalhado.',
       });
       
-      // Open WhatsApp
+      // Abrir WhatsApp com o link dinâmico
       window.open(whatsappLink, '_blank');
       setLoading(false);
     }
@@ -158,7 +159,15 @@ const Briefing = () => {
                   Enviar Outro Briefing
                 </Button>
                 <Button asChild className="bg-secondary text-secondary-foreground">
-                  <a href={`https://wa.me/5511987654321`} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={buildWhatsAppWebUrl('vim através do Seu web site!')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => { e.preventDefault(); openWhatsAppWithFallback('vim através do Seu web site!'); }}
+                    data-whatsapp-web-url={buildWhatsAppWebUrl('vim através do Seu web site!')}
+                    data-whatsapp-app-url={buildWhatsAppAppUrl('vim através do Seu web site!')}
+                    aria-label="Abrir conversa no WhatsApp"
+                  >
                     Abrir WhatsApp
                   </a>
                 </Button>

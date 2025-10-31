@@ -62,9 +62,6 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
-            <div className="inline-block mb-4 px-4 py-1 bg-secondary/20 rounded-full">
-              <span className="text-secondary text-sm font-medium">Parceiro técnico de arquitetos</span>
-            </div>
             <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Execução técnica para projetos de arquitetura
             </h1>
@@ -82,8 +79,15 @@ const Index = () => {
                   <ArrowRight className="ml-2" size={20} />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link to="/briefing">Enviar Briefing</Link>
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-background text-foreground hover:bg-background/90"
+              >
+                <Link to="/orcamento">
+                  Solicitar Orçamento Grátis
+                  <ArrowRight className="ml-2" size={20} />
+                </Link>
               </Button>
             </div>
             

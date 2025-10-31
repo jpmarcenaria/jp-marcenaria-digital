@@ -1,0 +1,135 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "JPMARCENARIA" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: JPMARCENARIA
+        - generic [ref=e9]:
+          - link "Portfólio" [ref=e10] [cursor=pointer]:
+            - /url: /portfolio
+          - link "Para Arquitetos" [ref=e11] [cursor=pointer]:
+            - /url: /arquitetos
+          - link "Materiais" [ref=e12] [cursor=pointer]:
+            - /url: /materiais
+          - link "Enviar Briefing" [ref=e13] [cursor=pointer]:
+            - /url: /briefing
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - heading "Solicite seu Orçamento" [level=1] [ref=e17]
+        - paragraph [ref=e18]: Preencha o formulário abaixo e receba uma proposta personalizada em até 24 horas
+      - generic [ref=e19]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - text: Nome Completo *
+            - textbox "Nome Completo *" [ref=e23]:
+              - /placeholder: Seu nome
+          - generic [ref=e24]:
+            - text: WhatsApp *
+            - textbox "WhatsApp *" [ref=e25]:
+              - /placeholder: (11) 98765-4321
+          - generic [ref=e26]:
+            - text: Email
+            - textbox "Email" [ref=e27]:
+              - /placeholder: seu@email.com
+          - generic [ref=e28]:
+            - text: Cidade
+            - textbox "Cidade" [ref=e29]:
+              - /placeholder: São Paulo
+          - generic [ref=e30]:
+            - text: Faixa de Investimento
+            - combobox "Faixa de Investimento" [ref=e31]:
+              - option "Selecione..." [selected]
+              - option "Até R$ 15.000"
+              - option "R$ 15.000 - R$ 30.000"
+              - option "R$ 30.000 - R$ 50.000"
+              - option "Acima de R$ 50.000"
+          - generic [ref=e32]:
+            - text: Mensagem
+            - textbox "Mensagem" [ref=e33]:
+              - /placeholder: Descreva o que você precisa...
+          - button "Solicitar Orçamento" [ref=e34] [cursor=pointer]
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - img [ref=e37]
+            - heading "Prefere falar pelo WhatsApp?" [level=3] [ref=e39]
+            - paragraph [ref=e40]: Converse diretamente com nossa equipe e tire todas as suas dúvidas
+            - link "Abrir conversa no WhatsApp" [ref=e41] [cursor=pointer]:
+              - /url: https://api.whatsapp.com/send?phone=5513974146380&text=vim%20atrav%C3%A9s%20do%20Seu%20web%20site!
+              - text: Abrir WhatsApp
+          - generic [ref=e42]:
+            - heading "Como funciona?" [level=3] [ref=e43]
+            - list [ref=e44]:
+              - listitem [ref=e45]:
+                - generic [ref=e46]: "1."
+                - generic [ref=e47]: Você preenche o formulário com seus dados
+              - listitem [ref=e48]:
+                - generic [ref=e49]: "2."
+                - generic [ref=e50]: Nossa equipe analisa sua solicitação
+              - listitem [ref=e51]:
+                - generic [ref=e52]: "3."
+                - generic [ref=e53]: Entramos em contato em até 24h
+              - listitem [ref=e54]:
+                - generic [ref=e55]: "4."
+                - generic [ref=e56]: Agendamos uma visita técnica
+              - listitem [ref=e57]:
+                - generic [ref=e58]: "5."
+                - generic [ref=e59]: Elaboramos projeto 3D e orçamento detalhado
+    - contentinfo [ref=e60]:
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - generic [ref=e64]: JPMARCENARIA
+            - paragraph [ref=e65]: 30 anos construindo sonhos com móveis planejados de alta qualidade.
+            - generic [ref=e66]:
+              - link [ref=e67] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e68]
+              - link [ref=e71] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e72]
+          - generic [ref=e74]:
+            - heading "Links Rápidos" [level=3] [ref=e75]
+            - list [ref=e76]:
+              - listitem [ref=e77]:
+                - link "Portfólio" [ref=e78] [cursor=pointer]:
+                  - /url: /portfolio
+              - listitem [ref=e79]:
+                - link "Tecnologia" [ref=e80] [cursor=pointer]:
+                  - /url: /tecnologia
+              - listitem [ref=e81]:
+                - link "Sobre Nós" [ref=e82] [cursor=pointer]:
+                  - /url: /sobre
+              - listitem [ref=e83]:
+                - link "Blog" [ref=e84] [cursor=pointer]:
+                  - /url: /blog
+          - generic [ref=e85]:
+            - heading "Serviços" [level=3] [ref=e86]
+            - list [ref=e87]:
+              - listitem [ref=e88]: Cozinhas Planejadas
+              - listitem [ref=e89]: Painéis Ripados com LED
+              - listitem [ref=e90]: Home Office
+              - listitem [ref=e91]: Área Gourmet
+              - listitem [ref=e92]: Quartos e Closets
+          - generic [ref=e93]:
+            - heading "Contato" [level=3] [ref=e94]
+            - list [ref=e95]:
+              - listitem [ref=e96]:
+                - img [ref=e97]
+                - generic "Telefone de contato" [ref=e99]: (13) 97414-6380
+              - listitem [ref=e100]:
+                - img [ref=e101]
+                - generic [ref=e104]: contato@jpmarcenaria.com.br
+              - listitem [ref=e105]:
+                - img [ref=e106]
+                - generic "Localização" [ref=e109]: Guarujá, SP
+        - generic [ref=e110]:
+          - paragraph [ref=e111]: © 2025 JP Marcenaria. Todos os direitos reservados.
+          - paragraph [ref=e112]: Se for madeira, deixe conosco.
+```
