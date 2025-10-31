@@ -10,9 +10,9 @@ import ripadoDetail from '@/assets/ripado-detail.jpg';
 const Index = () => {
   // Função para gerar link do WhatsApp
   const getWhatsAppLink = () => {
-    const phoneNumber = "5511999999999"; // Substitua pelo número real da JP Marcenaria
-    const message = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para meu projeto de marcenaria. Pode me ajudar?");
-    return `https://wa.me/${phoneNumber}?text=${message}`;
+    const phoneNumber = "5513974146380"; // Número real da JP Marcenaria
+    const message = "Vim através do seu site, quero um orçamento!";
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   };
 
   // Componente do ícone WhatsApp SVG com cores originais
