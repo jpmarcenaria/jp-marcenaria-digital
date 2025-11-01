@@ -86,10 +86,10 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
             <h1 className="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Execução técnica para projetos de arquitetura
+              Marcenaria sob medida que transforma ambientes
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Prazos previsíveis, execução premium e assistência pós-obra. Sua especificação, nossa precisão.
+              Planejamos, fabricamos e instalamos com precisão, conforto e estética. Do projeto ao pós-obra, cada detalhe reflete o seu padrão.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button 

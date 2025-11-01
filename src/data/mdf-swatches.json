@@ -1,0 +1,101 @@
+[
+  {
+    "brand": "Duratex",
+    "line": "Ultra Premium",
+    "finish": "Cristallo",
+    "pattern_id": "moss-absoluto",
+    "pattern_name": "Moss Absoluto",
+    "hydro": true,
+    "swatch_url": "/swatches/duratex/moss-absoluto.png",
+    "catalog_url": "https://duratex-madeira-prd-images-bucket.s3.amazonaws.com/2025/02/CATALOGO-2025-DURATEX.pdf",
+    "notes": ""
+  },
+  {
+    "brand": "Duratex",
+    "line": "Essencial",
+    "finish": "Acetinatta",
+    "pattern_id": "carvalho-hanover",
+    "pattern_name": "Carvalho Hanover",
+    "hydro": false,
+    "swatch_url": "/swatches/duratex/carvalho-hanover.png",
+    "catalog_url": "https://duratex-madeira-prd-images-bucket.s3.amazonaws.com/2025/02/CATALOGO-2025-DURATEX.pdf",
+    "notes": ""
+  },
+  {
+    "brand": "Eucatex",
+    "line": "Origens",
+    "finish": "BP Poro Supermatt",
+    "pattern_id": "nevada",
+    "pattern_name": "Nevada",
+    "hydro": false,
+    "swatch_url": "/swatches/eucatex/nevada.png",
+    "catalog_url": "https://www.eucatex.com.br/origens-nativas/img/Catalogo-Digital-Colecao-Origens-MDF-2024.pdf",
+    "notes": ""
+  },
+  {
+    "brand": "Eucatex",
+    "line": "Nativas",
+    "finish": "Matt Soft",
+    "pattern_id": "amendoa-natural",
+    "pattern_name": "Amêndoa Natural",
+    "hydro": false,
+    "swatch_url": "/swatches/eucatex/amendoa-natural.png",
+    "catalog_url": "https://www.eucatex.com.br/origens-nativas/img/Catalogo-Digital-Colecao-Origens-MDF-2024.pdf",
+    "notes": ""
+  },
+  {
+    "brand": "Arauco",
+    "line": "Arquivo de Cores",
+    "finish": "TX",
+    "pattern_id": "sal-rosa",
+    "pattern_name": "Sal Rosa",
+    "hydro": false,
+    "swatch_url": "/swatches/arauco/sal-rosa.png",
+    "catalog_url": "https://arauco.com.br/categoria/cores/",
+    "notes": ""
+  },
+  {
+    "brand": "Arauco",
+    "line": "Arquivo de Cores",
+    "finish": "TX",
+    "pattern_id": "salvia",
+    "pattern_name": "Sálvia",
+    "hydro": false,
+    "swatch_url": "/swatches/arauco/salvia.png",
+    "catalog_url": "https://arauco.com.br/categoria/cores/",
+    "notes": ""
+  },
+  {
+    "brand": "Guararapes",
+    "line": "Dual Touch",
+    "finish": "Dual Touch",
+    "pattern_id": "porto",
+    "pattern_name": "Porto",
+    "hydro": false,
+    "swatch_url": "/swatches/guararapes/porto.png",
+    "catalog_url": "https://www.guararapes.com.br/downloads/",
+    "notes": ""
+  },
+  {
+    "brand": "Guararapes",
+    "line": "Metalic",
+    "finish": "Metalic",
+    "pattern_id": "dual-black",
+    "pattern_name": "Dual Black",
+    "hydro": false,
+    "swatch_url": "/swatches/guararapes/dual-black.png",
+    "catalog_url": "https://www.guararapes.com.br/downloads/",
+    "notes": ""
+  },
+  {
+    "brand": "Guararapes",
+    "line": "Naturale",
+    "finish": "Naturale",
+    "pattern_id": "corten",
+    "pattern_name": "Corten",
+    "hydro": false,
+    "swatch_url": "/swatches/guararapes/corten.png",
+    "catalog_url": "https://www.guararapes.com.br/downloads/",
+    "notes": ""
+  }
+]

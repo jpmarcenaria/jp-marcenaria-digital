@@ -1,0 +1,230 @@
+# Regras de Alerta para JP Marcenaria Digital
+groups:
+  - name: jp-marcenaria-alerts
+    rules:
+      # Alertas de disponibilidade
+      - alert: SiteDown
+        expr: probe_success{job="blackbox"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          service: website
+        annotations:
+          summary: "Site JP Marcenaria está fora do ar"
+          description: "O site {{ $labels.instance }} está inacessível há mais de 2 minutos."
+
+      - alert: HighResponseTime
+        expr: probe_duration_seconds{job="blackbox"} > 3
+        for: 5m
+        labels:
+          severity: warning
+          service: website
+        annotations:
+          summary: "Tempo de resposta alto"
+          description: "O site {{ $labels.instance }} está respondendo em {{ $value }}s, acima do limite de 3s."
+
+      # Alertas de SSL/TLS
+      - alert: SSLCertificateExpiringSoon
+        expr: probe_ssl_earliest_cert_expiry - time() < 86400 * 7
+        for: 1h
+        labels:
+          severity: warning
+          service: ssl
+        annotations:
+          summary: "Certificado SSL expirando em breve"
+          description: "O certificado SSL para {{ $labels.instance }} expira em menos de 7 dias."
+
+      - alert: SSLCertificateExpired
+        expr: probe_ssl_earliest_cert_expiry - time() <= 0
+        for: 1m
+        labels:
+          severity: critical
+          service: ssl
+        annotations:
+          summary: "Certificado SSL expirado"
+          description: "O certificado SSL para {{ $labels.instance }} expirou."
+
+      # Alertas de sistema (se node-exporter estiver configurado)
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+          service: system
+        annotations:
+          summary: "Alto uso de CPU"
+          description: "CPU usage está em {{ $value }}% na instância {{ $labels.instance }}."
+
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+          service: system
+        annotations:
+          summary: "Alto uso de memória"
+          description: "Uso de memória está em {{ $value }}% na instância {{ $labels.instance }}."
+
+      - alert: DiskSpaceLow
+        expr: (1 - (node_filesystem_avail_bytes / node_filesystem_size_bytes)) * 100 > 90
+        for: 5m
+        labels:
+          severity: critical
+          service: system
+        annotations:
+          summary: "Espaço em disco baixo"
+          description: "Espaço em disco está em {{ $value }}% na instância {{ $labels.instance }}, mount point {{ $labels.mountpoint }}."
+
+      # Alertas de aplicação
+      - alert: HighErrorRate
+        expr: rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) > 0.05
+        for: 5m
+        labels:
+          severity: warning
+          service: application
+        annotations:
+          summary: "Alta taxa de erro"
+          description: "Taxa de erro HTTP 5xx está em {{ $value | humanizePercentage }} para {{ $labels.instance }}."
+
+      - alert: NoTrafficReceived
+        expr: rate(http_requests_total[5m]) == 0
+        for: 10m
+        labels:
+          severity: warning
+          service: application
+        annotations:
+          summary: "Nenhum tráfego recebido"
+          description: "Nenhuma requisição HTTP recebida nos últimos 10 minutos para {{ $labels.instance }}."
+
+      # Alertas de performance
+      - alert: HighWebVitalsLCP
+        expr: avg_over_time(web_vitals{name="LCP"}[5m]) > 4000
+        for: 5m
+        labels:
+          severity: warning
+          service: performance
+        annotations:
+          summary: "LCP (Largest Contentful Paint) alto"
+          description: "LCP médio está em {{ $value }}ms, acima do limite recomendado de 2.5s."
+
+      - alert: HighWebVitalsFID
+        expr: avg_over_time(web_vitals{name="FID"}[5m]) > 300
+        for: 5m
+        labels:
+          severity: warning
+          service: performance
+        annotations:
+          summary: "FID (First Input Delay) alto"
+          description: "FID médio está em {{ $value }}ms, acima do limite recomendado de 100ms."
+
+      - alert: HighWebVitalsCLS
+        expr: avg_over_time(web_vitals{name="CLS"}[5m]) > 0.25
+        for: 5m
+        labels:
+          severity: warning
+          service: performance
+        annotations:
+          summary: "CLS (Cumulative Layout Shift) alto"
+          description: "CLS médio está em {{ $value }}, acima do limite recomendado de 0.1."
+
+      # Alertas de negócio
+      - alert: LowConversionRate
+        expr: rate(conversions_total[1h]) / rate(analytics_events_total{event_name="page_view"}[1h]) < 0.02
+        for: 30m
+        labels:
+          severity: warning
+          service: business
+        annotations:
+          summary: "Taxa de conversão baixa"
+          description: "Taxa de conversão está em {{ $value | humanizePercentage }}, abaixo do esperado de 2%."
+
+      - alert: HighQuoteRequestVolume
+        expr: rate(quote_requests_total[1h]) > 10
+        for: 15m
+        labels:
+          severity: info
+          service: business
+        annotations:
+          summary: "Alto volume de solicitações de orçamento"
+          description: "Recebendo {{ $value }} solicitações de orçamento por hora, acima do normal."
+
+      - alert: PendingQuoteRequests
+        expr: quote_requests_pending > 20
+        for: 1h
+        labels:
+          severity: warning
+          service: business
+        annotations:
+          summary: "Muitas solicitações de orçamento pendentes"
+          description: "{{ $value }} solicitações de orçamento estão pendentes há mais de 1 hora."
+
+      # Alertas de infraestrutura
+      - alert: RedisDown
+        expr: redis_up == 0
+        for: 2m
+        labels:
+          severity: critical
+          service: infrastructure
+        annotations:
+          summary: "Redis está fora do ar"
+          description: "Instância Redis {{ $labels.instance }} está inacessível."
+
+      - alert: PostgreSQLDown
+        expr: pg_up == 0
+        for: 2m
+        labels:
+          severity: critical
+          service: infrastructure
+        annotations:
+          summary: "PostgreSQL está fora do ar"
+          description: "Instância PostgreSQL {{ $labels.instance }} está inacessível."
+
+      - alert: HighDatabaseConnections
+        expr: pg_stat_database_numbackends / pg_settings_max_connections > 0.8
+        for: 5m
+        labels:
+          severity: warning
+          service: infrastructure
+        annotations:
+          summary: "Alto número de conexões no banco"
+          description: "{{ $value | humanizePercentage }} das conexões do PostgreSQL estão em uso."
+
+  - name: jp-marcenaria-business-alerts
+    rules:
+      # Alertas específicos de negócio
+      - alert: ContactFormErrors
+        expr: rate(contact_form_errors_total[5m]) > 0.1
+        for: 2m
+        labels:
+          severity: warning
+          service: business
+        annotations:
+          summary: "Erros no formulário de contato"
+          description: "Taxa de erro no formulário de contato: {{ $value }} erros por minuto."
+
+      - alert: QuoteFormErrors
+        expr: rate(quote_form_errors_total[5m]) > 0.1
+        for: 2m
+        labels:
+          severity: warning
+          service: business
+        annotations:
+          summary: "Erros no formulário de orçamento"
+          description: "Taxa de erro no formulário de orçamento: {{ $value }} erros por minuto."
+
+      - alert: UnusualTrafficPattern
+        expr: |
+          (
+            rate(analytics_events_total{event_name="page_view"}[5m]) > 
+            avg_over_time(rate(analytics_events_total{event_name="page_view"}[5m])[1d:5m]) * 3
+          ) or (
+            rate(analytics_events_total{event_name="page_view"}[5m]) < 
+            avg_over_time(rate(analytics_events_total{event_name="page_view"}[5m])[1d:5m]) * 0.3
+          )
+        for: 10m
+        labels:
+          severity: info
+          service: business
+        annotations:
+          summary: "Padrão de tráfego incomum"
+          description: "Tráfego atual ({{ $value }}) está significativamente diferente da média histórica."

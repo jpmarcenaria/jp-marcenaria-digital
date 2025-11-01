@@ -8,8 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* JP Marcenaria - Premium Graphite & Walnut Palette */
-    --background: 220 30% 8%;        /* Graphite 900 #0B0F14 */
+    /* JP Marcenaria - Fundo preto absoluto para toda a página */
+    --background: 0 0% 0%;           /* Black #000000 */
     --foreground: 40 30% 93%;        /* Warm Ivory #F5F1E6 */
 
     --card: 220 20% 15%;             /* Graphite 700 #1F2937 */
@@ -47,7 +47,8 @@ All colors MUST be HSL.
     /* Custom gradients */
     --gradient-brass: linear-gradient(135deg, hsl(38 36% 57%) 0%, hsl(38 50% 45%) 100%);
     --gradient-walnut: linear-gradient(135deg, hsl(27 39% 39%) 0%, hsl(27 50% 30%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(220 30% 8%) 0%, hsl(220 25% 12%) 100%);
+    /* Garantir consistência: gradiente do hero é preto 100% */
+    --gradient-hero: linear-gradient(180deg, #000000 0%, #000000 100%);
   }
 }
 
@@ -58,6 +59,13 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Cobertura total do viewport e consistência */
+  html, body, #root {
+    min-height: 100vh;
+    background-color: #000000;
+    color-scheme: dark;
   }
   
   h1, h2, h3, h4, h5, h6 {

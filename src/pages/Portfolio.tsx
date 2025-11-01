@@ -5,11 +5,17 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Skeleton } from '@/components/ui/skeleton';
 import { EmptyState } from '@/components/ui/empty-state';
-import { Search, Package } from 'lucide-react';
+import SmartPortfolio from '@/components/SmartPortfolio';
+import RealPortfolio from '@/components/RealPortfolio';
+import FurniturePortfolio from '@/components/FurniturePortfolio';
+import SimplifiedFurniturePortfolio from '@/components/SimplifiedFurniturePortfolio';
+import ProfessionalPortfolio from '@/components/ProfessionalPortfolio';
+import { Search, Package, Sparkles, Grid, Star } from 'lucide-react';
 
 interface Case {
   id: string;
@@ -155,136 +161,145 @@ const Portfolio = () => {
       {/* Filters */}
       <section className="py-8 bg-card/50 sticky top-20 z-40 border-b border-border">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
-              <Input
-                type="text"
-                placeholder="Buscar por título, arquiteto ou cidade..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10"
-              />
-            </div>
+          <Tabs defaultValue="professional" className="w-full">
 
-            {categorias.length > 0 && (
-              <select
-                value={selectedCategoria}
-                onChange={(e) => setSelectedCategoria(e.target.value)}
-                className="px-4 py-2 bg-background border border-input rounded-md min-w-[200px]"
-              >
-                <option value="">Todas categorias</option>
-                {categorias.map(cat => (
-                  <option key={cat} value={cat}>{cat}</option>
-                ))}
-              </select>
-            )}
+          <TabsContent value="professional" className="space-y-6">
+            <ProfessionalPortfolio />
+          </TabsContent>
 
-            {(searchTerm || selectedCategoria) && (
-              <Button
-                variant="outline"
-                onClick={() => {
-                  setSearchTerm('');
-                  setSelectedCategoria('');
-                }}
-              >
-                Limpar
-              </Button>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Cases Grid */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          {loading ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <Card key={i} className="overflow-hidden">
-                  <Skeleton className="h-64 w-full" />
-                  <div className="p-6">
-                    <Skeleton className="h-6 w-3/4 mb-2" />
-                    <Skeleton className="h-4 w-full" />
-                  </div>
-                </Card>
-              ))}
-            </div>
-          ) : filteredCases.length === 0 ? (
-            <EmptyState
-              icon={<Package size={64} />}
-              title={cases.length === 0 ? "Nenhum case disponível" : "Nenhum case encontrado"}
-              description={
-                cases.length === 0
-                  ? "Adicione cases de exemplo para visualizar o portfólio"
-                  : "Tente ajustar os filtros ou fazer uma nova busca"
-              }
-              action={
-                cases.length === 0
-                  ? {
-                      label: "Adicionar Exemplos",
-                      onClick: addExamples
-                    }
-                  : undefined
-              }
-            />
-          ) : (
-            <>
-              {cases.length > 0 && cases.some(c => c.slug.endsWith('-exemplo')) && (
-                <div className="mb-6 flex justify-end">
-                  <Button variant="outline" size="sm" onClick={removeExamples}>
-                    Remover Exemplos
-                  </Button>
+            <TabsContent value="cases" className="space-y-6">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
+                  <Input
+                    type="text"
+                    placeholder="Buscar por título, arquiteto ou cidade..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="pl-10"
+                  />
                 </div>
-              )}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredCases.map((caseItem) => (
-                  <Link key={caseItem.id} to={`/portfolio/${caseItem.slug}`}>
-                    <Card className="overflow-hidden hover:shadow-xl transition-all glow-warm-hover cursor-pointer h-full">
-                      <div className="aspect-video overflow-hidden relative">
-                        <img
-                          src={caseItem.capa_url || 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800'}
-                          alt={caseItem.titulo}
-                          className="w-full h-full object-cover transition-transform hover:scale-105"
-                          loading="lazy"
-                        />
-                        {caseItem.slug.endsWith('-exemplo') && (
-                          <Badge className="absolute top-3 right-3 bg-secondary/90 text-secondary-foreground">
-                            Exemplo
-                          </Badge>
-                        )}
-                      </div>
+
+                {categorias.length > 0 && (
+                  <select
+                    value={selectedCategoria}
+                    onChange={(e) => setSelectedCategoria(e.target.value)}
+                    className="px-4 py-2 bg-background border border-input rounded-md min-w-[200px]"
+                  >
+                    <option value="">Todas categorias</option>
+                    {categorias.map(cat => (
+                      <option key={cat} value={cat}>{cat}</option>
+                    ))}
+                  </select>
+                )}
+
+                {(searchTerm || selectedCategoria) && (
+                  <Button
+                    variant="outline"
+                    onClick={() => {
+                      setSearchTerm('');
+                      setSelectedCategoria('');
+                    }}
+                  >
+                    Limpar
+                  </Button>
+                )}
+              </div>
+
+              {/* Cases Grid */}
+              {loading ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {[1, 2, 3, 4, 5, 6].map((i) => (
+                    <Card key={i} className="overflow-hidden">
+                      <Skeleton className="h-64 w-full" />
                       <div className="p-6">
-                        {caseItem.categoria && (
-                          <Badge className="mb-2 bg-secondary/20 text-secondary capitalize">
-                            {caseItem.categoria}
-                          </Badge>
-                        )}
-                        <h3 className="font-heading text-xl font-semibold mb-2">
-                          {caseItem.titulo}
-                        </h3>
-                        {caseItem.resumo && (
-                          <p className="text-muted-foreground text-sm line-clamp-2 mb-2">
-                            {caseItem.resumo}
-                          </p>
-                        )}
-                        {caseItem.arquiteto && (
-                          <p className="text-sm text-muted-foreground">
-                            Arq. {caseItem.arquiteto}
-                          </p>
-                        )}
-                        {caseItem.cidade && (
-                          <p className="text-sm text-secondary">
-                            {caseItem.cidade}
-                          </p>
-                        )}
+                        <Skeleton className="h-6 w-3/4 mb-2" />
+                        <Skeleton className="h-4 w-full" />
                       </div>
                     </Card>
-                  </Link>
-                ))}
-              </div>
-            </>
-          )}
+                  ))}
+                </div>
+                ) : filteredCases.length === 0 ? (
+                  <EmptyState
+                    icon={<Package size={64} />}
+                    title={cases.length === 0 ? "Nenhum case disponível" : "Nenhum case encontrado"}
+                    description={
+                      cases.length === 0
+                        ? "Adicione cases de exemplo para visualizar o portfólio"
+                        : "Tente ajustar os filtros ou fazer uma nova busca"
+                    }
+                    action={
+                      cases.length === 0
+                        ? {
+                            label: "Adicionar Exemplos",
+                            onClick: addExamples
+                          }
+                        : undefined
+                    }
+                  />
+                ) : (
+                  <>
+                    {cases.length > 0 && cases.some(c => c.slug.endsWith('-exemplo')) && (
+                      <div className="mb-6 flex justify-end">
+                        <Button variant="outline" size="sm" onClick={removeExamples}>
+                          Remover Exemplos
+                        </Button>
+                      </div>
+                    )}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {filteredCases.map((caseItem) => (
+                        <Link key={caseItem.id} to={`/portfolio/${caseItem.slug}`}>
+                          <Card className="overflow-hidden hover:shadow-xl transition-all glow-warm-hover cursor-pointer h-full">
+                            <div className="aspect-video overflow-hidden relative">
+                              <img
+                                src={caseItem.capa_url || 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800'}
+                                alt={caseItem.titulo}
+                                className="w-full h-full object-cover transition-transform hover:scale-105"
+                                loading="lazy"
+                              />
+                              {caseItem.slug.endsWith('-exemplo') && (
+                                <Badge className="absolute top-3 right-3 bg-secondary/90 text-secondary-foreground">
+                                  Exemplo
+                                </Badge>
+                              )}
+                            </div>
+                            <div className="p-6">
+                              {caseItem.categoria && (
+                                <Badge className="mb-2 bg-secondary/20 text-secondary capitalize">
+                                  {caseItem.categoria}
+                                </Badge>
+                              )}
+                              <h3 className="font-heading text-xl font-semibold mb-2">
+                                {caseItem.titulo}
+                              </h3>
+                              {caseItem.resumo && (
+                                <p className="text-muted-foreground text-sm line-clamp-2 mb-2">
+                                  {caseItem.resumo}
+                                </p>
+                              )}
+                              {caseItem.arquiteto && (
+                                <p className="text-sm text-muted-foreground">
+                                  Arq. {caseItem.arquiteto}
+                                </p>
+                              )}
+                              {caseItem.cidade && (
+                                <p className="text-sm text-secondary">
+                                  {caseItem.cidade}
+                                </p>
+                              )}
+                            </div>
+                          </Card>
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                )}
+                </TabsContent>
+
+            <TabsContent value="smart">
+              <SimplifiedFurniturePortfolio />
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 

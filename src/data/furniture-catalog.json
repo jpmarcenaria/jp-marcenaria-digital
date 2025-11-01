@@ -1,0 +1,562 @@
+{
+  "furniture_catalog": {
+    "cozinhas": [
+      {
+        "id": "coz_001",
+        "nome": "Cozinha Modulada Premium",
+        "categoria": "cozinha",
+        "estilo": "moderno",
+        "material_principal": "MDF",
+        "acabamento": "Laca Brilhante Branca",
+        "dimensoes": {
+          "largura": 420,
+          "altura": 220,
+          "profundidade": 60,
+          "unidade": "cm"
+        },
+        "especificacoes": {
+          "portas": 12,
+          "gavetas": 8,
+          "prateleiras_regulaveis": 16,
+          "soft_close": true,
+          "puxadores": "Cava Integrada",
+          "dobradiças": "Blum com Amortecedor"
+        },
+        "materiais": {
+          "estrutura": "MDF 18mm",
+          "frentes": "MDF 18mm com Laca",
+          "prateleiras": "MDF 15mm",
+          "fundo": "Eucatex 3mm",
+          "ferragens": "Blum Alemã"
+        },
+        "acabamentos_disponiveis": [
+          "Branco Brilhante",
+          "Branco Fosco",
+          "Cinza Concreto",
+          "Preto Fosco"
+        ],
+        "preco_base": 8500.00,
+        "prazo_fabricacao": 25,
+        "garantia": 24,
+        "imagens": [
+          "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&h=1080&fit=crop",
+          "https://images.unsplash.com/photo-1571460633648-d0b5c17d9c6d?w=1920&h=1080&fit=crop"
+        ],
+        "modelo_3d": "/models/cozinha-premium.glb",
+        "ficha_tecnica": "/fichas/cozinha-premium.pdf"
+      },
+      {
+        "id": "coz_002",
+        "nome": "Cozinha Clássica Nogueira",
+        "categoria": "cozinha",
+        "estilo": "classico",
+        "material_principal": "Madeira Maciça",
+        "acabamento": "Verniz Natural Nogueira",
+        "dimensoes": {
+          "largura": 380,
+          "altura": 220,
+          "profundidade": 60,
+          "unidade": "cm"
+        },
+        "especificacoes": {
+          "portas": 10,
+          "gavetas": 6,
+          "prateleiras_regulaveis": 12,
+          "soft_close": true,
+          "puxadores": "Bronze Envelhecido",
+          "dobradiças": "Ferrmax Premium"
+        },
+        "materiais": {
+          "estrutura": "Madeira Maciça Nogueira",
+          "frentes": "Madeira Maciça com Almofada",
+          "prateleiras": "Madeira Maciça 20mm",
+          "fundo": "Compensado Naval 6mm",
+          "ferragens": "Bronze e Latão"
+        },
+        "acabamentos_disponiveis": [
+          "Nogueira Natural",
+          "Mogno Escuro",
+          "Cerejeira",
+          "Carvalho Americano"
+        ],
+        "preco_base": 12500.00,
+        "prazo_fabricacao": 35,
+        "garantia": 36,
+        "imagens": [
+          "https://images.unsplash.com/photo-1571460633648-d0b5c17d9c6d?w=1920&h=1080&fit=crop"
+        ],
+        "modelo_3d": "/models/cozinha-classica.glb",
+        "ficha_tecnica": "/fichas/cozinha-classica.pdf"
+      }
+    ],
+    "dormitorios": [
+      {
+        "id": "dor_001",
+        "nome": "Guarda-Roupa Casal 6 Portas",
+        "categoria": "dormitorio",
+        "estilo": "moderno",
+        "material_principal": "MDF",
+        "acabamento": "Laminado Freijó",
+        "dimensoes": {
+          "largura": 270,
+          "altura": 220,
+          "profundidade": 60,
+          "unidade": "cm"
+        },
+        "especificacoes": {
+          "portas": 6,
+          "gavetas": 4,
+          "cabideiros": 3,
+          "prateleiras_regulaveis": 8,
+          "espelhos": 2,
+          "led_interno": true,
+          "soft_close": true
+        },
+        "materiais": {
+          "estrutura": "MDF 18mm",
+          "frentes": "MDF com Laminado Freijó",
+          "prateleiras": "MDF 15mm",
+          "fundo": "Eucatex 3mm",
+          "espelhos": "Cristal 4mm Bisotado"
+        },
+        "acabamentos_disponiveis": [
+          "Freijó Natural",
+          "Carvalho Mel",
+          "Nogal Sevilha",
+          "Branco Ártico"
+        ],
+        "preco_base": 4200.00,
+        "prazo_fabricacao": 20,
+        "garantia": 24,
+        "imagens": [
+          "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&h=1080&fit=crop",
+          "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920&h=1080&fit=crop"
+        ],
+        "modelo_3d": "/models/guarda-roupa-casal.glb",
+        "ficha_tecnica": "/fichas/guarda-roupa-casal.pdf"
+      },
+      {
+        "id": "dor_002",
+        "nome": "Cômoda com Espelho",
+        "categoria": "dormitorio",
+        "estilo": "classico",
+        "material_principal": "Madeira Maciça",
+        "acabamento": "Pátina Provençal",
+        "dimensoes": {
+          "largura": 120,
+          "altura": 80,
+          "profundidade": 45,
+          "unidade": "cm"
+        },
+        "especificacoes": {
+          "gavetas": 4,
+          "puxadores": "Cristal Lapidado",
+          "espelho": "Moldura Entalhada",
+          "soft_close": true,
+          "pes": "Torneados à Mão"
+        },
+        "materiais": {
+          "estrutura": "Madeira Maciça Pinus",
+          "frentes": "Madeira com Entalhes",
+          "gavetas": "Corrediças Telescópicas",
+          "espelho": "Cristal Bisotado",
+          "ferragens": "Latão Envelhecido"
+        },
+        "acabamentos_disponiveis": [
+          "Pátina Branca",
+          "Pátina Azul",
+          "Natural Encerado",
+          "Decapê Cinza"
+        ],
+        "preco_base": 1800.00,
+        "prazo_fabricacao": 15,
+        "garantia": 18,
+        "imagens": [
+          "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920&h=1080&fit=crop"
+        ],
+        "modelo_3d": "/models/comoda-espelho.glb",
+        "ficha_tecnica": "/fichas/comoda-espelho.pdf"
+      }
+    ],
+    "salas": [
+      {
+        "id": "sal_001",
+        "nome": "Painel TV 65\" com Rack",
+        "categoria": "sala",
+        "estilo": "moderno",
+        "material_principal": "MDF",
+        "acabamento": "Laca Fosca Cinza",
+        "dimensoes": {
+          "largura": 220,
+          "altura": 180,
+          "profundidade": 35,
+          "unidade": "cm"
+        },
+        "especificacoes": {
+          "suporte_tv": "Até 65 polegadas",
+          "nichos": 6,
+          "gavetas": 2,
+          "led_fita": true,
+          "passagem_cabos": true,
+          "prateleiras_vidro": 2
+        },
+        "materiais": {
+          "estrutura": "MDF 18mm",
+          "frentes": "MDF com Laca Fosca",
+          "prateleiras": "Vidro Temperado 8mm",
+          "led": "Fita LED 3000K",
+          "ferragens": "Blum Soft Close"
+        },
+        "acabamentos_disponiveis": [
+          "Cinza Concreto",
+          "Branco Fosco",
+          "Preto Fosco",
+          "Carvalho Natural"
+        ],
+        "preco_base": 3200.00,
+        "prazo_fabricacao": 18,
+        "garantia": 24,
+        "imagens": [
+          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1920&h=1080&fit=crop",
+          "https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=1920&h=1080&fit=crop"
+        ],
+        "modelo_3d": "/models/painel-tv-rack.glb",
+        "ficha_tecnica": "/fichas/painel-tv-rack.pdf"
+      },
+      {
+        "id": "sal_002",
+        "nome": "Estante Biblioteca Modular",
+        "categoria": "sala",
+        "estilo": "contemporaneo",
+        "material_principal": "MDF",
+        "acabamento": "Laminado Carvalho Europeu",
+        "dimensoes": {
+          "largura": 200,
+          "altura": 240,
+          "profundidade": 30,
+          "unidade": "cm"
+        },
+        "especificacoes": {
+          "prateleiras": 12,
+          "nichos_decorativos": 4,
+          "gavetas": 2,
+          "portas": 4,
+          "led_interno": true,
+          "modulacao": "Expansível"
+        },
+        "materiais": {
+          "estrutura": "MDF 18mm",
+          "prateleiras": "MDF 25mm Reforçado",
+          "frentes": "Laminado Carvalho",
+          "fundo": "MDF 6mm",
+          "ferragens": "Blum Premium"
+        },
+        "acabamentos_disponiveis": [
+          "Carvalho Europeu",
+          "Freijó Dourado",
+          "Nogal Americano",
+          "Branco Texturizado"
+        ],
+        "preco_base": 2800.00,
+        "prazo_fabricacao": 22,
+        "garantia": 24,
+        "imagens": [
+          "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&h=1080&fit=crop"
+        ],
+        "modelo_3d": "/models/estante-biblioteca.glb",
+        "ficha_tecnica": "/fichas/estante-biblioteca.pdf"
+      }
+    ],
+    "escritorios": [
+      {
+        "id": "esc_001",
+        "nome": "Mesa Home Office com Gaveteiro",
+        "categoria": "escritorio",
+        "estilo": "industrial",
+        "material_principal": "MDF",
+        "acabamento": "Laminado Carvalho + Metal",
+        "dimensoes": {
+          "largura": 150,
+          "altura": 75,
+          "profundidade": 60,
+          "unidade": "cm"
+        },
+        "especificacoes": {
+          "gavetas": 3,
+          "porta_cpu": 1,
+          "passagem_cabos": true,
+          "pes_metalicos": true,
+          "regulagem_altura": false,
+          "soft_close": true
+        },
+        "materiais": {
+          "tampo": "MDF 25mm Laminado",
+          "estrutura": "Aço Carbono 30x30mm",
+          "gavetas": "MDF 18mm",
+          "corrediças": "Telescópicas 45kg",
+          "pintura": "Eletrostática Preta"
+        },
+        "acabamentos_disponiveis": [
+          "Carvalho + Preto",
+          "Freijó + Cinza",
+          "Branco + Branco",
+          "Nogal + Preto"
+        ],
+        "preco_base": 1650.00,
+        "prazo_fabricacao": 12,
+        "garantia": 18,
+        "imagens": [
+          "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&h=1080&fit=crop",
+          "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&h=1080&fit=crop"
+        ],
+        "modelo_3d": "/models/mesa-home-office.glb",
+        "ficha_tecnica": "/fichas/mesa-home-office.pdf"
+      }
+    ],
+    "banheiros": [
+      {
+        "id": "ban_001",
+        "nome": "Gabinete Banheiro Suspenso",
+        "categoria": "banheiro",
+        "estilo": "moderno",
+        "material_principal": "MDF Hidrófugo",
+        "acabamento": "Laca Branca Brilhante",
+        "dimensoes": {
+          "largura": 80,
+          "altura": 60,
+          "profundidade": 45,
+          "unidade": "cm"
+        },
+        "especificacoes": {
+          "gavetas": 2,
+          "cuba": "Sobreposta Cerâmica",
+          "espelho": "Com LED Integrado",
+          "soft_close": true,
+          "resistente_umidade": true,
+          "fixacao": "Suporte Oculto"
+        },
+        "materiais": {
+          "estrutura": "MDF Hidrófugo 18mm",
+          "frentes": "MDF com Laca Náutica",
+          "cuba": "Cerâmica Branca",
+          "espelho": "Cristal com LED",
+          "ferragens": "Inox 304"
+        },
+        "acabamentos_disponiveis": [
+          "Branco Brilhante",
+          "Cinza Fosco",
+          "Preto Fosco",
+          "Madeirado Carvalho"
+        ],
+        "preco_base": 1200.00,
+        "prazo_fabricacao": 10,
+        "garantia": 12,
+        "imagens": [
+          "https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=1920&h=1080&fit=crop",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1920&h=1080&fit=crop"
+        ],
+        "modelo_3d": "/models/gabinete-banheiro.glb",
+        "ficha_tecnica": "/fichas/gabinete-banheiro.pdf"
+      }
+    ],
+    "closets": [
+      {
+        "id": "clo_001",
+        "nome": "Closet Casal Completo",
+        "categoria": "closet",
+        "estilo": "moderno",
+        "material_principal": "MDF",
+        "acabamento": "Laca Branca + Espelhos",
+        "dimensoes": {
+          "largura": 300,
+          "altura": 250,
+          "profundidade": 65,
+          "unidade": "cm"
+        },
+        "especificacoes": {
+          "cabideiros": 6,
+          "gavetas": 8,
+          "sapateira": 2,
+          "prateleiras": 16,
+          "espelhos": 4,
+          "led_interno": true,
+          "soft_close": true
+        },
+        "materiais": {
+          "estrutura": "MDF 18mm",
+          "frentes": "MDF com Laca Brilhante",
+          "prateleiras": "MDF 15mm",
+          "espelhos": "Cristal 4mm",
+          "led": "Fita LED 3000K",
+          "ferragens": "Blum Alemã"
+        },
+        "acabamentos_disponiveis": [
+          "Branco Brilhante",
+          "Cinza Fosco",
+          "Freijó Natural",
+          "Preto + Espelho"
+        ],
+        "preco_base": 6800.00,
+        "prazo_fabricacao": 30,
+        "garantia": 24,
+        "imagens": [
+          "https://images.unsplash.com/photo-1565183928294-7d9b5d0ce8a3?w=1920&h=1080&fit=crop"
+        ],
+        "modelo_3d": "/models/closet-casal.glb",
+        "ficha_tecnica": "/fichas/closet-casal.pdf"
+      }
+    ],
+    "area_gourmet": [
+      {
+        "id": "ago_001",
+        "nome": "Área Gourmet Completa",
+        "categoria": "area-gourmet",
+        "estilo": "rustico",
+        "material_principal": "Madeira de Demolição",
+        "acabamento": "Verniz Fosco + Pedra Natural",
+        "dimensoes": {
+          "largura": 400,
+          "altura": 220,
+          "profundidade": 70,
+          "unidade": "cm"
+        },
+        "especificacoes": {
+          "churrasqueira": "Embutida",
+          "pia": "Granito Natural",
+          "armarios": 8,
+          "gavetas": 4,
+          "prateleiras": 12,
+          "coifa": "Integrada"
+        },
+        "materiais": {
+          "estrutura": "Madeira de Demolição",
+          "bancada": "Granito Preto São Gabriel",
+          "portas": "Madeira Rústica",
+          "ferragens": "Ferro Fundido",
+          "acabamento": "Verniz Marítimo"
+        },
+        "acabamentos_disponiveis": [
+          "Demolição Natural",
+          "Pátina Branca",
+          "Verniz Escuro",
+          "Cera Incolor"
+        ],
+        "preco_base": 9500.00,
+        "prazo_fabricacao": 40,
+        "garantia": 18,
+        "imagens": [
+          "https://images.unsplash.com/photo-1611048267451-e6ed903d4a38?w=1920&h=1080&fit=crop"
+        ],
+        "modelo_3d": "/models/area-gourmet.glb",
+        "ficha_tecnica": "/fichas/area-gourmet.pdf"
+      }
+    ]
+  },
+  "materiais_disponiveis": {
+    "MDF": {
+      "nome": "MDF (Medium Density Fiberboard)",
+      "descricao": "Painel de fibras de madeira de média densidade, ideal para móveis planejados",
+      "espessuras": ["15mm", "18mm", "25mm"],
+      "acabamentos": ["Natural", "Laminado", "Laca", "Verniz"],
+      "resistencia_umidade": "Baixa (Hidrófugo disponível)",
+      "durabilidade": "Alta",
+      "custo": "Médio"
+    },
+    "Madeira Maciça": {
+      "nome": "Madeira Maciça",
+      "descricao": "Madeira natural sólida, oferece máxima durabilidade e beleza",
+      "tipos": ["Nogueira", "Mogno", "Cerejeira", "Carvalho", "Pinus"],
+      "acabamentos": ["Verniz", "Cera", "Óleo", "Pátina"],
+      "resistencia_umidade": "Média a Alta",
+      "durabilidade": "Muito Alta",
+      "custo": "Alto"
+    },
+    "MDF Hidrófugo": {
+      "nome": "MDF Hidrófugo",
+      "descricao": "MDF com tratamento especial resistente à umidade",
+      "aplicacoes": ["Banheiros", "Cozinhas", "Áreas Molhadas"],
+      "acabamentos": ["Laca Náutica", "Laminado Resistente"],
+      "resistencia_umidade": "Alta",
+      "durabilidade": "Alta",
+      "custo": "Médio-Alto"
+    },
+    "Madeira de Demolição": {
+      "nome": "Madeira de Demolição",
+      "descricao": "Madeira reutilizada com história e caráter único",
+      "caracteristicas": ["Sustentável", "Rústica", "Única"],
+      "acabamentos": ["Natural", "Verniz", "Cera", "Pátina"],
+      "resistencia_umidade": "Variável",
+      "durabilidade": "Muito Alta",
+      "custo": "Alto"
+    }
+  },
+  "estilos_disponiveis": {
+    "moderno": {
+      "nome": "Moderno",
+      "caracteristicas": ["Linhas retas", "Cores neutras", "Minimalismo", "Funcionalidade"],
+      "materiais_preferidos": ["MDF com Laca", "Vidro", "Metal"],
+      "cores_tipicas": ["Branco", "Cinza", "Preto", "Madeirados claros"]
+    },
+    "classico": {
+      "nome": "Clássico",
+      "caracteristicas": ["Detalhes ornamentais", "Madeiras nobres", "Elegância atemporal"],
+      "materiais_preferidos": ["Madeira Maciça", "Bronze", "Cristal"],
+      "cores_tipicas": ["Nogueira", "Mogno", "Cerejeira", "Dourado"]
+    },
+    "rustico": {
+      "nome": "Rústico",
+      "caracteristicas": ["Aparência natural", "Texturas marcantes", "Aconchego"],
+      "materiais_preferidos": ["Madeira de Demolição", "Ferro", "Pedra"],
+      "cores_tipicas": ["Madeira natural", "Terra", "Verde musgo"]
+    },
+    "industrial": {
+      "nome": "Industrial",
+      "caracteristicas": ["Metal aparente", "Concreto", "Tubulações", "Urbano"],
+      "materiais_preferidos": ["Aço", "MDF Preto", "Concreto"],
+      "cores_tipicas": ["Preto", "Cinza", "Cobre", "Chumbo"]
+    },
+    "contemporaneo": {
+      "nome": "Contemporâneo",
+      "caracteristicas": ["Tendências atuais", "Inovação", "Versatilidade"],
+      "materiais_preferidos": ["MDF Texturizado", "Vidro", "LED"],
+      "cores_tipicas": ["Tons terrosos", "Azul petróleo", "Verde sage"]
+    }
+  },
+  "ambientes": {
+    "cozinha": {
+      "nome": "Cozinha",
+      "produtos": ["Armários", "Balcões", "Ilhas", "Adegas", "Despensas"],
+      "consideracoes": ["Resistência à umidade", "Facilidade de limpeza", "Funcionalidade"]
+    },
+    "dormitorio": {
+      "nome": "Dormitório",
+      "produtos": ["Guarda-roupas", "Cômodas", "Criados-mudo", "Penteadeiras"],
+      "consideracoes": ["Organização", "Espelhos", "Iluminação interna"]
+    },
+    "sala": {
+      "nome": "Sala de Estar",
+      "produtos": ["Painéis TV", "Racks", "Estantes", "Aparadores"],
+      "consideracoes": ["Passagem de cabos", "Suporte para equipamentos", "Estética"]
+    },
+    "escritorio": {
+      "nome": "Escritório",
+      "produtos": ["Mesas", "Estantes", "Gaveteiros", "Armários"],
+      "consideracoes": ["Ergonomia", "Organização", "Tecnologia integrada"]
+    },
+    "banheiro": {
+      "nome": "Banheiro",
+      "produtos": ["Gabinetes", "Espelheiras", "Nichos", "Armários"],
+      "consideracoes": ["Resistência à umidade", "Ventilação", "Praticidade"]
+    },
+    "closet": {
+      "nome": "Closet",
+      "produtos": ["Cabideiros", "Sapateiras", "Gaveteiros", "Espelhos"],
+      "consideracoes": ["Organização", "Iluminação", "Ventilação", "Espelhos"]
+    },
+    "area-gourmet": {
+      "nome": "Área Gourmet",
+      "produtos": ["Churrasqueiras", "Bancadas", "Armários", "Coifas"],
+      "consideracoes": ["Resistência ao tempo", "Facilidade de limpeza", "Funcionalidade"]
+    }
+  }
+}

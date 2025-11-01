@@ -1,0 +1,72 @@
+# Workflow para atualização automática de dependências
+name: 🔄 Dependency Updates
+
+on:
+  schedule:
+    # Executa toda segunda-feira às 9h UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Permite execução manual
+
+jobs:
+  update-dependencies:
+    name: 📦 Update Dependencies
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: 🔍 Check for outdated packages
+        id: outdated
+        run: |
+          npm outdated --json > outdated.json || true
+          if [ -s outdated.json ]; then
+            echo "has_updates=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_updates=false" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: 📦 Update dependencies
+        if: steps.outdated.outputs.has_updates == 'true'
+        run: |
+          npm update
+          npm audit fix --force || true
+          
+      - name: 🧪 Run tests after update
+        if: steps.outdated.outputs.has_updates == 'true'
+        run: |
+          npm ci
+          npm run build
+          npm run lint
+          
+      - name: 📝 Create Pull Request
+        if: steps.outdated.outputs.has_updates == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: '🔄 chore: update dependencies'
+          title: '🔄 Automated dependency updates'
+          body: |
+            ## 📦 Dependency Updates
+            
+            This PR contains automated dependency updates.
+            
+            ### Changes:
+            - Updated npm packages to latest versions
+            - Fixed security vulnerabilities (if any)
+            
+            ### Testing:
+            - ✅ Build successful
+            - ✅ Linting passed
+            
+            Please review the changes before merging.
+          branch: chore/dependency-updates
+          delete-branch: true

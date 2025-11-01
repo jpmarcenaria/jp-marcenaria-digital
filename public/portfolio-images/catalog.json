@@ -1,0 +1,272 @@
+{
+  "generated": "2024-01-15T10:30:00.000Z",
+  "totalImages": 42,
+  "categories": {
+    "dormitorios": [
+      {
+        "filename": "dormitorio_moderno_1.jpg",
+        "url": "/portfolio-images/dormitorios/dormitorio_moderno_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "dormitorio_classico_1.jpg", 
+        "url": "/portfolio-images/dormitorios/dormitorio_classico_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "dormitorio_casal_1.jpg",
+        "url": "/portfolio-images/dormitorios/dormitorio_casal_1.jpg", 
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "dormitorio_solteiro_1.jpg",
+        "url": "/portfolio-images/dormitorios/dormitorio_solteiro_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "dormitorio_infantil_1.jpg",
+        "url": "/portfolio-images/dormitorios/dormitorio_infantil_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "dormitorio_suite_1.jpg",
+        "url": "/portfolio-images/dormitorios/dormitorio_suite_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      }
+    ],
+    "salas": [
+      {
+        "filename": "sala_estar_moderna_1.jpg",
+        "url": "/portfolio-images/salas/sala_estar_moderna_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "sala_tv_integrada_1.jpg",
+        "url": "/portfolio-images/salas/sala_tv_integrada_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "sala_jantar_elegante_1.jpg",
+        "url": "/portfolio-images/salas/sala_jantar_elegante_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "sala_estar_compacta_1.jpg",
+        "url": "/portfolio-images/salas/sala_estar_compacta_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "sala_home_theater_1.jpg",
+        "url": "/portfolio-images/salas/sala_home_theater_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "sala_varanda_gourmet_1.jpg",
+        "url": "/portfolio-images/salas/sala_varanda_gourmet_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      }
+    ],
+    "cozinhas": [
+      {
+        "filename": "cozinha_gourmet_1.jpg",
+        "url": "/portfolio-images/cozinhas/cozinha_gourmet_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "cozinha_americana_1.jpg",
+        "url": "/portfolio-images/cozinhas/cozinha_americana_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "cozinha_compacta_1.jpg",
+        "url": "/portfolio-images/cozinhas/cozinha_compacta_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "cozinha_ilha_central_1.jpg",
+        "url": "/portfolio-images/cozinhas/cozinha_ilha_central_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "cozinha_planejada_1.jpg",
+        "url": "/portfolio-images/cozinhas/cozinha_planejada_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "cozinha_integrada_1.jpg",
+        "url": "/portfolio-images/cozinhas/cozinha_integrada_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      }
+    ],
+    "banheiros": [
+      {
+        "filename": "banheiro_suite_1.jpg",
+        "url": "/portfolio-images/banheiros/banheiro_suite_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "banheiro_social_1.jpg",
+        "url": "/portfolio-images/banheiros/banheiro_social_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "banheiro_moderno_1.jpg",
+        "url": "/portfolio-images/banheiros/banheiro_moderno_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "banheiro_spa_1.jpg",
+        "url": "/portfolio-images/banheiros/banheiro_spa_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "banheiro_compacto_1.jpg",
+        "url": "/portfolio-images/banheiros/banheiro_compacto_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "banheiro_luxo_1.jpg",
+        "url": "/portfolio-images/banheiros/banheiro_luxo_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      }
+    ],
+    "escritorios": [
+      {
+        "filename": "escritorio_home_office_1.jpg",
+        "url": "/portfolio-images/escritorios/escritorio_home_office_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "escritorio_corporativo_1.jpg",
+        "url": "/portfolio-images/escritorios/escritorio_corporativo_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "escritorio_planejado_1.jpg",
+        "url": "/portfolio-images/escritorios/escritorio_planejado_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "escritorio_moderno_1.jpg",
+        "url": "/portfolio-images/escritorios/escritorio_moderno_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "escritorio_compacto_1.jpg",
+        "url": "/portfolio-images/escritorios/escritorio_compacto_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "escritorio_executivo_1.jpg",
+        "url": "/portfolio-images/escritorios/escritorio_executivo_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      }
+    ],
+    "closets": [
+      {
+        "filename": "closet_casal_1.jpg",
+        "url": "/portfolio-images/closets/closet_casal_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "closet_feminino_1.jpg",
+        "url": "/portfolio-images/closets/closet_feminino_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "closet_masculino_1.jpg",
+        "url": "/portfolio-images/closets/closet_masculino_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "closet_compacto_1.jpg",
+        "url": "/portfolio-images/closets/closet_compacto_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "closet_luxo_1.jpg",
+        "url": "/portfolio-images/closets/closet_luxo_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "closet_planejado_1.jpg",
+        "url": "/portfolio-images/closets/closet_planejado_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      }
+    ],
+    "lavanderias": [
+      {
+        "filename": "lavanderia_planejada_1.jpg",
+        "url": "/portfolio-images/lavanderias/lavanderia_planejada_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "lavanderia_compacta_1.jpg",
+        "url": "/portfolio-images/lavanderias/lavanderia_compacta_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "lavanderia_integrada_1.jpg",
+        "url": "/portfolio-images/lavanderias/lavanderia_integrada_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "lavanderia_moderna_1.jpg",
+        "url": "/portfolio-images/lavanderias/lavanderia_moderna_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "lavanderia_funcional_1.jpg",
+        "url": "/portfolio-images/lavanderias/lavanderia_funcional_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      },
+      {
+        "filename": "lavanderia_organizada_1.jpg",
+        "url": "/portfolio-images/lavanderias/lavanderia_organizada_1.jpg",
+        "dimensions": { "width": 1920, "height": 1080 },
+        "quality": "high"
+      }
+    ]
+  }
+}

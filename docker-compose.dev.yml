@@ -1,0 +1,93 @@
+# Docker Compose para Desenvolvimento - JP Marcenaria Digital
+version: '3.8'
+
+services:
+  # Aplicação Frontend em modo desenvolvimento
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: jp-marcenaria-dev
+    ports:
+      - "8080:8080"
+      - "24678:24678" # HMR port
+    environment:
+      - NODE_ENV=development
+      - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+      - VITE_SUPABASE_PUBLISHABLE_KEY=${VITE_SUPABASE_PUBLISHABLE_KEY}
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    restart: unless-stopped
+    networks:
+      - jp-marcenaria-dev-network
+    command: npm run dev -- --host 0.0.0.0 --port 8080
+
+  # Supabase Local (opcional para desenvolvimento offline)
+  supabase-db:
+    image: supabase/postgres:15.1.0.147
+    container_name: jp-marcenaria-supabase-db
+    ports:
+      - "54322:5432"
+    environment:
+      - POSTGRES_PASSWORD=your-super-secret-and-long-postgres-password
+      - POSTGRES_DB=postgres
+    volumes:
+      - supabase-db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - jp-marcenaria-dev-network
+    profiles:
+      - local-supabase
+
+  # Supabase Studio (opcional)
+  supabase-studio:
+    image: supabase/studio:20240101-ce42139
+    container_name: jp-marcenaria-supabase-studio
+    ports:
+      - "3000:3000"
+    environment:
+      - SUPABASE_URL=http://supabase-kong:8000
+      - SUPABASE_REST_URL=http://localhost:54321/rest/v1/
+      - SUPABASE_ANON_KEY=your-anon-key
+      - SUPABASE_SERVICE_KEY=your-service-key
+    depends_on:
+      - supabase-db
+    restart: unless-stopped
+    networks:
+      - jp-marcenaria-dev-network
+    profiles:
+      - local-supabase
+
+  # Mailhog para testes de email
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: jp-marcenaria-mailhog
+    ports:
+      - "1025:1025" # SMTP
+      - "8025:8025" # Web UI
+    restart: unless-stopped
+    networks:
+      - jp-marcenaria-dev-network
+    profiles:
+      - development
+
+  # Redis para desenvolvimento
+  redis-dev:
+    image: redis:7-alpine
+    container_name: jp-marcenaria-redis-dev
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    networks:
+      - jp-marcenaria-dev-network
+    profiles:
+      - development
+
+networks:
+  jp-marcenaria-dev-network:
+    driver: bridge
+
+volumes:
+  supabase-db-data:

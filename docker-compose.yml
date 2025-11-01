@@ -1,0 +1,103 @@
+# Docker Compose para JP Marcenaria Digital
+version: '3.8'
+
+services:
+  # Aplicação Frontend
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: jp-marcenaria-app
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+      - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+      - VITE_SUPABASE_PUBLISHABLE_KEY=${VITE_SUPABASE_PUBLISHABLE_KEY}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - jp-marcenaria-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jp-marcenaria.rule=Host(`localhost`)"
+      - "traefik.http.services.jp-marcenaria.loadbalancer.server.port=80"
+
+  # Nginx Proxy (opcional para load balancing)
+  nginx-proxy:
+    image: nginx:alpine
+    container_name: jp-marcenaria-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx-proxy.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - app
+    restart: unless-stopped
+    networks:
+      - jp-marcenaria-network
+    profiles:
+      - production
+
+  # Redis para cache (opcional)
+  redis:
+    image: redis:7-alpine
+    container_name: jp-marcenaria-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - jp-marcenaria-network
+    profiles:
+      - production
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-defaultpassword}
+
+  # Monitoramento com Prometheus (opcional)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: jp-marcenaria-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    restart: unless-stopped
+    networks:
+      - jp-marcenaria-network
+    profiles:
+      - monitoring
+
+  # Grafana para dashboards (opcional)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: jp-marcenaria-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+    volumes:
+      - grafana-data:/var/lib/grafana
+    restart: unless-stopped
+    networks:
+      - jp-marcenaria-network
+    profiles:
+      - monitoring
+
+networks:
+  jp-marcenaria-network:
+    driver: bridge
+
+volumes:
+  redis-data:
+  prometheus-data:
+  grafana-data:
