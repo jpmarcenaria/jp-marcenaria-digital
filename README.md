@@ -1,73 +1,118 @@
-# Welcome to your Lovable project
+# JP Marcenaria Digital
 
-## Project info
+Projeto open-source de landing page e portfólio profissional, com integração a Supabase, UI moderna com shadcn-ui/Tailwind e pipeline CI/CD. Otimizado para deploy contínuo na Vercel e testes E2E com Playwright.
 
-**URL**: https://lovable.dev/projects/719f1a6a-0f68-4aee-9a40-859817aa0465
+![Status CI/CD](https://github.com/jpmarcenaria/jp-marcenaria-digital/actions/workflows/ci-cd.yml/badge.svg)
+![Licença](https://img.shields.io/badge/license-MIT-green)
+![Node](https://img.shields.io/badge/node-20.x-339933?logo=node.js)
+![TypeScript](https://img.shields.io/badge/typescript-5.x-3178C6?logo=typescript)
+![Vite](https://img.shields.io/badge/vite-5.x-646CFF?logo=vite)
+![Vercel](https://img.shields.io/badge/vercel-deploy-black?logo=vercel)
 
-## How can I edit this code?
+## Descrição
+- Landing page e portfólio com componentes acessíveis e responsivos.
+- Páginas principais: Portfólio, Briefing, Foto Magia IA, Materiais.
+- Integrações: Supabase para dados, Playwright para E2E, Docker para dev/CI.
+- Deploy contínuo via GitHub Actions + Vercel.
 
-There are several ways of editing your application.
+## Requisitos de Sistema
+- `Node.js 20.x`
+- `npm` ou `pnpm`
+- Opcional: `Docker` e `Vercel CLI`
 
-**Use Lovable**
+## Instalação e Configuração
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/jpmarcenaria/jp-marcenaria-digital.git
+   cd jp-marcenaria-digital
+   ```
+2. Instale as dependências:
+   ```sh
+   npm ci
+   # ou
+   pnpm install
+   ```
+3. Configure variáveis de ambiente:
+   - Copie `.env.example` para `.env` e ajuste os valores.
+   - Consulte `docs/environment.md` para detalhes e recomendações.
+4. Desenvolvimento local:
+   ```sh
+   npm run dev
+   # Acesse http://localhost:5173/
+   ```
+5. Build de produção:
+   ```sh
+   npm run build
+   npm run preview
+   # Acesse http://localhost:4173/
+   ```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/719f1a6a-0f68-4aee-9a40-859817aa0465) and start prompting.
+## Exemplos de Uso
+- Rodar testes E2E:
+  ```sh
+  npm run test:e2e
+  npm run test:e2e:report
+  ```
+- Monitoramento/Security (local):
+  ```sh
+  npm run security:report
+  npm run security:ci
+  ```
 
-Changes made via Lovable will be committed automatically to this repo.
+## Deploy na Vercel
+- Arquivo `vercel.json` já configurado com:
+  - `buildCommand: npm run build`
+  - `outputDirectory: dist`
+  - `rewrites` para SPA
+  - `headers` de segurança (X-Content-Type-Options, X-Frame-Options, X-XSS-Protection)
+- Passos:
+  1. Conecte o repositório no dashboard da Vercel.
+  2. Configure variáveis de ambiente (Produção/Preview/Desenvolvimento).
+  3. Verifique scripts de build no `package.json`.
+  4. Push para `main` dispara deploy de produção.
+- Consulte `docs/deployment-vercel.md` e `VERCEL_SETUP.md`.
 
-**Use your preferred IDE**
+## CI/CD
+- Workflow principal: `.github/workflows/ci-cd.yml`
+  - Lint, build, testes E2E, scan de segurança (Trivy), build Docker e deploy.
+- Atualização automática de dependências: `.github/workflows/dependency-update.yml`.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## Estrutura de Pastas
+```
+jp-marcenaria-digital/
+├── src/                 # Código-fonte (React + Vite)
+├── public/              # Assets públicos, favicon, sitemap
+├── docs/                # Documentação técnica
+├── tests/               # Playwright E2E
+├── .github/workflows/   # Pipelines CI/CD
+├── vercel.json          # Configuração Vercel
+├── package.json         # Scripts e dependências
+├── README.md            # Este arquivo
 ```
 
-**Edit a file directly in GitHub**
+## Roadmap
+- Melhorias de acessibilidade (contraste, navegação por teclado).
+- Padronização total do tema escuro em todas as páginas.
+- Integração de analytics opt-in e conformidade LGPD.
+- Catálogo de materiais com filtros avançados.
+- Automação de screenshots e publicação no README.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Padrões Visuais
+- Markdown padronizado (títulos, listas, código).
+- Badges de status (CI/CD, licença, versões).
+- Diagramas e fluxos em `docs/architecture.md`.
+- Screenshots em `docs/screenshots/` (exemplo abaixo).
 
-**Use GitHub Codespaces**
+### Screenshot de exemplo
+![Screenshot](./public/placeholder.svg)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contribuição
+- Leia `CONTRIBUTING.md` para guidelines, convenções de commit e fluxo de PR.
 
-## What technologies are used for this project?
+## Licença
+- MIT — veja `LICENSE`.
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/719f1a6a-0f68-4aee-9a40-859817aa0465) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Referências
+- `docs/environment.md` — variáveis de ambiente
+- `docs/deployment-vercel.md` — deploy na Vercel
+- `docs/architecture.md` — arquitetura e componentes
