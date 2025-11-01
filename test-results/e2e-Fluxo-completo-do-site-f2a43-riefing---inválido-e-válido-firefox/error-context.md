@@ -1,0 +1,195 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "JPMARCENARIA" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: JPMARCENARIA
+        - generic [ref=e9]:
+          - link "Portfólio" [ref=e10] [cursor=pointer]:
+            - /url: /portfolio
+          - link "Para Arquitetos" [ref=e11] [cursor=pointer]:
+            - /url: /arquitetos
+          - link "Materiais" [ref=e12] [cursor=pointer]:
+            - /url: /materiais
+          - link "FOTO MAGIA IA" [ref=e13] [cursor=pointer]:
+            - /url: /foto-magia-ia
+          - link "Enviar Briefing" [ref=e14] [cursor=pointer]:
+            - /url: /briefing
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - img [ref=e18]
+        - heading "Briefing Técnico" [level=1] [ref=e22]
+        - paragraph [ref=e23]: Preencha as informações do projeto para receber orçamento detalhado em até 48 horas úteis
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - heading "Dados de Contato" [level=2] [ref=e27]
+          - generic [ref=e28]:
+            - generic [ref=e29]:
+              - text: Nome Completo *
+              - textbox "Nome Completo *" [ref=e30]:
+                - /placeholder: Seu nome
+            - generic [ref=e31]:
+              - text: WhatsApp *
+              - textbox "WhatsApp *" [ref=e32]:
+                - /placeholder: (11) 98765-4321
+            - generic [ref=e33]:
+              - text: Email
+              - textbox "Email" [ref=e34]:
+                - /placeholder: seu@email.com
+        - generic [ref=e35]:
+          - heading "Detalhes do Projeto" [level=2] [ref=e36]
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - text: Nome da Obra / Projeto
+              - textbox "Nome da Obra / Projeto" [ref=e39]:
+                - /placeholder: "Ex: Apartamento Perdizes"
+            - generic [ref=e40]:
+              - generic [ref=e41]: Ambientes a executar
+              - generic [ref=e42]:
+                - generic [ref=e43]:
+                  - checkbox "Cozinha" [ref=e44] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e45]: Cozinha
+                - generic [ref=e46]:
+                  - checkbox "Home Office" [ref=e47] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e48]: Home Office
+                - generic [ref=e49]:
+                  - checkbox "Closet" [ref=e50] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e51]: Closet
+                - generic [ref=e52]:
+                  - checkbox "Quarto" [ref=e53] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e54]: Quarto
+                - generic [ref=e55]:
+                  - checkbox "Área Gourmet" [ref=e56] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e57]: Área Gourmet
+                - generic [ref=e58]:
+                  - checkbox "Lavanderia" [ref=e59] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e60]: Lavanderia
+                - generic [ref=e61]:
+                  - checkbox "Banheiro" [ref=e62] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e63]: Banheiro
+                - generic [ref=e64]:
+                  - checkbox "Sala" [ref=e65] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e66]: Sala
+            - generic [ref=e67]:
+              - text: Medidas Aproximadas
+              - textbox "Medidas Aproximadas" [ref=e68]:
+                - /placeholder: "Ex: Cozinha 3m x 4m, Home Office 2,5m x 3m"
+        - generic [ref=e69]:
+          - heading "Materiais e Acabamentos" [level=2] [ref=e70]
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - generic [ref=e73]: Materiais desejados
+              - generic [ref=e74]:
+                - generic [ref=e75]:
+                  - checkbox "MDF Branco" [ref=e76] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e77]: MDF Branco
+                - generic [ref=e78]:
+                  - checkbox "MDF Amadeirado" [ref=e79] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e80]: MDF Amadeirado
+                - generic [ref=e81]:
+                  - checkbox "MDF Laqueado" [ref=e82] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e83]: MDF Laqueado
+                - generic [ref=e84]:
+                  - checkbox "MDP Melamínico" [ref=e85] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e86]: MDP Melamínico
+                - generic [ref=e87]:
+                  - checkbox "Painel Ripado" [ref=e88] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e89]: Painel Ripado
+                - generic [ref=e90]:
+                  - checkbox "LED Integrado" [ref=e91] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e92]: LED Integrado
+                - generic [ref=e93]:
+                  - checkbox "Blum / Hettich" [ref=e94] [cursor=pointer]
+                  - checkbox
+                  - generic [ref=e95]: Blum / Hettich
+            - generic [ref=e96]:
+              - text: Prazo Desejado
+              - textbox "Prazo Desejado" [ref=e97]:
+                - /placeholder: "Ex: 30 dias, Urgente, Sem pressa"
+        - generic [ref=e98]:
+          - heading "Informações Adicionais" [level=2] [ref=e99]
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - text: Observações e Requisitos Especiais
+              - textbox "Observações e Requisitos Especiais" [ref=e102]:
+                - /placeholder: "Ex: Preciso de gavetas especiais para utensílios, LED com controle dimmer, etc."
+            - generic [ref=e103]:
+              - img [ref=e104]
+              - paragraph [ref=e108]: Tem plantas, referências ou fotos do local?
+              - paragraph [ref=e109]: Envie pelo WhatsApp após o preenchimento do briefing
+        - generic [ref=e110]:
+          - button "Limpar Formulário" [ref=e111] [cursor=pointer]
+          - button "Enviar Briefing" [ref=e112] [cursor=pointer]
+    - contentinfo [ref=e113]:
+      - generic [ref=e114]:
+        - generic [ref=e115]:
+          - generic [ref=e116]:
+            - generic [ref=e117]: JPMARCENARIA
+            - paragraph [ref=e118]: 30 anos construindo sonhos com móveis planejados de alta qualidade.
+            - generic [ref=e119]:
+              - link [ref=e120] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e121]
+              - link [ref=e125] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e126]
+          - generic [ref=e128]:
+            - heading "Links Rápidos" [level=3] [ref=e129]
+            - list [ref=e130]:
+              - listitem [ref=e131]:
+                - link "Portfólio" [ref=e132] [cursor=pointer]:
+                  - /url: /portfolio
+              - listitem [ref=e133]:
+                - link "Tecnologia" [ref=e134] [cursor=pointer]:
+                  - /url: /tecnologia
+              - listitem [ref=e135]:
+                - link "Sobre Nós" [ref=e136] [cursor=pointer]:
+                  - /url: /sobre
+              - listitem [ref=e137]:
+                - link "Blog" [ref=e138] [cursor=pointer]:
+                  - /url: /blog
+          - generic [ref=e139]:
+            - heading "Serviços" [level=3] [ref=e140]
+            - list [ref=e141]:
+              - listitem [ref=e142]: Cozinhas Planejadas
+              - listitem [ref=e143]: Painéis Ripados com LED
+              - listitem [ref=e144]: Home Office
+              - listitem [ref=e145]: Área Gourmet
+              - listitem [ref=e146]: Quartos e Closets
+          - generic [ref=e147]:
+            - heading "Contato" [level=3] [ref=e148]
+            - list [ref=e149]:
+              - listitem [ref=e150]:
+                - img [ref=e151]
+                - generic "Telefone de contato" [ref=e153]: (13) 97414-6380
+              - listitem [ref=e154]:
+                - img [ref=e155]
+                - generic [ref=e158]: contato@jpmarcenaria.com.br
+              - listitem [ref=e159]:
+                - img [ref=e160]
+                - generic "Localização" [ref=e163]: Guarujá, SP
+        - generic [ref=e164]:
+          - paragraph [ref=e165]: © 2025 JP Marcenaria. Todos os direitos reservados.
+          - paragraph [ref=e166]: Se for madeira, deixe conosco.
+```

@@ -1,0 +1,2074 @@
+<testsuites id="" name="" tests="85" failures="42" skipped="22" errors="0" time="255.488971">
+<testsuite name="button-click-moveis-planejados.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="chromium" tests="1" failures="1" skipped="0" time="19.414" errors="0">
+<testcase name="Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo" classname="button-click-moveis-planejados.spec.ts" time="19.414">
+<failure message="button-click-moveis-planejados.spec.ts:30:3 Deve clicar no botão Móveis Planejados e verificar carregamento completo" type="FAILURE">
+<![CDATA[  [chromium] › button-click-moveis-planejados.spec.ts:30:3 › Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+
+
+      44 |
+      45 |     // Verificar se o elemento existe
+    > 46 |     await expect(targetButton).toBeVisible({ timeout: 10000 });
+         |                                ^
+      47 |     
+      48 |     enhancedLogger.info("Elemento alvo identificado com sucesso", {
+      49 |       selector: "button[role=\"tab\"] com texto \"Móveis Planejados\"",
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\button-click-moveis-planejados.spec.ts:46:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-chromium\video.webm]]
+
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="button-click-simple.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="chromium" tests="1" failures="1" skipped="0" time="19.236" errors="0">
+<testcase name="Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo" classname="button-click-simple.spec.ts" time="19.236">
+<failure message="button-click-simple.spec.ts:9:3 Deve clicar no botão Móveis Planejados e verificar carregamento completo" type="FAILURE">
+<![CDATA[  [chromium] › button-click-simple.spec.ts:9:3 › Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+
+
+      24 |
+      25 |     // Verificar se o elemento existe e está visível
+    > 26 |     await expect(targetButton).toBeVisible({ timeout: 10000 });
+         |                                ^
+      27 |     console.log("✅ Elemento alvo identificado e visível");
+      28 |
+      29 |     // 2. CAPTURA DE EVIDÊNCIA VISUAL ANTES DO CLIQUE
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\button-click-simple.spec.ts:26:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[🚀 Iniciando teste de clique no botão Móveis Planejados
+📍 Passo 1: Identificação do elemento alvo
+✅ Página carregada: /portfolio
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-chromium\video.webm]]
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="comprehensive-e2e.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="chromium" tests="7" failures="4" skipped="0" time="47.137" errors="0">
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Fluxo completo de navegação e usabilidade" classname="comprehensive-e2e.spec.ts" time="14.254">
+<failure message="comprehensive-e2e.spec.ts:115:3 Fluxo completo de navegação e usabilidade" type="FAILURE">
+<![CDATA[  [chromium] › comprehensive-e2e.spec.ts:115:3 › Testes E2E Abrangentes - JP Marcenaria › Fluxo completo de navegação e usabilidade 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('main')
+
+
+      124 |       // Verificar elementos essenciais
+      125 |       await expect(page.locator('nav')).toBeVisible();
+    > 126 |       await expect(page.locator('main')).toBeVisible();
+          |                                          ^
+      127 |       await expect(page.locator('footer')).toBeVisible();
+      128 |       
+      129 |       // Capturar métricas de performance
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:126:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-chromium\video.webm]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Formulários de contato e validação" classname="comprehensive-e2e.spec.ts" time="2.016">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Performance e otimização de recursos" classname="comprehensive-e2e.spec.ts" time="4.921">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Cenários de erro e recuperação" classname="comprehensive-e2e.spec.ts" time="9.669">
+<failure message="comprehensive-e2e.spec.ts:287:3 Cenários de erro e recuperação" type="FAILURE">
+<![CDATA[  [chromium] › comprehensive-e2e.spec.ts:287:3 › Testes E2E Abrangentes - JP Marcenaria › Cenários de erro e recuperação 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('main')
+
+
+      321 |       
+      322 |       // Verificar se conteúdo básico ainda é acessível
+    > 323 |       await expect(page.locator('main')).toBeVisible();
+          |                                          ^
+      324 |       
+      325 |       await testUtils.endTestTransaction(true);
+      326 |       
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:323:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-chromium\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Integração com sistemas externos" classname="comprehensive-e2e.spec.ts" time="2.296">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Acessibilidade e usabilidade avançada" classname="comprehensive-e2e.spec.ts" time="2.046">
+<failure message="comprehensive-e2e.spec.ts:393:3 Acessibilidade e usabilidade avançada" type="FAILURE">
+<![CDATA[  [chromium] › comprehensive-e2e.spec.ts:393:3 › Testes E2E Abrangentes - JP Marcenaria › Acessibilidade e usabilidade avançada 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      413 |       // 2. Verificar landmarks ARIA
+      414 |       const landmarks = await page.locator('[role="main"], [role="navigation"], [role="banner"], [role="contentinfo"]').count();
+    > 415 |       expect(landmarks).toBeGreaterThan(0);
+          |                         ^
+      416 |       
+      417 |       // 3. Verificar headings hierárquicos
+      418 |       const headings = await page.locator('h1, h2, h3, h4, h5, h6').all();
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:415:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-chromium\video.webm]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes de Regressão › Verificar funcionalidades críticas após mudanças" classname="comprehensive-e2e.spec.ts" time="11.935">
+<failure message="comprehensive-e2e.spec.ts:461:3 Verificar funcionalidades críticas após mudanças" type="FAILURE">
+<![CDATA[  [chromium] › comprehensive-e2e.spec.ts:461:3 › Testes de Regressão › Verificar funcionalidades críticas após mudanças 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('main').first()
+
+
+      478 |         
+      479 |         const element = page.locator(feature.selector);
+    > 480 |         await expect(element.first()).toBeVisible({ timeout: 10000 });
+          |                                       ^
+      481 |         
+      482 |         enhancedLogger.info(`Critical feature verified: ${feature.name}`, { feature }, transactionId);
+      483 |       }
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:480:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-chromium\video.webm]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="coverage.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.003" errors="0">
+<testcase name="Cobertura mínima de código" classname="coverage.spec.ts" time="0.003">
+<system-err>
+<![CDATA[Diretório de cobertura não encontrado; pulando verificação.
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="e2e.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="chromium" tests="6" failures="1" skipped="4" time="135.393" errors="0">
+<testcase name="Fluxo completo do site › Navegação principal via Navbar e acessibilidade" classname="e2e.spec.ts" time="9.278">
+</testcase>
+<testcase name="Fluxo completo do site › Clicar elementos interativos em Home" classname="e2e.spec.ts" time="126.115">
+<failure message="e2e.spec.ts:36:3 Clicar elementos interativos em Home" type="FAILURE">
+<![CDATA[  [chromium] › e2e.spec.ts:36:3 › Fluxo completo do site › Clicar elementos interativos em Home ────
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.getAttribute: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for getByRole('link').nth(1)
+
+
+       at utils\interactions.ts:6
+
+      4 |   const links = await page.getByRole('link').all();
+      5 |   for (const link of links) {
+    > 6 |     const href = await link.getAttribute('href');
+        |                             ^
+      7 |     if (!href || href.startsWith('#')) continue;
+      8 |     try { await link.scrollIntoViewIfNeeded(); await link.click({ force: true }); } catch {}
+      9 |     await page.waitForLoadState('domcontentloaded');
+        at clickAllInteractive (C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\utils\interactions.ts:6:29)
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\e2e.spec.ts:38:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-f2bef-ementos-interativos-em-Home-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-f2bef-ementos-interativos-em-Home-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-f2bef-ementos-interativos-em-Home-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-f2bef-ementos-interativos-em-Home-chromium\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Fluxo completo do site › Formulário Briefing - inválido e válido" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Formulário Orçamento - inválido e válido" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Página 404 NotFound" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › WhatsApp CTA - formatação, codificação e URLs" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="portfolio.smoke.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="chromium" tests="1" failures="1" skipped="0" time="2.745" errors="0">
+<testcase name="Portfólio de Móveis - Smoke › Imagens carregam e cards são clicáveis" classname="portfolio.smoke.spec.ts" time="2.745">
+<failure message="portfolio.smoke.spec.ts:6:3 Imagens carregam e cards são clicáveis" type="FAILURE">
+<![CDATA[  [chromium] › portfolio.smoke.spec.ts:6:3 › Portfólio de Móveis - Smoke › Imagens carregam e cards são clicáveis 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8082/
+    Call log:
+      - navigating to "http://localhost:8082/", waiting until "load"
+
+
+       5 | test.describe("Portfólio de Móveis - Smoke", () => {
+       6 |   test("Imagens carregam e cards são clicáveis", async ({ page }) => {
+    >  7 |     await page.goto(BASE_URL);
+         |                ^
+       8 |     // aguarda primeira imagem visível
+       9 |     const img = page.locator('img[alt]');
+      10 |     await expect(img.first()).toBeVisible({ timeout: 15000 });
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\portfolio.smoke.spec.ts:7:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-chromium\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="button-click-moveis-planejados.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="firefox" tests="1" failures="1" skipped="0" time="14.529" errors="0">
+<testcase name="Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo" classname="button-click-moveis-planejados.spec.ts" time="14.529">
+<failure message="button-click-moveis-planejados.spec.ts:30:3 Deve clicar no botão Móveis Planejados e verificar carregamento completo" type="FAILURE">
+<![CDATA[  [firefox] › button-click-moveis-planejados.spec.ts:30:3 › Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+
+
+      44 |
+      45 |     // Verificar se o elemento existe
+    > 46 |     await expect(targetButton).toBeVisible({ timeout: 10000 });
+         |                                ^
+      47 |     
+      48 |     enhancedLogger.info("Elemento alvo identificado com sucesso", {
+      49 |       selector: "button[role=\"tab\"] com texto \"Móveis Planejados\"",
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\button-click-moveis-planejados.spec.ts:46:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-firefox\video.webm]]
+
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="button-click-simple.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="firefox" tests="1" failures="1" skipped="0" time="13.408" errors="0">
+<testcase name="Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo" classname="button-click-simple.spec.ts" time="13.408">
+<failure message="button-click-simple.spec.ts:9:3 Deve clicar no botão Móveis Planejados e verificar carregamento completo" type="FAILURE">
+<![CDATA[  [firefox] › button-click-simple.spec.ts:9:3 › Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+
+
+      24 |
+      25 |     // Verificar se o elemento existe e está visível
+    > 26 |     await expect(targetButton).toBeVisible({ timeout: 10000 });
+         |                                ^
+      27 |     console.log("✅ Elemento alvo identificado e visível");
+      28 |
+      29 |     // 2. CAPTURA DE EVIDÊNCIA VISUAL ANTES DO CLIQUE
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\button-click-simple.spec.ts:26:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[🚀 Iniciando teste de clique no botão Móveis Planejados
+📍 Passo 1: Identificação do elemento alvo
+✅ Página carregada: /portfolio
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-firefox\video.webm]]
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="comprehensive-e2e.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="firefox" tests="7" failures="4" skipped="0" time="46.508" errors="0">
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Fluxo completo de navegação e usabilidade" classname="comprehensive-e2e.spec.ts" time="8.305">
+<failure message="comprehensive-e2e.spec.ts:115:3 Fluxo completo de navegação e usabilidade" type="FAILURE">
+<![CDATA[  [firefox] › comprehensive-e2e.spec.ts:115:3 › Testes E2E Abrangentes - JP Marcenaria › Fluxo completo de navegação e usabilidade 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('main')
+
+
+      124 |       // Verificar elementos essenciais
+      125 |       await expect(page.locator('nav')).toBeVisible();
+    > 126 |       await expect(page.locator('main')).toBeVisible();
+          |                                          ^
+      127 |       await expect(page.locator('footer')).toBeVisible();
+      128 |       
+      129 |       // Capturar métricas de performance
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:126:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-firefox\video.webm]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Formulários de contato e validação" classname="comprehensive-e2e.spec.ts" time="4.055">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Performance e otimização de recursos" classname="comprehensive-e2e.spec.ts" time="4.991">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Cenários de erro e recuperação" classname="comprehensive-e2e.spec.ts" time="10.196">
+<failure message="comprehensive-e2e.spec.ts:287:3 Cenários de erro e recuperação" type="FAILURE">
+<![CDATA[  [firefox] › comprehensive-e2e.spec.ts:287:3 › Testes E2E Abrangentes - JP Marcenaria › Cenários de erro e recuperação 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('main')
+
+
+      321 |       
+      322 |       // Verificar se conteúdo básico ainda é acessível
+    > 323 |       await expect(page.locator('main')).toBeVisible();
+          |                                          ^
+      324 |       
+      325 |       await testUtils.endTestTransaction(true);
+      326 |       
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:323:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-firefox\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Integração com sistemas externos" classname="comprehensive-e2e.spec.ts" time="3.998">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Acessibilidade e usabilidade avançada" classname="comprehensive-e2e.spec.ts" time="2.362">
+<failure message="comprehensive-e2e.spec.ts:393:3 Acessibilidade e usabilidade avançada" type="FAILURE">
+<![CDATA[  [firefox] › comprehensive-e2e.spec.ts:393:3 › Testes E2E Abrangentes - JP Marcenaria › Acessibilidade e usabilidade avançada 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      413 |       // 2. Verificar landmarks ARIA
+      414 |       const landmarks = await page.locator('[role="main"], [role="navigation"], [role="banner"], [role="contentinfo"]').count();
+    > 415 |       expect(landmarks).toBeGreaterThan(0);
+          |                         ^
+      416 |       
+      417 |       // 3. Verificar headings hierárquicos
+      418 |       const headings = await page.locator('h1, h2, h3, h4, h5, h6').all();
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:415:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-firefox\video.webm]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes de Regressão › Verificar funcionalidades críticas após mudanças" classname="comprehensive-e2e.spec.ts" time="12.601">
+<failure message="comprehensive-e2e.spec.ts:461:3 Verificar funcionalidades críticas após mudanças" type="FAILURE">
+<![CDATA[  [firefox] › comprehensive-e2e.spec.ts:461:3 › Testes de Regressão › Verificar funcionalidades críticas após mudanças 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('main').first()
+
+
+      478 |         
+      479 |         const element = page.locator(feature.selector);
+    > 480 |         await expect(element.first()).toBeVisible({ timeout: 10000 });
+          |                                       ^
+      481 |         
+      482 |         enhancedLogger.info(`Critical feature verified: ${feature.name}`, { feature }, transactionId);
+      483 |       }
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:480:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-firefox\video.webm]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="coverage.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="firefox" tests="1" failures="0" skipped="0" time="0.003" errors="0">
+<testcase name="Cobertura mínima de código" classname="coverage.spec.ts" time="0.003">
+<system-err>
+<![CDATA[Diretório de cobertura não encontrado; pulando verificação.
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="e2e.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="firefox" tests="6" failures="1" skipped="3" time="9.877" errors="0">
+<testcase name="Fluxo completo do site › Navegação principal via Navbar e acessibilidade" classname="e2e.spec.ts" time="5.011">
+</testcase>
+<testcase name="Fluxo completo do site › Clicar elementos interativos em Home" classname="e2e.spec.ts" time="3.565">
+</testcase>
+<testcase name="Fluxo completo do site › Formulário Briefing - inválido e válido" classname="e2e.spec.ts" time="1.301">
+<failure message="e2e.spec.ts:42:3 Formulário Briefing - inválido e válido" type="FAILURE">
+<![CDATA[  [firefox] › e2e.spec.ts:42:3 › Fluxo completo do site › Formulário Briefing - inválido e válido ──
+
+    Error: locator.fill: Error: strict mode violation: getByRole('textbox', { name: /Nome/i }) resolved to 2 elements:
+        1) <input id="nome" name="nome" placeholder="Seu nome" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-1"/> aka getByRole('textbox', { name: 'Nome Completo *' })
+        2) <input id="obra" name="obra" placeholder="Ex: Apartamento Perdizes" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-1"/> aka getByRole('textbox', { name: 'Nome da Obra / Projeto' })
+
+    Call log:
+      - waiting for getByRole('textbox', { name: /Nome/i })
+
+
+      46 |
+      47 |     // Submissão inválida
+    > 48 |     await page.getByRole('textbox', { name: /Nome/i }).fill('A');
+         |                                                        ^
+      49 |     await page.getByRole('textbox', { name: /Telefone/i }).fill('');
+      50 |     await page.getByRole('button', { name: /Enviar/i }).click();
+      51 |     // Erros esperados (baseados em zod/rhf)
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\e2e.spec.ts:48:56
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-f2a43-riefing---inválido-e-válido-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-f2a43-riefing---inválido-e-válido-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-Fluxo-completo-do-site-f2a43-riefing---inválido-e-válido-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-f2a43-riefing---inválido-e-válido-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-f2a43-riefing---inválido-e-válido-firefox\video.webm]]
+
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-f2a43-riefing---inválido-e-válido-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Fluxo completo do site › Formulário Orçamento - inválido e válido" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Página 404 NotFound" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › WhatsApp CTA - formatação, codificação e URLs" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="portfolio.smoke.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="firefox" tests="1" failures="1" skipped="0" time="4.26" errors="0">
+<testcase name="Portfólio de Móveis - Smoke › Imagens carregam e cards são clicáveis" classname="portfolio.smoke.spec.ts" time="4.26">
+<failure message="portfolio.smoke.spec.ts:6:3 Imagens carregam e cards são clicáveis" type="FAILURE">
+<![CDATA[  [firefox] › portfolio.smoke.spec.ts:6:3 › Portfólio de Móveis - Smoke › Imagens carregam e cards são clicáveis 
+
+    Error: page.goto: NS_ERROR_CONNECTION_REFUSED
+    Call log:
+      - navigating to "http://localhost:8082/", waiting until "load"
+
+
+       5 | test.describe("Portfólio de Móveis - Smoke", () => {
+       6 |   test("Imagens carregam e cards são clicáveis", async ({ page }) => {
+    >  7 |     await page.goto(BASE_URL);
+         |                ^
+       8 |     // aguarda primeira imagem visível
+       9 |     const img = page.locator('img[alt]');
+      10 |     await expect(img.first()).toBeVisible({ timeout: 15000 });
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\portfolio.smoke.spec.ts:7:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-firefox\video.webm]]
+
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="button-click-moveis-planejados.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="webkit" tests="1" failures="1" skipped="0" time="11.66" errors="0">
+<testcase name="Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo" classname="button-click-moveis-planejados.spec.ts" time="11.66">
+<failure message="button-click-moveis-planejados.spec.ts:30:3 Deve clicar no botão Móveis Planejados e verificar carregamento completo" type="FAILURE">
+<![CDATA[  [webkit] › button-click-moveis-planejados.spec.ts:30:3 › Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+
+
+      44 |
+      45 |     // Verificar se o elemento existe
+    > 46 |     await expect(targetButton).toBeVisible({ timeout: 10000 });
+         |                                ^
+      47 |     
+      48 |     enhancedLogger.info("Elemento alvo identificado com sucesso", {
+      49 |       selector: "button[role=\"tab\"] com texto \"Móveis Planejados\"",
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\button-click-moveis-planejados.spec.ts:46:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-webkit\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="button-click-simple.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="webkit" tests="1" failures="1" skipped="0" time="11.278" errors="0">
+<testcase name="Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo" classname="button-click-simple.spec.ts" time="11.278">
+<failure message="button-click-simple.spec.ts:9:3 Deve clicar no botão Móveis Planejados e verificar carregamento completo" type="FAILURE">
+<![CDATA[  [webkit] › button-click-simple.spec.ts:9:3 › Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+
+
+      24 |
+      25 |     // Verificar se o elemento existe e está visível
+    > 26 |     await expect(targetButton).toBeVisible({ timeout: 10000 });
+         |                                ^
+      27 |     console.log("✅ Elemento alvo identificado e visível");
+      28 |
+      29 |     // 2. CAPTURA DE EVIDÊNCIA VISUAL ANTES DO CLIQUE
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\button-click-simple.spec.ts:26:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🚀 Iniciando teste de clique no botão Móveis Planejados
+📍 Passo 1: Identificação do elemento alvo
+✅ Página carregada: /portfolio
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-webkit\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="comprehensive-e2e.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="webkit" tests="7" failures="5" skipped="0" time="153.881" errors="0">
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Fluxo completo de navegação e usabilidade" classname="comprehensive-e2e.spec.ts" time="6.131">
+<failure message="comprehensive-e2e.spec.ts:115:3 Fluxo completo de navegação e usabilidade" type="FAILURE">
+<![CDATA[  [webkit] › comprehensive-e2e.spec.ts:115:3 › Testes E2E Abrangentes - JP Marcenaria › Fluxo completo de navegação e usabilidade 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('nav')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('nav')
+
+
+      123 |       
+      124 |       // Verificar elementos essenciais
+    > 125 |       await expect(page.locator('nav')).toBeVisible();
+          |                                         ^
+      126 |       await expect(page.locator('main')).toBeVisible();
+      127 |       await expect(page.locator('footer')).toBeVisible();
+      128 |       
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:125:41
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-webkit\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Formulários de contato e validação" classname="comprehensive-e2e.spec.ts" time="120.143">
+<failure message="comprehensive-e2e.spec.ts:171:3 Formulários de contato e validação" type="FAILURE">
+<![CDATA[  [webkit] › comprehensive-e2e.spec.ts:171:3 › Testes E2E Abrangentes - JP Marcenaria › Formulários de contato e validação 
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: /enviar|solicitar/i })
+
+
+      181 |       await testUtils.logTestAction('Testando validação de campos obrigatórios');
+      182 |       const submitButton = page.getByRole('button', { name: /enviar|solicitar/i });
+    > 183 |       await submitButton.click();
+          |                          ^
+      184 |       
+      185 |       // Verificar mensagens de erro
+      186 |       const errorMessages = page.locator('[role="alert"], .error, [data-error="true"]');
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:183:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-18c2f-rios-de-contato-e-validação-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-18c2f-rios-de-contato-e-validação-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-18c2f-rios-de-contato-e-validação-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-18c2f-rios-de-contato-e-validação-webkit\video.webm]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[Failed to send logs: TypeError: fetch failed
+[90m    at node:internal/deps/undici/undici:15845:13[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at EnhancedLogger.flush [90m(file:///C:/Repositorios/landpage-jpmarcenaria/jp-marcenaria-digital/[39msrc/utils/enhanced-logging.ts:331:9[90m)[39m {
+  [cause]: AggregateError: 
+  [90m    at internalConnectMultiple (node:net:1134:18)[39m
+  [90m    at afterConnectMultiple (node:net:1715:7)[39m {
+    code: [32m'ECONNREFUSED'[39m,
+    [errors]: [ [36m[Error][39m, [36m[Error][39m ]
+  }
+}
+Failed to send logs: TypeError: fetch failed
+[90m    at node:internal/deps/undici/undici:15845:13[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at EnhancedLogger.flush [90m(file:///C:/Repositorios/landpage-jpmarcenaria/jp-marcenaria-digital/[39msrc/utils/enhanced-logging.ts:331:9[90m)[39m {
+  [cause]: AggregateError: 
+  [90m    at internalConnectMultiple (node:net:1134:18)[39m
+  [90m    at afterConnectMultiple (node:net:1715:7)[39m {
+    code: [32m'ECONNREFUSED'[39m,
+    [errors]: [ [36m[Error][39m, [36m[Error][39m ]
+  }
+}
+Failed to send logs: TypeError: fetch failed
+[90m    at node:internal/deps/undici/undici:15845:13[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at EnhancedLogger.flush [90m(file:///C:/Repositorios/landpage-jpmarcenaria/jp-marcenaria-digital/[39msrc/utils/enhanced-logging.ts:331:9[90m)[39m {
+  [cause]: AggregateError: 
+  [90m    at internalConnectMultiple (node:net:1134:18)[39m
+  [90m    at afterConnectMultiple (node:net:1715:7)[39m {
+    code: [32m'ECONNREFUSED'[39m,
+    [errors]: [ [36m[Error][39m, [36m[Error][39m ]
+  }
+}
+Failed to send logs: TypeError: fetch failed
+[90m    at node:internal/deps/undici/undici:15845:13[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at EnhancedLogger.flush [90m(file:///C:/Repositorios/landpage-jpmarcenaria/jp-marcenaria-digital/[39msrc/utils/enhanced-logging.ts:331:9[90m)[39m {
+  [cause]: AggregateError: 
+  [90m    at internalConnectMultiple (node:net:1134:18)[39m
+  [90m    at afterConnectMultiple (node:net:1715:7)[39m {
+    code: [32m'ECONNREFUSED'[39m,
+    [errors]: [ [36m[Error][39m, [36m[Error][39m ]
+  }
+}
+]]>
+</system-err>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Performance e otimização de recursos" classname="comprehensive-e2e.spec.ts" time="4.204">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Cenários de erro e recuperação" classname="comprehensive-e2e.spec.ts" time="9.251">
+<failure message="comprehensive-e2e.spec.ts:287:3 Cenários de erro e recuperação" type="FAILURE">
+<![CDATA[  [webkit] › comprehensive-e2e.spec.ts:287:3 › Testes E2E Abrangentes - JP Marcenaria › Cenários de erro e recuperação 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('main')
+
+
+      321 |       
+      322 |       // Verificar se conteúdo básico ainda é acessível
+    > 323 |       await expect(page.locator('main')).toBeVisible();
+          |                                          ^
+      324 |       
+      325 |       await testUtils.endTestTransaction(true);
+      326 |       
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:323:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-webkit\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Integração com sistemas externos" classname="comprehensive-e2e.spec.ts" time="1.557">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Acessibilidade e usabilidade avançada" classname="comprehensive-e2e.spec.ts" time="1.523">
+<failure message="comprehensive-e2e.spec.ts:393:3 Acessibilidade e usabilidade avançada" type="FAILURE">
+<![CDATA[  [webkit] › comprehensive-e2e.spec.ts:393:3 › Testes E2E Abrangentes - JP Marcenaria › Acessibilidade e usabilidade avançada 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      413 |       // 2. Verificar landmarks ARIA
+      414 |       const landmarks = await page.locator('[role="main"], [role="navigation"], [role="banner"], [role="contentinfo"]').count();
+    > 415 |       expect(landmarks).toBeGreaterThan(0);
+          |                         ^
+      416 |       
+      417 |       // 3. Verificar headings hierárquicos
+      418 |       const headings = await page.locator('h1, h2, h3, h4, h5, h6').all();
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:415:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-webkit\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes de Regressão › Verificar funcionalidades críticas após mudanças" classname="comprehensive-e2e.spec.ts" time="11.072">
+<failure message="comprehensive-e2e.spec.ts:461:3 Verificar funcionalidades críticas após mudanças" type="FAILURE">
+<![CDATA[  [webkit] › comprehensive-e2e.spec.ts:461:3 › Testes de Regressão › Verificar funcionalidades críticas após mudanças 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('main').first()
+
+
+      478 |         
+      479 |         const element = page.locator(feature.selector);
+    > 480 |         await expect(element.first()).toBeVisible({ timeout: 10000 });
+          |                                       ^
+      481 |         
+      482 |         enhancedLogger.info(`Critical feature verified: ${feature.name}`, { feature }, transactionId);
+      483 |       }
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:480:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-webkit\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="coverage.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="webkit" tests="1" failures="0" skipped="0" time="0.002" errors="0">
+<testcase name="Cobertura mínima de código" classname="coverage.spec.ts" time="0.002">
+<system-err>
+<![CDATA[Diretório de cobertura não encontrado; pulando verificação.
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="e2e.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="webkit" tests="6" failures="1" skipped="5" time="120.149" errors="0">
+<testcase name="Fluxo completo do site › Navegação principal via Navbar e acessibilidade" classname="e2e.spec.ts" time="120.149">
+<failure message="e2e.spec.ts:9:3 Navegação principal via Navbar e acessibilidade" type="FAILURE">
+<![CDATA[  [webkit] › e2e.spec.ts:9:3 › Fluxo completo do site › Navegação principal via Navbar e acessibilidade 
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for getByRole('navigation').getByRole('link', { name: 'Portfólio' }).first()
+
+
+      13 |     await saveCoverage(page, 'home');
+      14 |
+    > 15 |     await page.getByRole('navigation').getByRole('link', { name: 'Portfólio' }).first().click();
+         |                                                                                         ^
+      16 |     await expect(page).toHaveURL(/\/portfolio/);
+      17 |     await checkWcagAA(page, 'Portfolio');
+      18 |     await saveCoverage(page, 'portfolio');
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\e2e.spec.ts:15:89
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-webkit\video-1.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-webkit\video-1.webm]]
+
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-webkit\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Fluxo completo do site › Clicar elementos interativos em Home" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Formulário Briefing - inválido e válido" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Formulário Orçamento - inválido e válido" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Página 404 NotFound" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › WhatsApp CTA - formatação, codificação e URLs" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="portfolio.smoke.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="webkit" tests="1" failures="1" skipped="0" time="2.544" errors="0">
+<testcase name="Portfólio de Móveis - Smoke › Imagens carregam e cards são clicáveis" classname="portfolio.smoke.spec.ts" time="2.544">
+<failure message="portfolio.smoke.spec.ts:6:3 Imagens carregam e cards são clicáveis" type="FAILURE">
+<![CDATA[  [webkit] › portfolio.smoke.spec.ts:6:3 › Portfólio de Móveis - Smoke › Imagens carregam e cards são clicáveis 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+      - navigating to "http://localhost:8082/", waiting until "load"
+
+
+       5 | test.describe("Portfólio de Móveis - Smoke", () => {
+       6 |   test("Imagens carregam e cards são clicáveis", async ({ page }) => {
+    >  7 |     await page.goto(BASE_URL);
+         |                ^
+       8 |     // aguarda primeira imagem visível
+       9 |     const img = page.locator('img[alt]');
+      10 |     await expect(img.first()).toBeVisible({ timeout: 15000 });
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\portfolio.smoke.spec.ts:7:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-webkit\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="button-click-moveis-planejados.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-chrome" tests="1" failures="1" skipped="0" time="11.801" errors="0">
+<testcase name="Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo" classname="button-click-moveis-planejados.spec.ts" time="11.801">
+<failure message="button-click-moveis-planejados.spec.ts:30:3 Deve clicar no botão Móveis Planejados e verificar carregamento completo" type="FAILURE">
+<![CDATA[  [mobile-chrome] › button-click-moveis-planejados.spec.ts:30:3 › Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+
+
+      44 |
+      45 |     // Verificar se o elemento existe
+    > 46 |     await expect(targetButton).toBeVisible({ timeout: 10000 });
+         |                                ^
+      47 |     
+      48 |     enhancedLogger.info("Elemento alvo identificado com sucesso", {
+      49 |       selector: "button[role=\"tab\"] com texto \"Móveis Planejados\"",
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\button-click-moveis-planejados.spec.ts:46:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="button-click-simple.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-chrome" tests="1" failures="1" skipped="0" time="12.223" errors="0">
+<testcase name="Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo" classname="button-click-simple.spec.ts" time="12.223">
+<failure message="button-click-simple.spec.ts:9:3 Deve clicar no botão Móveis Planejados e verificar carregamento completo" type="FAILURE">
+<![CDATA[  [mobile-chrome] › button-click-simple.spec.ts:9:3 › Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+
+
+      24 |
+      25 |     // Verificar se o elemento existe e está visível
+    > 26 |     await expect(targetButton).toBeVisible({ timeout: 10000 });
+         |                                ^
+      27 |     console.log("✅ Elemento alvo identificado e visível");
+      28 |
+      29 |     // 2. CAPTURA DE EVIDÊNCIA VISUAL ANTES DO CLIQUE
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\button-click-simple.spec.ts:26:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[🚀 Iniciando teste de clique no botão Móveis Planejados
+📍 Passo 1: Identificação do elemento alvo
+✅ Página carregada: /portfolio
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="comprehensive-e2e.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-chrome" tests="7" failures="4" skipped="0" time="41.584" errors="0">
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Fluxo completo de navegação e usabilidade" classname="comprehensive-e2e.spec.ts" time="6.768">
+<failure message="comprehensive-e2e.spec.ts:115:3 Fluxo completo de navegação e usabilidade" type="FAILURE">
+<![CDATA[  [mobile-chrome] › comprehensive-e2e.spec.ts:115:3 › Testes E2E Abrangentes - JP Marcenaria › Fluxo completo de navegação e usabilidade 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('main')
+
+
+      124 |       // Verificar elementos essenciais
+      125 |       await expect(page.locator('nav')).toBeVisible();
+    > 126 |       await expect(page.locator('main')).toBeVisible();
+          |                                          ^
+      127 |       await expect(page.locator('footer')).toBeVisible();
+      128 |       
+      129 |       // Capturar métricas de performance
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:126:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Formulários de contato e validação" classname="comprehensive-e2e.spec.ts" time="2.194">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Performance e otimização de recursos" classname="comprehensive-e2e.spec.ts" time="7.27">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Cenários de erro e recuperação" classname="comprehensive-e2e.spec.ts" time="9.303">
+<failure message="comprehensive-e2e.spec.ts:287:3 Cenários de erro e recuperação" type="FAILURE">
+<![CDATA[  [mobile-chrome] › comprehensive-e2e.spec.ts:287:3 › Testes E2E Abrangentes - JP Marcenaria › Cenários de erro e recuperação 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('main')
+
+
+      321 |       
+      322 |       // Verificar se conteúdo básico ainda é acessível
+    > 323 |       await expect(page.locator('main')).toBeVisible();
+          |                                          ^
+      324 |       
+      325 |       await testUtils.endTestTransaction(true);
+      326 |       
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:323:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-mobile-chrome\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Integração com sistemas externos" classname="comprehensive-e2e.spec.ts" time="2.224">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Acessibilidade e usabilidade avançada" classname="comprehensive-e2e.spec.ts" time="2.072">
+<failure message="comprehensive-e2e.spec.ts:393:3 Acessibilidade e usabilidade avançada" type="FAILURE">
+<![CDATA[  [mobile-chrome] › comprehensive-e2e.spec.ts:393:3 › Testes E2E Abrangentes - JP Marcenaria › Acessibilidade e usabilidade avançada 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      413 |       // 2. Verificar landmarks ARIA
+      414 |       const landmarks = await page.locator('[role="main"], [role="navigation"], [role="banner"], [role="contentinfo"]').count();
+    > 415 |       expect(landmarks).toBeGreaterThan(0);
+          |                         ^
+      416 |       
+      417 |       // 3. Verificar headings hierárquicos
+      418 |       const headings = await page.locator('h1, h2, h3, h4, h5, h6').all();
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:415:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes de Regressão › Verificar funcionalidades críticas após mudanças" classname="comprehensive-e2e.spec.ts" time="11.753">
+<failure message="comprehensive-e2e.spec.ts:461:3 Verificar funcionalidades críticas após mudanças" type="FAILURE">
+<![CDATA[  [mobile-chrome] › comprehensive-e2e.spec.ts:461:3 › Testes de Regressão › Verificar funcionalidades críticas após mudanças 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('main').first()
+
+
+      478 |         
+      479 |         const element = page.locator(feature.selector);
+    > 480 |         await expect(element.first()).toBeVisible({ timeout: 10000 });
+          |                                       ^
+      481 |         
+      482 |         enhancedLogger.info(`Critical feature verified: ${feature.name}`, { feature }, transactionId);
+      483 |       }
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:480:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="coverage.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-chrome" tests="1" failures="0" skipped="0" time="0.002" errors="0">
+<testcase name="Cobertura mínima de código" classname="coverage.spec.ts" time="0.002">
+<system-err>
+<![CDATA[Diretório de cobertura não encontrado; pulando verificação.
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="e2e.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-chrome" tests="6" failures="1" skipped="5" time="123.393" errors="0">
+<testcase name="Fluxo completo do site › Navegação principal via Navbar e acessibilidade" classname="e2e.spec.ts" time="123.393">
+<failure message="e2e.spec.ts:9:3 Navegação principal via Navbar e acessibilidade" type="FAILURE">
+<![CDATA[  [mobile-chrome] › e2e.spec.ts:9:3 › Fluxo completo do site › Navegação principal via Navbar e acessibilidade 
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for getByRole('navigation').getByRole('link', { name: 'Portfólio' }).first()
+
+
+      13 |     await saveCoverage(page, 'home');
+      14 |
+    > 15 |     await page.getByRole('navigation').getByRole('link', { name: 'Portfólio' }).first().click();
+         |                                                                                         ^
+      16 |     await expect(page).toHaveURL(/\/portfolio/);
+      17 |     await checkWcagAA(page, 'Portfolio');
+      18 |     await saveCoverage(page, 'portfolio');
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\e2e.spec.ts:15:89
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-chrome\video-1.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-chrome\video-1.webm]]
+
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-chrome\video.webm]]
+
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Fluxo completo do site › Clicar elementos interativos em Home" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Formulário Briefing - inválido e válido" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Formulário Orçamento - inválido e válido" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Página 404 NotFound" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › WhatsApp CTA - formatação, codificação e URLs" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="portfolio.smoke.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-chrome" tests="1" failures="1" skipped="0" time="2.618" errors="0">
+<testcase name="Portfólio de Móveis - Smoke › Imagens carregam e cards são clicáveis" classname="portfolio.smoke.spec.ts" time="2.618">
+<failure message="portfolio.smoke.spec.ts:6:3 Imagens carregam e cards são clicáveis" type="FAILURE">
+<![CDATA[  [mobile-chrome] › portfolio.smoke.spec.ts:6:3 › Portfólio de Móveis - Smoke › Imagens carregam e cards são clicáveis 
+
+    Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:8082/
+    Call log:
+      - navigating to "http://localhost:8082/", waiting until "load"
+
+
+       5 | test.describe("Portfólio de Móveis - Smoke", () => {
+       6 |   test("Imagens carregam e cards são clicáveis", async ({ page }) => {
+    >  7 |     await page.goto(BASE_URL);
+         |                ^
+       8 |     // aguarda primeira imagem visível
+       9 |     const img = page.locator('img[alt]');
+      10 |     await expect(img.first()).toBeVisible({ timeout: 15000 });
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\portfolio.smoke.spec.ts:7:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-mobile-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-mobile-chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-mobile-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-mobile-chrome\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="button-click-moveis-planejados.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-safari" tests="1" failures="1" skipped="0" time="10.982" errors="0">
+<testcase name="Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo" classname="button-click-moveis-planejados.spec.ts" time="10.982">
+<failure message="button-click-moveis-planejados.spec.ts:30:3 Deve clicar no botão Móveis Planejados e verificar carregamento completo" type="FAILURE">
+<![CDATA[  [mobile-safari] › button-click-moveis-planejados.spec.ts:30:3 › Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+
+
+      44 |
+      45 |     // Verificar se o elemento existe
+    > 46 |     await expect(targetButton).toBeVisible({ timeout: 10000 });
+         |                                ^
+      47 |     
+      48 |     enhancedLogger.info("Elemento alvo identificado com sucesso", {
+      49 |       selector: "button[role=\"tab\"] com texto \"Móveis Planejados\"",
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\button-click-moveis-planejados.spec.ts:46:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-mobile-safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\button-click-moveis-planej-3af3b-ficar-carregamento-completo-mobile-safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-mobile-safari\test-failed-1.png]]
+
+[[ATTACHMENT|button-click-moveis-planej-3af3b-ficar-carregamento-completo-mobile-safari\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="button-click-simple.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-safari" tests="1" failures="1" skipped="0" time="10.986" errors="0">
+<testcase name="Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo" classname="button-click-simple.spec.ts" time="10.986">
+<failure message="button-click-simple.spec.ts:9:3 Deve clicar no botão Móveis Planejados e verificar carregamento completo" type="FAILURE">
+<![CDATA[  [mobile-safari] › button-click-simple.spec.ts:9:3 › Teste de Clique - Botão Móveis Planejados › Deve clicar no botão Móveis Planejados e verificar carregamento completo 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('button[role="tab"]').filter({ hasText: 'Móveis Planejados' })
+
+
+      24 |
+      25 |     // Verificar se o elemento existe e está visível
+    > 26 |     await expect(targetButton).toBeVisible({ timeout: 10000 });
+         |                                ^
+      27 |     console.log("✅ Elemento alvo identificado e visível");
+      28 |
+      29 |     // 2. CAPTURA DE EVIDÊNCIA VISUAL ANTES DO CLIQUE
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\button-click-simple.spec.ts:26:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-mobile-safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\button-click-simple-Teste--3a053-ficar-carregamento-completo-mobile-safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🚀 Iniciando teste de clique no botão Móveis Planejados
+📍 Passo 1: Identificação do elemento alvo
+✅ Página carregada: /portfolio
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-mobile-safari\test-failed-1.png]]
+
+[[ATTACHMENT|button-click-simple-Teste--3a053-ficar-carregamento-completo-mobile-safari\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="comprehensive-e2e.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-safari" tests="7" failures="5" skipped="0" time="153.822" errors="0">
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Fluxo completo de navegação e usabilidade" classname="comprehensive-e2e.spec.ts" time="6.006">
+<failure message="comprehensive-e2e.spec.ts:115:3 Fluxo completo de navegação e usabilidade" type="FAILURE">
+<![CDATA[  [mobile-safari] › comprehensive-e2e.spec.ts:115:3 › Testes E2E Abrangentes - JP Marcenaria › Fluxo completo de navegação e usabilidade 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('nav')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('nav')
+
+
+      123 |       
+      124 |       // Verificar elementos essenciais
+    > 125 |       await expect(page.locator('nav')).toBeVisible();
+          |                                         ^
+      126 |       await expect(page.locator('main')).toBeVisible();
+      127 |       await expect(page.locator('footer')).toBeVisible();
+      128 |       
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:125:41
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-mobile-safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-mobile-safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-mobile-safari\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-6f0e0--de-navegação-e-usabilidade-mobile-safari\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Formulários de contato e validação" classname="comprehensive-e2e.spec.ts" time="120.109">
+<failure message="comprehensive-e2e.spec.ts:171:3 Formulários de contato e validação" type="FAILURE">
+<![CDATA[  [mobile-safari] › comprehensive-e2e.spec.ts:171:3 › Testes E2E Abrangentes - JP Marcenaria › Formulários de contato e validação 
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: /enviar|solicitar/i })
+
+
+      181 |       await testUtils.logTestAction('Testando validação de campos obrigatórios');
+      182 |       const submitButton = page.getByRole('button', { name: /enviar|solicitar/i });
+    > 183 |       await submitButton.click();
+          |                          ^
+      184 |       
+      185 |       // Verificar mensagens de erro
+      186 |       const errorMessages = page.locator('[role="alert"], .error, [data-error="true"]');
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:183:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-18c2f-rios-de-contato-e-validação-mobile-safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-18c2f-rios-de-contato-e-validação-mobile-safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-18c2f-rios-de-contato-e-validação-mobile-safari\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-18c2f-rios-de-contato-e-validação-mobile-safari\video.webm]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[Failed to send logs: TypeError: fetch failed
+[90m    at node:internal/deps/undici/undici:15845:13[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at EnhancedLogger.flush [90m(file:///C:/Repositorios/landpage-jpmarcenaria/jp-marcenaria-digital/[39msrc/utils/enhanced-logging.ts:331:9[90m)[39m {
+  [cause]: AggregateError: 
+  [90m    at internalConnectMultiple (node:net:1134:18)[39m
+  [90m    at afterConnectMultiple (node:net:1715:7)[39m {
+    code: [32m'ECONNREFUSED'[39m,
+    [errors]: [ [36m[Error][39m, [36m[Error][39m ]
+  }
+}
+Failed to send logs: TypeError: fetch failed
+[90m    at node:internal/deps/undici/undici:15845:13[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at EnhancedLogger.flush [90m(file:///C:/Repositorios/landpage-jpmarcenaria/jp-marcenaria-digital/[39msrc/utils/enhanced-logging.ts:331:9[90m)[39m {
+  [cause]: AggregateError: 
+  [90m    at internalConnectMultiple (node:net:1134:18)[39m
+  [90m    at afterConnectMultiple (node:net:1715:7)[39m {
+    code: [32m'ECONNREFUSED'[39m,
+    [errors]: [ [36m[Error][39m, [36m[Error][39m ]
+  }
+}
+Failed to send logs: TypeError: fetch failed
+[90m    at node:internal/deps/undici/undici:15845:13[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at EnhancedLogger.flush [90m(file:///C:/Repositorios/landpage-jpmarcenaria/jp-marcenaria-digital/[39msrc/utils/enhanced-logging.ts:331:9[90m)[39m {
+  [cause]: AggregateError: 
+  [90m    at internalConnectMultiple (node:net:1134:18)[39m
+  [90m    at afterConnectMultiple (node:net:1715:7)[39m {
+    code: [32m'ECONNREFUSED'[39m,
+    [errors]: [ [36m[Error][39m, [36m[Error][39m ]
+  }
+}
+Failed to send logs: TypeError: fetch failed
+[90m    at node:internal/deps/undici/undici:15845:13[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:103:5)[39m
+    at EnhancedLogger.flush [90m(file:///C:/Repositorios/landpage-jpmarcenaria/jp-marcenaria-digital/[39msrc/utils/enhanced-logging.ts:331:9[90m)[39m {
+  [cause]: AggregateError: 
+  [90m    at internalConnectMultiple (node:net:1134:18)[39m
+  [90m    at afterConnectMultiple (node:net:1715:7)[39m {
+    code: [32m'ECONNREFUSED'[39m,
+    [errors]: [ [36m[Error][39m, [36m[Error][39m ]
+  }
+}
+]]>
+</system-err>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Performance e otimização de recursos" classname="comprehensive-e2e.spec.ts" time="4.519">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Cenários de erro e recuperação" classname="comprehensive-e2e.spec.ts" time="9.155">
+<failure message="comprehensive-e2e.spec.ts:287:3 Cenários de erro e recuperação" type="FAILURE">
+<![CDATA[  [mobile-safari] › comprehensive-e2e.spec.ts:287:3 › Testes E2E Abrangentes - JP Marcenaria › Cenários de erro e recuperação 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('main')
+
+
+      321 |       
+      322 |       // Verificar se conteúdo básico ainda é acessível
+    > 323 |       await expect(page.locator('main')).toBeVisible();
+          |                                          ^
+      324 |       
+      325 |       await testUtils.endTestTransaction(true);
+      326 |       
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:323:42
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-mobile-safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-mobile-safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-mobile-safari\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-d52a9-ários-de-erro-e-recuperação-mobile-safari\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Integração com sistemas externos" classname="comprehensive-e2e.spec.ts" time="1.52">
+</testcase>
+<testcase name="Testes E2E Abrangentes - JP Marcenaria › Acessibilidade e usabilidade avançada" classname="comprehensive-e2e.spec.ts" time="1.496">
+<failure message="comprehensive-e2e.spec.ts:393:3 Acessibilidade e usabilidade avançada" type="FAILURE">
+<![CDATA[  [mobile-safari] › comprehensive-e2e.spec.ts:393:3 › Testes E2E Abrangentes - JP Marcenaria › Acessibilidade e usabilidade avançada 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      413 |       // 2. Verificar landmarks ARIA
+      414 |       const landmarks = await page.locator('[role="main"], [role="navigation"], [role="banner"], [role="contentinfo"]').count();
+    > 415 |       expect(landmarks).toBeGreaterThan(0);
+          |                         ^
+      416 |       
+      417 |       // 3. Verificar headings hierárquicos
+      418 |       const headings = await page.locator('h1, h2, h3, h4, h5, h6').all();
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:415:25
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-mobile-safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-mobile-safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-mobile-safari\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-E-1d8b7-dade-e-usabilidade-avançada-mobile-safari\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Testes de Regressão › Verificar funcionalidades críticas após mudanças" classname="comprehensive-e2e.spec.ts" time="11.017">
+<failure message="comprehensive-e2e.spec.ts:461:3 Verificar funcionalidades críticas após mudanças" type="FAILURE">
+<![CDATA[  [mobile-safari] › comprehensive-e2e.spec.ts:461:3 › Testes de Regressão › Verificar funcionalidades críticas após mudanças 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('main').first()
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 10000ms
+      - waiting for locator('main').first()
+
+
+      478 |         
+      479 |         const element = page.locator(feature.selector);
+    > 480 |         await expect(element.first()).toBeVisible({ timeout: 10000 });
+          |                                       ^
+      481 |         
+      482 |         enhancedLogger.info(`Critical feature verified: ${feature.name}`, { feature }, transactionId);
+      483 |       }
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\comprehensive-e2e.spec.ts:480:39
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-mobile-safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-mobile-safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-mobile-safari\test-failed-1.png]]
+
+[[ATTACHMENT|comprehensive-e2e-Testes-d-d4260-ades-críticas-após-mudanças-mobile-safari\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="coverage.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-safari" tests="1" failures="0" skipped="0" time="0.002" errors="0">
+<testcase name="Cobertura mínima de código" classname="coverage.spec.ts" time="0.002">
+<system-err>
+<![CDATA[Diretório de cobertura não encontrado; pulando verificação.
+]]>
+</system-err>
+</testcase>
+</testsuite>
+<testsuite name="e2e.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-safari" tests="6" failures="1" skipped="5" time="120.092" errors="0">
+<testcase name="Fluxo completo do site › Navegação principal via Navbar e acessibilidade" classname="e2e.spec.ts" time="120.092">
+<failure message="e2e.spec.ts:9:3 Navegação principal via Navbar e acessibilidade" type="FAILURE">
+<![CDATA[  [mobile-safari] › e2e.spec.ts:9:3 › Fluxo completo do site › Navegação principal via Navbar e acessibilidade 
+
+    Test timeout of 120000ms exceeded.
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+      - waiting for getByRole('navigation').getByRole('link', { name: 'Portfólio' }).first()
+
+
+      13 |     await saveCoverage(page, 'home');
+      14 |
+    > 15 |     await page.getByRole('navigation').getByRole('link', { name: 'Portfólio' }).first().click();
+         |                                                                                         ^
+      16 |     await expect(page).toHaveURL(/\/portfolio/);
+      17 |     await checkWcagAA(page, 'Portfolio');
+      18 |     await saveCoverage(page, 'portfolio');
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\e2e.spec.ts:15:89
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-safari\video-1.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-safari\test-failed-1.png]]
+
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-safari\video-1.webm]]
+
+[[ATTACHMENT|e2e-Fluxo-completo-do-site-2492f-via-Navbar-e-acessibilidade-mobile-safari\video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Fluxo completo do site › Clicar elementos interativos em Home" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Formulário Briefing - inválido e válido" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Formulário Orçamento - inválido e válido" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › Página 404 NotFound" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Fluxo completo do site › WhatsApp CTA - formatação, codificação e URLs" classname="e2e.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="portfolio.smoke.spec.ts" timestamp="2025-11-01T05:41:24.807Z" hostname="mobile-safari" tests="1" failures="1" skipped="0" time="2.483" errors="0">
+<testcase name="Portfólio de Móveis - Smoke › Imagens carregam e cards são clicáveis" classname="portfolio.smoke.spec.ts" time="2.483">
+<failure message="portfolio.smoke.spec.ts:6:3 Imagens carregam e cards são clicáveis" type="FAILURE">
+<![CDATA[  [mobile-safari] › portfolio.smoke.spec.ts:6:3 › Portfólio de Móveis - Smoke › Imagens carregam e cards são clicáveis 
+
+    Error: page.goto: Could not connect to server
+    Call log:
+      - navigating to "http://localhost:8082/", waiting until "load"
+
+
+       5 | test.describe("Portfólio de Móveis - Smoke", () => {
+       6 |   test("Imagens carregam e cards são clicáveis", async ({ page }) => {
+    >  7 |     await page.goto(BASE_URL);
+         |                ^
+       8 |     // aguarda primeira imagem visível
+       9 |     const img = page.locator('img[alt]');
+      10 |     await expect(img.first()).toBeVisible({ timeout: 15000 });
+        at C:\Repositorios\landpage-jpmarcenaria\jp-marcenaria-digital\tests\portfolio.smoke.spec.ts:7:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-mobile-safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-mobile-safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-mobile-safari\test-failed-1.png]]
+
+[[ATTACHMENT|portfolio.smoke-Portfólio--67147-regam-e-cards-são-clicáveis-mobile-safari\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

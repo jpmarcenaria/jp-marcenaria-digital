@@ -1,0 +1,918 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "JPMARCENARIA" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: JPMARCENARIA
+        - generic [ref=e9]:
+          - link "Portfólio" [ref=e10] [cursor=pointer]:
+            - /url: /portfolio
+          - link "Para Arquitetos" [ref=e11] [cursor=pointer]:
+            - /url: /arquitetos
+          - link "Materiais" [ref=e12] [cursor=pointer]:
+            - /url: /materiais
+          - link "FOTO MAGIA IA" [ref=e13] [cursor=pointer]:
+            - /url: /foto-magia-ia
+          - link "Enviar Briefing" [ref=e14] [cursor=pointer]:
+            - /url: /briefing
+    - generic [ref=e16]:
+      - heading "Portfólio Técnico" [level=1] [ref=e17]
+      - paragraph [ref=e18]: Conheça projetos executados com precisão e acabamento premium
+    - tabpanel [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e26]:
+          - heading "Portfólio Profissional" [level=1] [ref=e27]
+          - paragraph [ref=e28]: Descubra nossa coleção exclusiva de móveis planejados. Cada projeto é único, desenvolvido com excelência e atenção aos detalhes para transformar seus ambientes em espaços extraordinários.
+        - generic [ref=e30]:
+          - generic [ref=e32]:
+            - img [ref=e33]
+            - textbox "Buscar projetos..." [ref=e36]
+          - generic [ref=e37]:
+            - button "🏠Todos os Projetos(42)" [ref=e38] [cursor=pointer]:
+              - text: 🏠Todos os Projetos
+              - generic [ref=e39]: (42)
+            - button "🛏️Dormitórios(6)" [ref=e40] [cursor=pointer]:
+              - text: 🛏️Dormitórios
+              - generic [ref=e41]: (6)
+            - button "🛋️Salas de Estar(6)" [ref=e42] [cursor=pointer]:
+              - text: 🛋️Salas de Estar
+              - generic [ref=e43]: (6)
+            - button "👨‍🍳Cozinhas(6)" [ref=e44] [cursor=pointer]:
+              - text: 👨‍🍳Cozinhas
+              - generic [ref=e45]: (6)
+            - button "🚿Banheiros(6)" [ref=e46] [cursor=pointer]:
+              - text: 🚿Banheiros
+              - generic [ref=e47]: (6)
+            - button "💼Escritórios(6)" [ref=e48] [cursor=pointer]:
+              - text: 💼Escritórios
+              - generic [ref=e49]: (6)
+            - button "👔Closets(6)" [ref=e50] [cursor=pointer]:
+              - text: 👔Closets
+              - generic [ref=e51]: (6)
+            - button "🧺Lavanderias(6)" [ref=e52] [cursor=pointer]:
+              - text: 🧺Lavanderias
+              - generic [ref=e53]: (6)
+          - generic [ref=e55]:
+            - button [ref=e56] [cursor=pointer]:
+              - img [ref=e57]
+            - button [ref=e63] [cursor=pointer]:
+              - img [ref=e64]
+        - main [ref=e71]:
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e74] [cursor=pointer]:
+                - img "Dormitório Moderno Premium" [ref=e75]
+                - generic [ref=e77]:
+                  - button [ref=e78]:
+                    - img [ref=e79]
+                  - button [ref=e81]:
+                    - img [ref=e82]
+                - generic [ref=e89]:
+                  - img [ref=e90]
+                  - generic [ref=e93]: Ver detalhes
+              - generic [ref=e94]:
+                - heading "Dormitório Moderno Premium" [level=3] [ref=e95]
+                - paragraph [ref=e96]: Quarto planejado com guarda-roupa sob medida, cabeceira integrada e iluminação ambiente.
+                - generic [ref=e97]:
+                  - generic [ref=e98]: moderno
+                  - generic [ref=e99]: planejado
+                  - generic [ref=e100]: sob-medida
+                  - generic [ref=e101]: "+2"
+            - generic [ref=e102]:
+              - generic [ref=e103] [cursor=pointer]:
+                - img "Quarto Clássico Elegante" [ref=e104]
+                - generic [ref=e106]:
+                  - button [ref=e107]:
+                    - img [ref=e108]
+                  - button [ref=e110]:
+                    - img [ref=e111]
+                - generic [ref=e118]:
+                  - img [ref=e119]
+                  - generic [ref=e122]: Ver detalhes
+              - generic [ref=e123]:
+                - heading "Quarto Clássico Elegante" [level=3] [ref=e124]
+                - paragraph [ref=e125]: Dormitório clássico com móveis em madeira nobre e acabamentos refinados.
+                - generic [ref=e126]:
+                  - generic [ref=e127]: moderno
+                  - generic [ref=e128]: planejado
+                  - generic [ref=e129]: sob-medida
+                  - generic [ref=e130]: "+2"
+            - generic [ref=e131]:
+              - generic [ref=e132] [cursor=pointer]:
+                - img "Suíte de Casal Sofisticada" [ref=e133]
+                - generic [ref=e135]:
+                  - button [ref=e136]:
+                    - img [ref=e137]
+                  - button [ref=e139]:
+                    - img [ref=e140]
+                - generic [ref=e147]:
+                  - img [ref=e148]
+                  - generic [ref=e151]: Ver detalhes
+              - generic [ref=e152]:
+                - heading "Suíte de Casal Sofisticada" [level=3] [ref=e153]
+                - paragraph [ref=e154]: Suíte de casal com closet integrado, penteadeira e área de descanso.
+                - generic [ref=e155]:
+                  - generic [ref=e156]: moderno
+                  - generic [ref=e157]: planejado
+                  - generic [ref=e158]: sob-medida
+                  - generic [ref=e159]: "+2"
+            - generic [ref=e160]:
+              - generic [ref=e161] [cursor=pointer]:
+                - img "Dormitório Solteiro Funcional" [ref=e162]
+                - generic [ref=e164]:
+                  - button [ref=e165]:
+                    - img [ref=e166]
+                  - button [ref=e168]:
+                    - img [ref=e169]
+                - generic [ref=e176]:
+                  - img [ref=e177]
+                  - generic [ref=e180]: Ver detalhes
+              - generic [ref=e181]:
+                - heading "Dormitório Solteiro Funcional" [level=3] [ref=e182]
+                - paragraph [ref=e183]: Quarto solteiro otimizado com cama, escrivaninha e armários planejados.
+                - generic [ref=e184]:
+                  - generic [ref=e185]: moderno
+                  - generic [ref=e186]: planejado
+                  - generic [ref=e187]: sob-medida
+                  - generic [ref=e188]: "+2"
+            - generic [ref=e189]:
+              - generic [ref=e190] [cursor=pointer]:
+                - img "Quarto Infantil Criativo" [ref=e191]
+                - generic [ref=e193]:
+                  - button [ref=e194]:
+                    - img [ref=e195]
+                  - button [ref=e197]:
+                    - img [ref=e198]
+                - generic [ref=e205]:
+                  - img [ref=e206]
+                  - generic [ref=e209]: Ver detalhes
+              - generic [ref=e210]:
+                - heading "Quarto Infantil Criativo" [level=3] [ref=e211]
+                - paragraph [ref=e212]: Quarto infantil colorido com móveis lúdicos e área de estudos.
+                - generic [ref=e213]:
+                  - generic [ref=e214]: moderno
+                  - generic [ref=e215]: planejado
+                  - generic [ref=e216]: sob-medida
+                  - generic [ref=e217]: "+2"
+            - generic [ref=e218]:
+              - generic [ref=e219] [cursor=pointer]:
+                - img "Suíte Master Luxuosa" [ref=e220]
+                - generic [ref=e222]:
+                  - button [ref=e223]:
+                    - img [ref=e224]
+                  - button [ref=e226]:
+                    - img [ref=e227]
+                - generic [ref=e234]:
+                  - img [ref=e235]
+                  - generic [ref=e238]: Ver detalhes
+              - generic [ref=e239]:
+                - heading "Suíte Master Luxuosa" [level=3] [ref=e240]
+                - paragraph [ref=e241]: Suíte master com banheira de hidromassagem e closet de luxo.
+                - generic [ref=e242]:
+                  - generic [ref=e243]: moderno
+                  - generic [ref=e244]: planejado
+                  - generic [ref=e245]: sob-medida
+                  - generic [ref=e246]: "+2"
+            - generic [ref=e247]:
+              - generic [ref=e248] [cursor=pointer]:
+                - img "Sala de Estar Moderna" [ref=e249]
+                - generic [ref=e251]:
+                  - button [ref=e252]:
+                    - img [ref=e253]
+                  - button [ref=e255]:
+                    - img [ref=e256]
+                - generic [ref=e263]:
+                  - img [ref=e264]
+                  - generic [ref=e267]: Ver detalhes
+              - generic [ref=e268]:
+                - heading "Sala de Estar Moderna" [level=3] [ref=e269]
+                - paragraph [ref=e270]: Sala de estar com estante planejada, painel para TV e móveis sob medida.
+                - generic [ref=e271]:
+                  - generic [ref=e272]: integrada
+                  - generic [ref=e273]: estante
+                  - generic [ref=e274]: painel-tv
+                  - generic [ref=e275]: "+2"
+            - generic [ref=e276]:
+              - generic [ref=e277] [cursor=pointer]:
+                - img "Living Integrado com TV" [ref=e278]
+                - generic [ref=e280]:
+                  - button [ref=e281]:
+                    - img [ref=e282]
+                  - button [ref=e284]:
+                    - img [ref=e285]
+                - generic [ref=e292]:
+                  - img [ref=e293]
+                  - generic [ref=e296]: Ver detalhes
+              - generic [ref=e297]:
+                - heading "Living Integrado com TV" [level=3] [ref=e298]
+                - paragraph [ref=e299]: Living integrado com home theater e sistema de som ambiente.
+                - generic [ref=e300]:
+                  - generic [ref=e301]: integrada
+                  - generic [ref=e302]: estante
+                  - generic [ref=e303]: painel-tv
+                  - generic [ref=e304]: "+2"
+            - generic [ref=e305]:
+              - generic [ref=e306] [cursor=pointer]:
+                - img "Sala de Jantar Elegante" [ref=e307]
+                - generic [ref=e309]:
+                  - button [ref=e310]:
+                    - img [ref=e311]
+                  - button [ref=e313]:
+                    - img [ref=e314]
+                - generic [ref=e321]:
+                  - img [ref=e322]
+                  - generic [ref=e325]: Ver detalhes
+              - generic [ref=e326]:
+                - heading "Sala de Jantar Elegante" [level=3] [ref=e327]
+                - paragraph [ref=e328]: Sala de jantar com buffet planejado e adega climatizada.
+                - generic [ref=e329]:
+                  - generic [ref=e330]: integrada
+                  - generic [ref=e331]: estante
+                  - generic [ref=e332]: painel-tv
+                  - generic [ref=e333]: "+2"
+            - generic [ref=e334]:
+              - generic [ref=e335] [cursor=pointer]:
+                - img "Sala Compacta Funcional" [ref=e336]
+                - generic [ref=e338]:
+                  - button [ref=e339]:
+                    - img [ref=e340]
+                  - button [ref=e342]:
+                    - img [ref=e343]
+                - generic [ref=e350]:
+                  - img [ref=e351]
+                  - generic [ref=e354]: Ver detalhes
+              - generic [ref=e355]:
+                - heading "Sala Compacta Funcional" [level=3] [ref=e356]
+                - paragraph [ref=e357]: Sala compacta com móveis multifuncionais e aproveitamento inteligente.
+                - generic [ref=e358]:
+                  - generic [ref=e359]: integrada
+                  - generic [ref=e360]: estante
+                  - generic [ref=e361]: painel-tv
+                  - generic [ref=e362]: "+2"
+            - generic [ref=e363]:
+              - generic [ref=e364] [cursor=pointer]:
+                - img "Home Theater Premium" [ref=e365]
+                - generic [ref=e367]:
+                  - button [ref=e368]:
+                    - img [ref=e369]
+                  - button [ref=e371]:
+                    - img [ref=e372]
+                - generic [ref=e379]:
+                  - img [ref=e380]
+                  - generic [ref=e383]: Ver detalhes
+              - generic [ref=e384]:
+                - heading "Home Theater Premium" [level=3] [ref=e385]
+                - paragraph [ref=e386]: Home theater com poltronas reclináveis e sistema de projeção.
+                - generic [ref=e387]:
+                  - generic [ref=e388]: integrada
+                  - generic [ref=e389]: estante
+                  - generic [ref=e390]: painel-tv
+                  - generic [ref=e391]: "+2"
+            - generic [ref=e392]:
+              - generic [ref=e393] [cursor=pointer]:
+                - img "Varanda Gourmet Integrada" [ref=e394]
+                - generic [ref=e396]:
+                  - button [ref=e397]:
+                    - img [ref=e398]
+                  - button [ref=e400]:
+                    - img [ref=e401]
+                - generic [ref=e408]:
+                  - img [ref=e409]
+                  - generic [ref=e412]: Ver detalhes
+              - generic [ref=e413]:
+                - heading "Varanda Gourmet Integrada" [level=3] [ref=e414]
+                - paragraph [ref=e415]: Varanda gourmet com churrasqueira e área de convivência.
+                - generic [ref=e416]:
+                  - generic [ref=e417]: integrada
+                  - generic [ref=e418]: estante
+                  - generic [ref=e419]: painel-tv
+                  - generic [ref=e420]: "+2"
+            - generic [ref=e421]:
+              - generic [ref=e422] [cursor=pointer]:
+                - img "Cozinha Gourmet Premium" [ref=e423]
+                - generic [ref=e425]:
+                  - button [ref=e426]:
+                    - img [ref=e427]
+                  - button [ref=e429]:
+                    - img [ref=e430]
+                - generic [ref=e437]:
+                  - img [ref=e438]
+                  - generic [ref=e441]: Ver detalhes
+              - generic [ref=e442]:
+                - heading "Cozinha Gourmet Premium" [level=3] [ref=e443]
+                - paragraph [ref=e444]: Cozinha gourmet com ilha central, armários até o teto e acabamentos premium.
+                - generic [ref=e445]:
+                  - generic [ref=e446]: gourmet
+                  - generic [ref=e447]: ilha-central
+                  - generic [ref=e448]: planejada
+                  - generic [ref=e449]: "+2"
+            - generic [ref=e450]:
+              - generic [ref=e451] [cursor=pointer]:
+                - img "Cozinha Americana Integrada" [ref=e452]
+                - generic [ref=e454]:
+                  - button [ref=e455]:
+                    - img [ref=e456]
+                  - button [ref=e458]:
+                    - img [ref=e459]
+                - generic [ref=e466]:
+                  - img [ref=e467]
+                  - generic [ref=e470]: Ver detalhes
+              - generic [ref=e471]:
+                - heading "Cozinha Americana Integrada" [level=3] [ref=e472]
+                - paragraph [ref=e473]: Cozinha americana integrada com sala de jantar e área gourmet.
+                - generic [ref=e474]:
+                  - generic [ref=e475]: gourmet
+                  - generic [ref=e476]: ilha-central
+                  - generic [ref=e477]: planejada
+                  - generic [ref=e478]: "+2"
+            - generic [ref=e479]:
+              - generic [ref=e480] [cursor=pointer]:
+                - img "Cozinha Compacta Funcional" [ref=e481]
+                - generic [ref=e483]:
+                  - button [ref=e484]:
+                    - img [ref=e485]
+                  - button [ref=e487]:
+                    - img [ref=e488]
+                - generic [ref=e495]:
+                  - img [ref=e496]
+                  - generic [ref=e499]: Ver detalhes
+              - generic [ref=e500]:
+                - heading "Cozinha Compacta Funcional" [level=3] [ref=e501]
+                - paragraph [ref=e502]: Cozinha compacta com aproveitamento máximo do espaço disponível.
+                - generic [ref=e503]:
+                  - generic [ref=e504]: gourmet
+                  - generic [ref=e505]: ilha-central
+                  - generic [ref=e506]: planejada
+                  - generic [ref=e507]: "+2"
+            - generic [ref=e508]:
+              - generic [ref=e509] [cursor=pointer]:
+                - img "Cozinha com Ilha Central" [ref=e510]
+                - generic [ref=e512]:
+                  - button [ref=e513]:
+                    - img [ref=e514]
+                  - button [ref=e516]:
+                    - img [ref=e517]
+                - generic [ref=e524]:
+                  - img [ref=e525]
+                  - generic [ref=e528]: Ver detalhes
+              - generic [ref=e529]:
+                - heading "Cozinha com Ilha Central" [level=3] [ref=e530]
+                - paragraph [ref=e531]: Cozinha com ilha central multifuncional e área de preparo ampliada.
+                - generic [ref=e532]:
+                  - generic [ref=e533]: gourmet
+                  - generic [ref=e534]: ilha-central
+                  - generic [ref=e535]: planejada
+                  - generic [ref=e536]: "+2"
+            - generic [ref=e537]:
+              - generic [ref=e538] [cursor=pointer]:
+                - img "Cozinha Planejada Completa" [ref=e539]
+                - generic [ref=e541]:
+                  - button [ref=e542]:
+                    - img [ref=e543]
+                  - button [ref=e545]:
+                    - img [ref=e546]
+                - generic [ref=e553]:
+                  - img [ref=e554]
+                  - generic [ref=e557]: Ver detalhes
+              - generic [ref=e558]:
+                - heading "Cozinha Planejada Completa" [level=3] [ref=e559]
+                - paragraph [ref=e560]: Cozinha planejada completa com todos os eletrodomésticos integrados.
+                - generic [ref=e561]:
+                  - generic [ref=e562]: gourmet
+                  - generic [ref=e563]: ilha-central
+                  - generic [ref=e564]: planejada
+                  - generic [ref=e565]: "+2"
+            - generic [ref=e566]:
+              - generic [ref=e567] [cursor=pointer]:
+                - img "Cozinha Integrada Moderna" [ref=e568]
+                - generic [ref=e570]:
+                  - button [ref=e571]:
+                    - img [ref=e572]
+                  - button [ref=e574]:
+                    - img [ref=e575]
+                - generic [ref=e582]:
+                  - img [ref=e583]
+                  - generic [ref=e586]: Ver detalhes
+              - generic [ref=e587]:
+                - heading "Cozinha Integrada Moderna" [level=3] [ref=e588]
+                - paragraph [ref=e589]: Cozinha moderna integrada com sala de estar e área social.
+                - generic [ref=e590]:
+                  - generic [ref=e591]: gourmet
+                  - generic [ref=e592]: ilha-central
+                  - generic [ref=e593]: planejada
+                  - generic [ref=e594]: "+2"
+            - generic [ref=e595]:
+              - generic [ref=e596] [cursor=pointer]:
+                - img "Banheiro Suíte Luxuoso" [ref=e597]
+                - generic [ref=e599]:
+                  - button [ref=e600]:
+                    - img [ref=e601]
+                  - button [ref=e603]:
+                    - img [ref=e604]
+                - generic [ref=e611]:
+                  - img [ref=e612]
+                  - generic [ref=e615]: Ver detalhes
+              - generic [ref=e616]:
+                - heading "Banheiro Suíte Luxuoso" [level=3] [ref=e617]
+                - paragraph [ref=e618]: Banheiro suíte com banheira de hidromassagem e acabamentos de luxo.
+                - generic [ref=e619]:
+                  - generic [ref=e620]: luxo
+                  - generic [ref=e621]: spa
+                  - generic [ref=e622]: moderno
+                  - generic [ref=e623]: "+2"
+            - generic [ref=e624]:
+              - generic [ref=e625] [cursor=pointer]:
+                - img "Banheiro Social Moderno" [ref=e626]
+                - generic [ref=e628]:
+                  - button [ref=e629]:
+                    - img [ref=e630]
+                  - button [ref=e632]:
+                    - img [ref=e633]
+                - generic [ref=e640]:
+                  - img [ref=e641]
+                  - generic [ref=e644]: Ver detalhes
+              - generic [ref=e645]:
+                - heading "Banheiro Social Moderno" [level=3] [ref=e646]
+                - paragraph [ref=e647]: Banheiro social moderno com móveis planejados e iluminação LED.
+                - generic [ref=e648]:
+                  - generic [ref=e649]: luxo
+                  - generic [ref=e650]: spa
+                  - generic [ref=e651]: moderno
+                  - generic [ref=e652]: "+2"
+            - generic [ref=e653]:
+              - generic [ref=e654] [cursor=pointer]:
+                - img "Banheiro Contemporâneo" [ref=e655]
+                - generic [ref=e657]:
+                  - button [ref=e658]:
+                    - img [ref=e659]
+                  - button [ref=e661]:
+                    - img [ref=e662]
+                - generic [ref=e669]:
+                  - img [ref=e670]
+                  - generic [ref=e673]: Ver detalhes
+              - generic [ref=e674]:
+                - heading "Banheiro Contemporâneo" [level=3] [ref=e675]
+                - paragraph [ref=e676]: Banheiro contemporâneo com design clean e materiais nobres.
+                - generic [ref=e677]:
+                  - generic [ref=e678]: luxo
+                  - generic [ref=e679]: spa
+                  - generic [ref=e680]: moderno
+                  - generic [ref=e681]: "+2"
+            - generic [ref=e682]:
+              - generic [ref=e683] [cursor=pointer]:
+                - img "Banheiro Spa Relaxante" [ref=e684]
+                - generic [ref=e686]:
+                  - button [ref=e687]:
+                    - img [ref=e688]
+                  - button [ref=e690]:
+                    - img [ref=e691]
+                - generic [ref=e698]:
+                  - img [ref=e699]
+                  - generic [ref=e702]: Ver detalhes
+              - generic [ref=e703]:
+                - heading "Banheiro Spa Relaxante" [level=3] [ref=e704]
+                - paragraph [ref=e705]: Banheiro spa com sauna seca e área de relaxamento.
+                - generic [ref=e706]:
+                  - generic [ref=e707]: luxo
+                  - generic [ref=e708]: spa
+                  - generic [ref=e709]: moderno
+                  - generic [ref=e710]: "+2"
+            - generic [ref=e711]:
+              - generic [ref=e712] [cursor=pointer]:
+                - img "Banheiro Compacto Funcional" [ref=e713]
+                - generic [ref=e715]:
+                  - button [ref=e716]:
+                    - img [ref=e717]
+                  - button [ref=e719]:
+                    - img [ref=e720]
+                - generic [ref=e727]:
+                  - img [ref=e728]
+                  - generic [ref=e731]: Ver detalhes
+              - generic [ref=e732]:
+                - heading "Banheiro Compacto Funcional" [level=3] [ref=e733]
+                - paragraph [ref=e734]: Banheiro compacto com móveis suspensos e espelhos amplos.
+                - generic [ref=e735]:
+                  - generic [ref=e736]: luxo
+                  - generic [ref=e737]: spa
+                  - generic [ref=e738]: moderno
+                  - generic [ref=e739]: "+2"
+            - generic [ref=e740]:
+              - generic [ref=e741] [cursor=pointer]:
+                - img "Banheiro de Luxo Premium" [ref=e742]
+                - generic [ref=e744]:
+                  - button [ref=e745]:
+                    - img [ref=e746]
+                  - button [ref=e748]:
+                    - img [ref=e749]
+                - generic [ref=e756]:
+                  - img [ref=e757]
+                  - generic [ref=e760]: Ver detalhes
+              - generic [ref=e761]:
+                - heading "Banheiro de Luxo Premium" [level=3] [ref=e762]
+                - paragraph [ref=e763]: Banheiro de luxo com mármore Carrara e metais dourados.
+                - generic [ref=e764]:
+                  - generic [ref=e765]: luxo
+                  - generic [ref=e766]: spa
+                  - generic [ref=e767]: moderno
+                  - generic [ref=e768]: "+2"
+            - generic [ref=e769]:
+              - generic [ref=e770] [cursor=pointer]:
+                - img "Home Office Moderno" [ref=e771]
+                - generic [ref=e773]:
+                  - button [ref=e774]:
+                    - img [ref=e775]
+                  - button [ref=e777]:
+                    - img [ref=e778]
+                - generic [ref=e785]:
+                  - img [ref=e786]
+                  - generic [ref=e789]: Ver detalhes
+              - generic [ref=e790]:
+                - heading "Home Office Moderno" [level=3] [ref=e791]
+                - paragraph [ref=e792]: Home office planejado com mesa sob medida, estantes e iluminação adequada.
+                - generic [ref=e793]:
+                  - generic [ref=e794]: home-office
+                  - generic [ref=e795]: planejado
+                  - generic [ref=e796]: funcional
+                  - generic [ref=e797]: "+2"
+            - generic [ref=e798]:
+              - generic [ref=e799] [cursor=pointer]:
+                - img "Escritório Corporativo" [ref=e800]
+                - generic [ref=e802]:
+                  - button [ref=e803]:
+                    - img [ref=e804]
+                  - button [ref=e806]:
+                    - img [ref=e807]
+                - generic [ref=e814]:
+                  - img [ref=e815]
+                  - generic [ref=e818]: Ver detalhes
+              - generic [ref=e819]:
+                - heading "Escritório Corporativo" [level=3] [ref=e820]
+                - paragraph [ref=e821]: Escritório corporativo com móveis executivos e sistema de videoconferência.
+                - generic [ref=e822]:
+                  - generic [ref=e823]: home-office
+                  - generic [ref=e824]: planejado
+                  - generic [ref=e825]: funcional
+                  - generic [ref=e826]: "+2"
+            - generic [ref=e827]:
+              - generic [ref=e828] [cursor=pointer]:
+                - img "Escritório Planejado" [ref=e829]
+                - generic [ref=e831]:
+                  - button [ref=e832]:
+                    - img [ref=e833]
+                  - button [ref=e835]:
+                    - img [ref=e836]
+                - generic [ref=e843]:
+                  - img [ref=e844]
+                  - generic [ref=e847]: Ver detalhes
+              - generic [ref=e848]:
+                - heading "Escritório Planejado" [level=3] [ref=e849]
+                - paragraph [ref=e850]: Escritório planejado com área de reuniões e arquivo organizado.
+                - generic [ref=e851]:
+                  - generic [ref=e852]: home-office
+                  - generic [ref=e853]: planejado
+                  - generic [ref=e854]: funcional
+                  - generic [ref=e855]: "+2"
+            - generic [ref=e856]:
+              - generic [ref=e857] [cursor=pointer]:
+                - img "Escritório Contemporâneo" [ref=e858]
+                - generic [ref=e860]:
+                  - button [ref=e861]:
+                    - img [ref=e862]
+                  - button [ref=e864]:
+                    - img [ref=e865]
+                - generic [ref=e872]:
+                  - img [ref=e873]
+                  - generic [ref=e876]: Ver detalhes
+              - generic [ref=e877]:
+                - heading "Escritório Contemporâneo" [level=3] [ref=e878]
+                - paragraph [ref=e879]: Escritório contemporâneo com design moderno e tecnologia integrada.
+                - generic [ref=e880]:
+                  - generic [ref=e881]: home-office
+                  - generic [ref=e882]: planejado
+                  - generic [ref=e883]: funcional
+                  - generic [ref=e884]: "+2"
+            - generic [ref=e885]:
+              - generic [ref=e886] [cursor=pointer]:
+                - img "Escritório Compacto" [ref=e887]
+                - generic [ref=e889]:
+                  - button [ref=e890]:
+                    - img [ref=e891]
+                  - button [ref=e893]:
+                    - img [ref=e894]
+                - generic [ref=e901]:
+                  - img [ref=e902]
+                  - generic [ref=e905]: Ver detalhes
+              - generic [ref=e906]:
+                - heading "Escritório Compacto" [level=3] [ref=e907]
+                - paragraph [ref=e908]: Escritório compacto otimizado para pequenos espaços.
+                - generic [ref=e909]:
+                  - generic [ref=e910]: home-office
+                  - generic [ref=e911]: planejado
+                  - generic [ref=e912]: funcional
+                  - generic [ref=e913]: "+2"
+            - generic [ref=e914]:
+              - generic [ref=e915] [cursor=pointer]:
+                - img "Escritório Executivo" [ref=e916]
+                - generic [ref=e918]:
+                  - button [ref=e919]:
+                    - img [ref=e920]
+                  - button [ref=e922]:
+                    - img [ref=e923]
+                - generic [ref=e930]:
+                  - img [ref=e931]
+                  - generic [ref=e934]: Ver detalhes
+              - generic [ref=e935]:
+                - heading "Escritório Executivo" [level=3] [ref=e936]
+                - paragraph [ref=e937]: Escritório executivo com móveis de luxo e acabamentos premium.
+                - generic [ref=e938]:
+                  - generic [ref=e939]: home-office
+                  - generic [ref=e940]: planejado
+                  - generic [ref=e941]: funcional
+                  - generic [ref=e942]: "+2"
+            - generic [ref=e943]:
+              - generic [ref=e944] [cursor=pointer]:
+                - img "Closet de Casal Amplo" [ref=e945]
+                - generic [ref=e947]:
+                  - button [ref=e948]:
+                    - img [ref=e949]
+                  - button [ref=e951]:
+                    - img [ref=e952]
+                - generic [ref=e959]:
+                  - img [ref=e960]
+                  - generic [ref=e963]: Ver detalhes
+              - generic [ref=e964]:
+                - heading "Closet de Casal Amplo" [level=3] [ref=e965]
+                - paragraph [ref=e966]: Closet de casal amplo com ilha central e espelhos de corpo inteiro.
+                - generic [ref=e967]:
+                  - generic [ref=e968]: amplo
+                  - generic [ref=e969]: organizado
+                  - generic [ref=e970]: funcional
+                  - generic [ref=e971]: "+2"
+            - generic [ref=e972]:
+              - generic [ref=e973] [cursor=pointer]:
+                - img "Closet Feminino Elegante" [ref=e974]
+                - generic [ref=e976]:
+                  - button [ref=e977]:
+                    - img [ref=e978]
+                  - button [ref=e980]:
+                    - img [ref=e981]
+                - generic [ref=e988]:
+                  - img [ref=e989]
+                  - generic [ref=e992]: Ver detalhes
+              - generic [ref=e993]:
+                - heading "Closet Feminino Elegante" [level=3] [ref=e994]
+                - paragraph [ref=e995]: Closet feminino com sapateira giratória e área de maquiagem.
+                - generic [ref=e996]:
+                  - generic [ref=e997]: amplo
+                  - generic [ref=e998]: organizado
+                  - generic [ref=e999]: funcional
+                  - generic [ref=e1000]: "+2"
+            - generic [ref=e1001]:
+              - generic [ref=e1002] [cursor=pointer]:
+                - img "Closet Masculino Funcional" [ref=e1003]
+                - generic [ref=e1005]:
+                  - button [ref=e1006]:
+                    - img [ref=e1007]
+                  - button [ref=e1009]:
+                    - img [ref=e1010]
+                - generic [ref=e1017]:
+                  - img [ref=e1018]
+                  - generic [ref=e1021]: Ver detalhes
+              - generic [ref=e1022]:
+                - heading "Closet Masculino Funcional" [level=3] [ref=e1023]
+                - paragraph [ref=e1024]: Closet masculino funcional com cabideiros e gavetas organizadoras.
+                - generic [ref=e1025]:
+                  - generic [ref=e1026]: amplo
+                  - generic [ref=e1027]: organizado
+                  - generic [ref=e1028]: funcional
+                  - generic [ref=e1029]: "+2"
+            - generic [ref=e1030]:
+              - generic [ref=e1031] [cursor=pointer]:
+                - img "Closet Compacto Inteligente" [ref=e1032]
+                - generic [ref=e1034]:
+                  - button [ref=e1035]:
+                    - img [ref=e1036]
+                  - button [ref=e1038]:
+                    - img [ref=e1039]
+                - generic [ref=e1046]:
+                  - img [ref=e1047]
+                  - generic [ref=e1050]: Ver detalhes
+              - generic [ref=e1051]:
+                - heading "Closet Compacto Inteligente" [level=3] [ref=e1052]
+                - paragraph [ref=e1053]: Closet compacto inteligente com aproveitamento vertical máximo.
+                - generic [ref=e1054]:
+                  - generic [ref=e1055]: amplo
+                  - generic [ref=e1056]: organizado
+                  - generic [ref=e1057]: funcional
+                  - generic [ref=e1058]: "+2"
+            - generic [ref=e1059]:
+              - generic [ref=e1060] [cursor=pointer]:
+                - img "Closet de Luxo Premium" [ref=e1061]
+                - generic [ref=e1063]:
+                  - button [ref=e1064]:
+                    - img [ref=e1065]
+                  - button [ref=e1067]:
+                    - img [ref=e1068]
+                - generic [ref=e1075]:
+                  - img [ref=e1076]
+                  - generic [ref=e1079]: Ver detalhes
+              - generic [ref=e1080]:
+                - heading "Closet de Luxo Premium" [level=3] [ref=e1081]
+                - paragraph [ref=e1082]: Closet de luxo com iluminação LED e acabamentos premium.
+                - generic [ref=e1083]:
+                  - generic [ref=e1084]: amplo
+                  - generic [ref=e1085]: organizado
+                  - generic [ref=e1086]: funcional
+                  - generic [ref=e1087]: "+2"
+            - generic [ref=e1088]:
+              - generic [ref=e1089] [cursor=pointer]:
+                - img "Closet Planejado Completo" [ref=e1090]
+                - generic [ref=e1092]:
+                  - button [ref=e1093]:
+                    - img [ref=e1094]
+                  - button [ref=e1096]:
+                    - img [ref=e1097]
+                - generic [ref=e1104]:
+                  - img [ref=e1105]
+                  - generic [ref=e1108]: Ver detalhes
+              - generic [ref=e1109]:
+                - heading "Closet Planejado Completo" [level=3] [ref=e1110]
+                - paragraph [ref=e1111]: Closet planejado completo com todos os acessórios organizadores.
+                - generic [ref=e1112]:
+                  - generic [ref=e1113]: amplo
+                  - generic [ref=e1114]: organizado
+                  - generic [ref=e1115]: funcional
+                  - generic [ref=e1116]: "+2"
+            - generic [ref=e1117]:
+              - generic [ref=e1118] [cursor=pointer]:
+                - img "Lavanderia Planejada" [ref=e1119]
+                - generic [ref=e1121]:
+                  - button [ref=e1122]:
+                    - img [ref=e1123]
+                  - button [ref=e1125]:
+                    - img [ref=e1126]
+                - generic [ref=e1133]:
+                  - img [ref=e1134]
+                  - generic [ref=e1137]: Ver detalhes
+              - generic [ref=e1138]:
+                - heading "Lavanderia Planejada" [level=3] [ref=e1139]
+                - paragraph [ref=e1140]: Lavanderia planejada com tanque de granito e armários suspensos.
+                - generic [ref=e1141]:
+                  - generic [ref=e1142]: planejada
+                  - generic [ref=e1143]: funcional
+                  - generic [ref=e1144]: organizada
+                  - generic [ref=e1145]: "+2"
+            - generic [ref=e1146]:
+              - generic [ref=e1147] [cursor=pointer]:
+                - img "Lavanderia Compacta" [ref=e1148]
+                - generic [ref=e1150]:
+                  - button [ref=e1151]:
+                    - img [ref=e1152]
+                  - button [ref=e1154]:
+                    - img [ref=e1155]
+                - generic [ref=e1162]:
+                  - img [ref=e1163]
+                  - generic [ref=e1166]: Ver detalhes
+              - generic [ref=e1167]:
+                - heading "Lavanderia Compacta" [level=3] [ref=e1168]
+                - paragraph [ref=e1169]: Lavanderia compacta com móveis multifuncionais e área de secagem.
+                - generic [ref=e1170]:
+                  - generic [ref=e1171]: planejada
+                  - generic [ref=e1172]: funcional
+                  - generic [ref=e1173]: organizada
+                  - generic [ref=e1174]: "+2"
+            - generic [ref=e1175]:
+              - generic [ref=e1176] [cursor=pointer]:
+                - img "Lavanderia Integrada" [ref=e1177]
+                - generic [ref=e1179]:
+                  - button [ref=e1180]:
+                    - img [ref=e1181]
+                  - button [ref=e1183]:
+                    - img [ref=e1184]
+                - generic [ref=e1191]:
+                  - img [ref=e1192]
+                  - generic [ref=e1195]: Ver detalhes
+              - generic [ref=e1196]:
+                - heading "Lavanderia Integrada" [level=3] [ref=e1197]
+                - paragraph [ref=e1198]: Lavanderia integrada com cozinha e área de serviço otimizada.
+                - generic [ref=e1199]:
+                  - generic [ref=e1200]: planejada
+                  - generic [ref=e1201]: funcional
+                  - generic [ref=e1202]: organizada
+                  - generic [ref=e1203]: "+2"
+            - generic [ref=e1204]:
+              - generic [ref=e1205] [cursor=pointer]:
+                - img "Lavanderia Moderna" [ref=e1206]
+                - generic [ref=e1208]:
+                  - button [ref=e1209]:
+                    - img [ref=e1210]
+                  - button [ref=e1212]:
+                    - img [ref=e1213]
+                - generic [ref=e1220]:
+                  - img [ref=e1221]
+                  - generic [ref=e1224]: Ver detalhes
+              - generic [ref=e1225]:
+                - heading "Lavanderia Moderna" [level=3] [ref=e1226]
+                - paragraph [ref=e1227]: Lavanderia moderna com máquinas embutidas e bancada de trabalho.
+                - generic [ref=e1228]:
+                  - generic [ref=e1229]: planejada
+                  - generic [ref=e1230]: funcional
+                  - generic [ref=e1231]: organizada
+                  - generic [ref=e1232]: "+2"
+            - generic [ref=e1233]:
+              - generic [ref=e1234] [cursor=pointer]:
+                - img "Lavanderia Funcional" [ref=e1235]
+                - generic [ref=e1237]:
+                  - button [ref=e1238]:
+                    - img [ref=e1239]
+                  - button [ref=e1241]:
+                    - img [ref=e1242]
+                - generic [ref=e1249]:
+                  - img [ref=e1250]
+                  - generic [ref=e1253]: Ver detalhes
+              - generic [ref=e1254]:
+                - heading "Lavanderia Funcional" [level=3] [ref=e1255]
+                - paragraph [ref=e1256]: Lavanderia funcional com área de passar e armazenamento inteligente.
+                - generic [ref=e1257]:
+                  - generic [ref=e1258]: planejada
+                  - generic [ref=e1259]: funcional
+                  - generic [ref=e1260]: organizada
+                  - generic [ref=e1261]: "+2"
+            - generic [ref=e1262]:
+              - generic [ref=e1263] [cursor=pointer]:
+                - img "Lavanderia Organizada" [ref=e1264]
+                - generic [ref=e1266]:
+                  - button [ref=e1267]:
+                    - img [ref=e1268]
+                  - button [ref=e1270]:
+                    - img [ref=e1271]
+                - generic [ref=e1278]:
+                  - img [ref=e1279]
+                  - generic [ref=e1282]: Ver detalhes
+              - generic [ref=e1283]:
+                - heading "Lavanderia Organizada" [level=3] [ref=e1284]
+                - paragraph [ref=e1285]: Lavanderia organizada com sistema de classificação de roupas.
+                - generic [ref=e1286]:
+                  - generic [ref=e1287]: planejada
+                  - generic [ref=e1288]: funcional
+                  - generic [ref=e1289]: organizada
+                  - generic [ref=e1290]: "+2"
+    - contentinfo [ref=e1291]:
+      - generic [ref=e1292]:
+        - generic [ref=e1293]:
+          - generic [ref=e1294]:
+            - generic [ref=e1295]: JPMARCENARIA
+            - paragraph [ref=e1296]: 30 anos construindo sonhos com móveis planejados de alta qualidade.
+            - generic [ref=e1297]:
+              - link [ref=e1298] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e1299]
+              - link [ref=e1303] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e1304]
+          - generic [ref=e1306]:
+            - heading "Links Rápidos" [level=3] [ref=e1307]
+            - list [ref=e1308]:
+              - listitem [ref=e1309]:
+                - link "Portfólio" [ref=e1310] [cursor=pointer]:
+                  - /url: /portfolio
+              - listitem [ref=e1311]:
+                - link "Tecnologia" [ref=e1312] [cursor=pointer]:
+                  - /url: /tecnologia
+              - listitem [ref=e1313]:
+                - link "Sobre Nós" [ref=e1314] [cursor=pointer]:
+                  - /url: /sobre
+              - listitem [ref=e1315]:
+                - link "Blog" [ref=e1316] [cursor=pointer]:
+                  - /url: /blog
+          - generic [ref=e1317]:
+            - heading "Serviços" [level=3] [ref=e1318]
+            - list [ref=e1319]:
+              - listitem [ref=e1320]: Cozinhas Planejadas
+              - listitem [ref=e1321]: Painéis Ripados com LED
+              - listitem [ref=e1322]: Home Office
+              - listitem [ref=e1323]: Área Gourmet
+              - listitem [ref=e1324]: Quartos e Closets
+          - generic [ref=e1325]:
+            - heading "Contato" [level=3] [ref=e1326]
+            - list [ref=e1327]:
+              - listitem [ref=e1328]:
+                - img [ref=e1329]
+                - generic "Telefone de contato" [ref=e1331]: (13) 97414-6380
+              - listitem [ref=e1332]:
+                - img [ref=e1333]
+                - generic [ref=e1336]: contato@jpmarcenaria.com.br
+              - listitem [ref=e1337]:
+                - img [ref=e1338]
+                - generic "Localização" [ref=e1341]: Guarujá, SP
+        - generic [ref=e1342]:
+          - paragraph [ref=e1343]: © 2025 JP Marcenaria. Todos os direitos reservados.
+          - paragraph [ref=e1344]: Se for madeira, deixe conosco.
+```

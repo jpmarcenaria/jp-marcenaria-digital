@@ -1,0 +1,171 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e6]:
+        - link "JPMARCENARIA" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e8]: JPMARCENARIA
+        - button "Toggle menu" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+    - generic [ref=e15]:
+      - heading "Marcenaria sob medida que transforma ambientes" [level=1] [ref=e16]
+      - paragraph [ref=e17]: Planejamos, fabricamos e instalamos com precisão, conforto e estética. Do projeto ao pós-obra, cada detalhe reflete o seu padrão.
+      - generic [ref=e18]:
+        - link "Ver Portfólio Técnico" [ref=e19] [cursor=pointer]:
+          - /url: /portfolio
+          - text: Ver Portfólio Técnico
+          - img
+        - link "Solicitar orçamento via WhatsApp" [ref=e20] [cursor=pointer]:
+          - /url: https://wa.me/5513974146380?text=Vim%20atrav%C3%A9s%20do%20seu%20site%2C%20quero%20um%20or%C3%A7amento!
+          - img
+          - generic [ref=e21]: Solicitar Orçamento
+          - img
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - generic [ref=e24]: 200+
+          - generic [ref=e25]: Projetos executados
+        - generic [ref=e26]:
+          - generic [ref=e27]: 15 dias
+          - generic [ref=e28]: Prazo médio
+        - generic [ref=e29]:
+          - generic [ref=e30]: 95%
+          - generic [ref=e31]: Satisfação
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - heading "Por que arquitetos nos escolhem" [level=2] [ref=e35]
+        - paragraph [ref=e36]: Entendemos as exigências técnicas e prazos de projetos profissionais
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - img [ref=e39]
+          - heading "Prazo Previsível" [level=3] [ref=e42]
+          - paragraph [ref=e43]: SLA de 48h para orçamento. Cronograma detalhado desde o primeiro dia.
+        - generic [ref=e44]:
+          - img [ref=e45]
+          - heading "Execução Premium" [level=3] [ref=e48]
+          - paragraph [ref=e49]: CNC de precisão, marcas especificadas (Arauco, Duratex, Blum, Hettich).
+        - generic [ref=e50]:
+          - img [ref=e51]
+          - heading "Assistência Pós-Obra" [level=3] [ref=e53]
+          - paragraph [ref=e54]: Garantia de 12 meses e suporte técnico para ajustes.
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - heading "Painéis Ripados com LED Quente" [level=2] [ref=e59]
+        - paragraph [ref=e60]: "Nossa especialidade: painéis ripados em MDF premium com iluminação LED 2700K que cria um brilho dourado acolhedor, perfeito para salas, quartos e home offices."
+        - list [ref=e61]:
+          - listitem [ref=e62]:
+            - generic [ref=e63]: ✓
+            - generic [ref=e64]: Corte de precisão CNC
+          - listitem [ref=e65]:
+            - generic [ref=e66]: ✓
+            - generic [ref=e67]: LED 2700K - 3000K (tom quente)
+          - listitem [ref=e68]:
+            - generic [ref=e69]: ✓
+            - generic [ref=e70]: Acabamentos premium Arauco, Duratex e Masisa
+          - listitem [ref=e71]:
+            - generic [ref=e72]: ✓
+            - generic [ref=e73]: Projeto 3D incluído
+        - link "Ver Projetos com Ripado" [ref=e74] [cursor=pointer]:
+          - /url: /portfolio
+      - img "Detalhe painel ripado com LED quente" [ref=e76]
+    - generic [ref=e78]:
+      - heading "O que nossos clientes dizem" [level=2] [ref=e80]
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: ★
+            - generic [ref=e85]: ★
+            - generic [ref=e86]: ★
+            - generic [ref=e87]: ★
+            - generic [ref=e88]: ★
+          - paragraph [ref=e89]: "\"Trabalho impecável! O painel ripado com LED transformou nossa sala.\""
+          - generic [ref=e90]:
+            - paragraph [ref=e91]: Maria Silva
+            - paragraph [ref=e92]: São Paulo
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - generic [ref=e95]: ★
+            - generic [ref=e96]: ★
+            - generic [ref=e97]: ★
+            - generic [ref=e98]: ★
+            - generic [ref=e99]: ★
+          - paragraph [ref=e100]: "\"Móveis de altíssima qualidade. O acabamento MDF é perfeito.\""
+          - generic [ref=e101]:
+            - paragraph [ref=e102]: João Oliveira
+            - paragraph [ref=e103]: Campinas
+        - generic [ref=e104]:
+          - generic [ref=e105]:
+            - generic [ref=e106]: ★
+            - generic [ref=e107]: ★
+            - generic [ref=e108]: ★
+            - generic [ref=e109]: ★
+            - generic [ref=e110]: ★
+          - paragraph [ref=e111]: "\"Projeto 3D muito realista, entrega no prazo e pós-venda excelente.\""
+          - generic [ref=e112]:
+            - paragraph [ref=e113]: Ana Costa
+            - paragraph [ref=e114]: São José dos Campos
+    - generic [ref=e116]:
+      - heading "Pronto para transformar seu ambiente?" [level=2] [ref=e117]
+      - paragraph [ref=e118]: Receba um orçamento personalizado em até 24 horas. Nossa equipe está pronta para transformar suas ideias em realidade.
+      - link "Solicitar orçamento via WhatsApp" [ref=e119] [cursor=pointer]:
+        - /url: https://wa.me/5513974146380?text=Vim%20atrav%C3%A9s%20do%20seu%20site%2C%20quero%20um%20or%C3%A7amento!
+        - img
+        - generic [ref=e120]: Solicitar Orçamento
+        - img
+    - contentinfo [ref=e121]:
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - generic [ref=e125]: JPMARCENARIA
+            - paragraph [ref=e126]: 30 anos construindo sonhos com móveis planejados de alta qualidade.
+            - generic [ref=e127]:
+              - link [ref=e128] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e129]
+              - link [ref=e132] [cursor=pointer]:
+                - /url: "#"
+                - img [ref=e133]
+          - generic [ref=e135]:
+            - heading "Links Rápidos" [level=3] [ref=e136]
+            - list [ref=e137]:
+              - listitem [ref=e138]:
+                - link "Portfólio" [ref=e139] [cursor=pointer]:
+                  - /url: /portfolio
+              - listitem [ref=e140]:
+                - link "Tecnologia" [ref=e141] [cursor=pointer]:
+                  - /url: /tecnologia
+              - listitem [ref=e142]:
+                - link "Sobre Nós" [ref=e143] [cursor=pointer]:
+                  - /url: /sobre
+              - listitem [ref=e144]:
+                - link "Blog" [ref=e145] [cursor=pointer]:
+                  - /url: /blog
+          - generic [ref=e146]:
+            - heading "Serviços" [level=3] [ref=e147]
+            - list [ref=e148]:
+              - listitem [ref=e149]: Cozinhas Planejadas
+              - listitem [ref=e150]: Painéis Ripados com LED
+              - listitem [ref=e151]: Home Office
+              - listitem [ref=e152]: Área Gourmet
+              - listitem [ref=e153]: Quartos e Closets
+          - generic [ref=e154]:
+            - heading "Contato" [level=3] [ref=e155]
+            - list [ref=e156]:
+              - listitem [ref=e157]:
+                - img [ref=e158]
+                - generic "Telefone de contato" [ref=e160]: (13) 97414-6380
+              - listitem [ref=e161]:
+                - img [ref=e162]
+                - generic [ref=e165]: contato@jpmarcenaria.com.br
+              - listitem [ref=e166]:
+                - img [ref=e167]
+                - generic "Localização" [ref=e170]: Guarujá, SP
+        - generic [ref=e171]:
+          - paragraph [ref=e172]: © 2025 JP Marcenaria. Todos os direitos reservados.
+          - paragraph [ref=e173]: Se for madeira, deixe conosco.
+```
