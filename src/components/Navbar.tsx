@@ -10,6 +10,7 @@ const Navbar = () => {
     { label: 'Portfólio', href: '/portfolio' },
     { label: 'Para Arquitetos', href: '/arquitetos' },
     { label: 'Materiais', href: '/materiais' },
+    { label: 'FOTO MAGIA IA', href: '/foto-magia-ia' },
   ];
 
   return (
@@ -25,17 +26,17 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center flex-wrap gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-foreground/80 hover:text-secondary transition-colors font-medium"
+                className="inline-flex items-center px-3 py-2 rounded-md bg-black text-white hover:text-secondary transition-colors font-medium"
               >
                 {link.label}
               </Link>
             ))}
-            <Button asChild variant="default" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+            <Button asChild variant="default" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 flex-shrink-0">
               <Link to="/briefing">Enviar Briefing</Link>
             </Button>
           </div>
@@ -58,7 +59,7 @@ const Navbar = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="text-foreground/80 hover:text-secondary transition-colors font-medium"
+                  className="inline-flex items-center px-3 py-2 rounded-md bg-black text-white hover:text-secondary transition-colors font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
