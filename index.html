@@ -50,5 +50,22 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (async () => {
+        try {
+          const res = await fetch('/api/whoami', { method: 'GET', credentials: 'omit' });
+          if (res.ok) {
+            const data = await res.json();
+            const ip = data?.ip || '';
+            if (ip) {
+              window.__CLIENT_IP__ = ip;
+              try { localStorage.setItem('client_ip', ip); } catch {}
+            }
+          }
+        } catch (e) {
+          // Silencia erros para não impactar UX
+        }
+      })();
+    </script>
   </body>
 </html>
