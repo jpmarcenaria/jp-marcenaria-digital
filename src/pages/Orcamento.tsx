@@ -12,7 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Phone } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { useSitePhone } from '@/hooks/useSitePhone';
+
 
 const formSchema = z.object({
   name: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres').max(100),
@@ -73,8 +73,7 @@ const Orcamento = () => {
   };
 
   const DEFAULT_MSG = 'vim através do Seu web site!';
-  const { buildWhatsAppWebUrl, buildWhatsAppAppUrl, openWhatsAppWithFallback } = useSitePhone();
-  const whatsappLink = buildWhatsAppWebUrl(DEFAULT_MSG);
+  const whatsappLink = `https://api.whatsapp.com/send?phone=5511999999999&text=${encodeURIComponent(DEFAULT_MSG)}`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -216,9 +215,6 @@ const Orcamento = () => {
                     href={whatsappLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => { e.preventDefault(); openWhatsAppWithFallback(DEFAULT_MSG); }}
-                    data-whatsapp-web-url={whatsappLink}
-                    data-whatsapp-app-url={buildWhatsAppAppUrl(DEFAULT_MSG)}
                     aria-label="Abrir conversa no WhatsApp"
                   >
                     Abrir WhatsApp

@@ -10,7 +10,7 @@ import Orcamento from "./pages/Orcamento";
 import Arquitetos from "./pages/Arquitetos";
 import Materiais from "./pages/Materiais";
 import Briefing from "./pages/Briefing";
-import FotoMagiaIA from "./pages/FotoMagiaIA";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,7 +30,7 @@ const App = () => (
           <Route path="/arquitetos" element={<Arquitetos />} />
           <Route path="/materiais" element={<Materiais />} />
           <Route path="/briefing" element={<Briefing />} />
-          <Route path="/foto-magia-ia" element={<FotoMagiaIA />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

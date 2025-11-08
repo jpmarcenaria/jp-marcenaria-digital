@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
-import { Card, CardProps } from '@/components/ui/card';
+import React, { ReactNode } from 'react';
+import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 
-interface CardHoverProps extends CardProps {
+interface CardHoverProps extends React.HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
   delay?: number;
 }

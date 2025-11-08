@@ -1,17 +1,21 @@
 // Utilitários de performance para JP Marcenaria Digital
+import React from 'react';
 
 // Lazy loading de componentes
 export const lazyLoad = <T extends React.ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
-  fallback?: React.ComponentType
+  FallbackComponent?: React.ComponentType
 ) => {
   const LazyComponent = React.lazy(importFunc);
+  const Fallback = FallbackComponent || (() => <div>Carregando...</div>);
   
-  return React.forwardRef<any, React.ComponentProps<T>>((props, ref) => (
-    <React.Suspense fallback={fallback ? <fallback /> : <div>Carregando...</div>}>
-      <LazyComponent {...props} ref={ref} />
+  const Component = (props: React.ComponentProps<T>) => (
+    <React.Suspense fallback={<Fallback />}>
+      <LazyComponent {...props} />
     </React.Suspense>
-  ));
+  );
+  
+  return Component;
 };
 
 // Debounce para otimizar inputs
@@ -193,8 +197,8 @@ export class PerformanceMonitor {
     const metricsData = Object.fromEntries(this.metrics);
     
     // Enviar para Google Analytics, Sentry, etc.
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'web_vitals', metricsData);
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'web_vitals', metricsData);
     }
     
     console.log('Performance Metrics:', metricsData);

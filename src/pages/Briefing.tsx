@@ -13,7 +13,7 @@ import { useToast } from '@/hooks/use-toast';
 import { ClipboardCheck, Upload } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { useSitePhone } from '@/hooks/useSitePhone';
+
 
 const formSchema = z.object({
   nome: z.string().min(2, 'Nome deve ter pelo menos 2 caracteres').max(100),
@@ -80,13 +80,11 @@ const Briefing = () => {
     );
   };
 
-  const { buildWhatsAppWebUrl, buildWhatsAppAppUrl, openWhatsAppWithFallback } = useSitePhone();
-
   const onSubmit = async (data: FormData) => {
     setLoading(true);
 
     const whatsappMessage = `Olá! Enviei um briefing técnico pelo site.\n\nNome: ${data.nome}\nTelefone: ${data.telefone}\nAmbientes: ${selectedAmbientes.join(', ')}\nMateriais: ${selectedMateriais.join(', ')}`;
-    const whatsappLink = buildWhatsAppWebUrl(whatsappMessage);
+    const whatsappLink = `https://api.whatsapp.com/send?phone=5511999999999&text=${encodeURIComponent(whatsappMessage)}`;
 
     const { error } = await supabase.from('briefings').insert([
       {
@@ -160,12 +158,9 @@ const Briefing = () => {
                 </Button>
                 <Button asChild className="bg-secondary text-secondary-foreground">
                   <a
-                    href={buildWhatsAppWebUrl('vim através do Seu web site!')}
+                    href={`https://api.whatsapp.com/send?phone=5511999999999&text=${encodeURIComponent('Olá! Gostaria de falar sobre um projeto.')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => { e.preventDefault(); openWhatsAppWithFallback('vim através do Seu web site!'); }}
-                    data-whatsapp-web-url={buildWhatsAppWebUrl('vim através do Seu web site!')}
-                    data-whatsapp-app-url={buildWhatsAppAppUrl('vim através do Seu web site!')}
                     aria-label="Abrir conversa no WhatsApp"
                   >
                     Abrir WhatsApp

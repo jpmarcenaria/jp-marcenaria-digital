@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { useSitePhone } from '@/hooks/useSitePhone';
+
 import { Skeleton } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/ui/error-state';
 import { Helmet } from 'react-helmet';
@@ -80,10 +80,10 @@ const Case = () => {
     setLoading(false);
   };
 
-  const { openWhatsAppWithFallback } = useSitePhone();
   const handleWhatsApp = () => {
     const message = `Olá! Gostaria de solicitar um orçamento para um projeto similar ao case "${caseData?.titulo}". Link: ${window.location.href}`;
-    openWhatsAppWithFallback(message);
+    const whatsappLink = `https://api.whatsapp.com/send?phone=5511999999999&text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, '_blank');
   };
 
   const fotos = media.filter(m => m.tipo === 'foto');

@@ -13,7 +13,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 import SmartPortfolio from '@/components/SmartPortfolio';
 import RealPortfolio from '@/components/RealPortfolio';
 import FurniturePortfolio from '@/components/FurniturePortfolio';
-import SimplifiedFurniturePortfolio from '@/components/SimplifiedFurniturePortfolio';
+
 import ProfessionalPortfolio from '@/components/ProfessionalPortfolio';
 import { Search, Package, Sparkles, Grid, Star } from 'lucide-react';
 
@@ -300,7 +300,9 @@ const Portfolio = () => {
                 </TabsContent>
 
             <TabsContent value="smart">
-              <SimplifiedFurniturePortfolio />
+              <div className="text-center py-12">
+                <p className="text-muted-foreground">Portfólio em desenvolvimento</p>
+              </div>
             </TabsContent>
           </Tabs>
         </div>
