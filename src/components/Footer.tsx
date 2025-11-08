@@ -128,9 +128,9 @@ const FooterLocation = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-card border-t border-border shadow-inner">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 animate-in fade-in duration-700">
           {/* Brand */}
           <div>
             <div className="font-heading text-2xl font-bold mb-4">
@@ -141,10 +141,10 @@ const Footer = () => {
               30 anos construindo sonhos com móveis planejados de alta qualidade.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-secondary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-secondary transition-all duration-200 hover:scale-110" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-secondary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-secondary transition-all duration-200 hover:scale-110" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
             </div>
@@ -155,23 +155,23 @@ const Footer = () => {
             <h3 className="font-heading font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/portfolio" className="text-muted-foreground hover:text-secondary transition-colors text-sm">
+                <Link to="/portfolio" className="text-muted-foreground hover:text-secondary transition-all duration-200 text-sm hover:translate-x-1 inline-block focus-ring">
                   Portfólio
                 </Link>
               </li>
               <li>
-                <Link to="/tecnologia" className="text-muted-foreground hover:text-secondary transition-colors text-sm">
-                  Tecnologia
+                <Link to="/arquitetos" className="text-muted-foreground hover:text-secondary transition-all duration-200 text-sm hover:translate-x-1 inline-block focus-ring">
+                  Para Arquitetos
                 </Link>
               </li>
               <li>
-                <Link to="/sobre" className="text-muted-foreground hover:text-secondary transition-colors text-sm">
-                  Sobre Nós
+                <Link to="/materiais" className="text-muted-foreground hover:text-secondary transition-all duration-200 text-sm hover:translate-x-1 inline-block focus-ring">
+                  Materiais
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-secondary transition-colors text-sm">
-                  Blog
+                <Link to="/briefing" className="text-muted-foreground hover:text-secondary transition-all duration-200 text-sm hover:translate-x-1 inline-block focus-ring">
+                  Briefing
                 </Link>
               </li>
             </ul>

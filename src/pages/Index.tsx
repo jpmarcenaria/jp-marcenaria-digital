@@ -91,21 +91,23 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               Planejamos, fabricamos e instalamos com precisão, conforto e estética. Do projeto ao pós-obra, cada detalhe reflete o seu padrão.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
               <Button 
                 asChild 
                 size="lg" 
-                className="bg-secondary text-secondary-foreground hover:bg-secondary/90 glow-warm-hover"
+                variant="premium"
+                className="glow-warm-hover hover-lift"
               >
                 <Link to="/portfolio">
                   Ver Portfólio Técnico
-                  <ArrowRight className="ml-2" size={20} />
+                  <ArrowRight className="ml-2 transition-transform duration-200 group-hover:translate-x-1" size={20} />
                 </Link>
               </Button>
               <Button 
                 asChild 
                 size="lg" 
-                className="group bg-card border border-border text-foreground hover:bg-muted/50 hover:border-secondary/30 transition-all duration-300 shadow-sm hover:shadow-md"
+                variant="outline"
+                className="group hover-lift"
               >
                 <a 
                   href={getWhatsAppLink()} 
@@ -154,9 +156,10 @@ const Index = () => {
             {highlights.map((highlight, index) => (
               <Card 
                 key={index} 
-                className="p-8 bg-card hover:bg-card/80 transition-all glow-warm-hover"
+                className="p-8 bg-card hover:bg-card/80 transition-all glow-warm-hover hover-lift group border-border hover:border-secondary/30 animate-in fade-in slide-in-from-bottom-4 duration-700"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <highlight.icon className="text-secondary mb-4" size={40} />
+                <highlight.icon className="text-secondary mb-4 transition-transform duration-200 group-hover:scale-110" size={40} />
                 <h3 className="font-heading text-2xl font-semibold mb-3">{highlight.title}</h3>
                 <p className="text-muted-foreground">{highlight.description}</p>
               </Card>
@@ -195,7 +198,7 @@ const Index = () => {
                   <span>Projeto 3D incluído</span>
                 </li>
               </ul>
-              <Button asChild className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+              <Button asChild variant="premium" className="hover-lift">
                 <Link to="/portfolio">Ver Projetos com Ripado</Link>
               </Button>
             </div>
@@ -221,13 +224,17 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6 bg-card">
+              <Card 
+                key={index} 
+                className="p-6 bg-card hover-lift border-border hover:border-secondary/30 animate-in fade-in slide-in-from-bottom-4 duration-700"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-secondary">★</span>
+                    <span key={i} className="text-secondary transition-transform duration-200 hover:scale-125 inline-block">★</span>
                   ))}
                 </div>
-                <p className="text-muted-foreground mb-4">"{testimonial.text}"</p>
+                <p className="text-muted-foreground mb-4 italic">"{testimonial.text}"</p>
                 <div>
                   <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.city}</p>
@@ -251,7 +258,8 @@ const Index = () => {
           <Button 
             asChild 
             size="lg" 
-            className="group bg-card border border-border text-foreground hover:bg-muted/50 hover:border-secondary/30 transition-all duration-300 shadow-sm hover:shadow-md"
+            variant="outline"
+            className="group hover-lift bg-background/80"
           >
             <a 
               href={getWhatsAppLink()} 

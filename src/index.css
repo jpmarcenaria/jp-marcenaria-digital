@@ -49,6 +49,17 @@ All colors MUST be HSL.
     --gradient-walnut: linear-gradient(135deg, hsl(27 39% 39%) 0%, hsl(27 50% 30%) 100%);
     /* Garantir consistência: gradiente do hero é preto 100% */
     --gradient-hero: linear-gradient(180deg, #000000 0%, #000000 100%);
+    
+    /* Smooth transitions */
+    --transition-base: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(var(--shadow-warm) / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(var(--shadow-warm) / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(var(--shadow-warm) / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(var(--shadow-warm) / 0.1);
   }
 }
 
@@ -81,7 +92,7 @@ All colors MUST be HSL.
   }
   
   .glow-warm-hover {
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow var(--transition-slow);
   }
   
   .glow-warm-hover:hover {
@@ -102,6 +113,44 @@ All colors MUST be HSL.
   
   /* Smooth transitions */
   .transition-smooth {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all var(--transition-slow);
+  }
+  
+  .transition-base {
+    transition: all var(--transition-base);
+  }
+  
+  .transition-fast {
+    transition: all var(--transition-fast);
+  }
+  
+  /* Micro-interactions */
+  .hover-lift {
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .hover-scale {
+    transition: transform var(--transition-base);
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+  
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+  
+  /* Gradient text effect */
+  .gradient-text {
+    background: var(--gradient-brass);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

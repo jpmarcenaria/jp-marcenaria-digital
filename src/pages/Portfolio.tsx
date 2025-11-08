@@ -247,14 +247,17 @@ const Portfolio = () => {
                       </div>
                     )}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      {filteredCases.map((caseItem) => (
+                      {filteredCases.map((caseItem, index) => (
                         <Link key={caseItem.id} to={`/portfolio/${caseItem.slug}`}>
-                          <Card className="overflow-hidden hover:shadow-xl transition-all glow-warm-hover cursor-pointer h-full">
-                            <div className="aspect-video overflow-hidden relative">
+                          <Card 
+                            className="overflow-hidden hover:shadow-xl transition-all glow-warm-hover cursor-pointer h-full hover-lift border-border hover:border-secondary/30 animate-in fade-in slide-in-from-bottom-4 duration-700"
+                            style={{ animationDelay: `${index * 50}ms` }}
+                          >
+                            <div className="aspect-video overflow-hidden relative group">
                               <img
                                 src={caseItem.capa_url || 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800'}
                                 alt={caseItem.titulo}
-                                className="w-full h-full object-cover transition-transform hover:scale-105"
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                                 loading="lazy"
                               />
                               {caseItem.slug.endsWith('-exemplo') && (
