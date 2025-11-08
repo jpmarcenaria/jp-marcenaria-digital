@@ -14,6 +14,56 @@ export type Database = {
   }
   public: {
     Tables: {
+      activity_log: {
+        Row: {
+          acao: string
+          dados_anteriores: Json | null
+          dados_novos: Json | null
+          id: string
+          ip_address: unknown
+          metadata: Json | null
+          registro_id: string | null
+          tabela: string | null
+          timestamp: string | null
+          user_agent: string | null
+          usuario_id: string | null
+        }
+        Insert: {
+          acao: string
+          dados_anteriores?: Json | null
+          dados_novos?: Json | null
+          id?: string
+          ip_address?: unknown
+          metadata?: Json | null
+          registro_id?: string | null
+          tabela?: string | null
+          timestamp?: string | null
+          user_agent?: string | null
+          usuario_id?: string | null
+        }
+        Update: {
+          acao?: string
+          dados_anteriores?: Json | null
+          dados_novos?: Json | null
+          id?: string
+          ip_address?: unknown
+          metadata?: Json | null
+          registro_id?: string | null
+          tabela?: string | null
+          timestamp?: string | null
+          user_agent?: string | null
+          usuario_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "activity_log_usuario_id_fkey"
+            columns: ["usuario_id"]
+            isOneToOne: false
+            referencedRelation: "usuarios"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       blog_posts: {
         Row: {
           body_md: string | null
@@ -184,6 +234,113 @@ export type Database = {
         }
         Relationships: []
       }
+      clientes: {
+        Row: {
+          ativo: boolean | null
+          cep: string | null
+          cidade: string | null
+          cpf_cnpj: string | null
+          created_at: string
+          data_nascimento: string | null
+          email: string
+          endereco: string | null
+          estado: string | null
+          id: number
+          nome: string | null
+          notas: string | null
+          telefone: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          ativo?: boolean | null
+          cep?: string | null
+          cidade?: string | null
+          cpf_cnpj?: string | null
+          created_at?: string
+          data_nascimento?: string | null
+          email: string
+          endereco?: string | null
+          estado?: string | null
+          id?: number
+          nome?: string | null
+          notas?: string | null
+          telefone?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          ativo?: boolean | null
+          cep?: string | null
+          cidade?: string | null
+          cpf_cnpj?: string | null
+          created_at?: string
+          data_nascimento?: string | null
+          email?: string
+          endereco?: string | null
+          estado?: string | null
+          id?: number
+          nome?: string | null
+          notas?: string | null
+          telefone?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      fidelidade: {
+        Row: {
+          ativo: boolean | null
+          cliente_id: number | null
+          created_at: string | null
+          data_inscricao: string | null
+          data_proxima_avaliacao: string | null
+          desconto_ativo: number | null
+          historico: Json | null
+          id: string
+          pontos: number | null
+          tier: Database["public"]["Enums"]["loyalty_tier"] | null
+          total_gasto: number | null
+          ultima_atividade: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          ativo?: boolean | null
+          cliente_id?: number | null
+          created_at?: string | null
+          data_inscricao?: string | null
+          data_proxima_avaliacao?: string | null
+          desconto_ativo?: number | null
+          historico?: Json | null
+          id?: string
+          pontos?: number | null
+          tier?: Database["public"]["Enums"]["loyalty_tier"] | null
+          total_gasto?: number | null
+          ultima_atividade?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          ativo?: boolean | null
+          cliente_id?: number | null
+          created_at?: string | null
+          data_inscricao?: string | null
+          data_proxima_avaliacao?: string | null
+          desconto_ativo?: number | null
+          historico?: Json | null
+          id?: string
+          pontos?: number | null
+          tier?: Database["public"]["Enums"]["loyalty_tier"] | null
+          total_gasto?: number | null
+          ultima_atividade?: string | null
+          updated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "fidelidade_cliente_id_fkey"
+            columns: ["cliente_id"]
+            isOneToOne: true
+            referencedRelation: "clientes"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       finishes: {
         Row: {
           brand: string | null
@@ -211,6 +368,39 @@ export type Database = {
           id?: string
           image_url?: string | null
           name?: string
+        }
+        Relationships: []
+      }
+      foto_magia_projects: {
+        Row: {
+          ambiente_image_url: string
+          created_at: string
+          id: string
+          instrucoes: string | null
+          movel_image_url: string
+          result_image_url: string | null
+          tipo_ambiente: string | null
+          tipo_movel: string | null
+        }
+        Insert: {
+          ambiente_image_url: string
+          created_at?: string
+          id?: string
+          instrucoes?: string | null
+          movel_image_url: string
+          result_image_url?: string | null
+          tipo_ambiente?: string | null
+          tipo_movel?: string | null
+        }
+        Update: {
+          ambiente_image_url?: string
+          created_at?: string
+          id?: string
+          instrucoes?: string | null
+          movel_image_url?: string
+          result_image_url?: string | null
+          tipo_ambiente?: string | null
+          tipo_movel?: string | null
         }
         Relationships: []
       }
@@ -253,6 +443,63 @@ export type Database = {
           name?: string
           phone_whatsapp?: string
           source?: string | null
+        }
+        Relationships: []
+      }
+      materiais: {
+        Row: {
+          ativo: boolean | null
+          categoria: string | null
+          codigo_referencia: string | null
+          created_at: string | null
+          data_ultima_atualizacao: string | null
+          descricao: string | null
+          fornecedor: string | null
+          id: string
+          localizacao_estoque: string | null
+          metadata: Json | null
+          nome: string
+          preco_unitario: number | null
+          quantidade_estoque: number | null
+          quantidade_minima: number | null
+          unidade_medida: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          ativo?: boolean | null
+          categoria?: string | null
+          codigo_referencia?: string | null
+          created_at?: string | null
+          data_ultima_atualizacao?: string | null
+          descricao?: string | null
+          fornecedor?: string | null
+          id?: string
+          localizacao_estoque?: string | null
+          metadata?: Json | null
+          nome: string
+          preco_unitario?: number | null
+          quantidade_estoque?: number | null
+          quantidade_minima?: number | null
+          unidade_medida?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          ativo?: boolean | null
+          categoria?: string | null
+          codigo_referencia?: string | null
+          created_at?: string | null
+          data_ultima_atualizacao?: string | null
+          descricao?: string | null
+          fornecedor?: string | null
+          id?: string
+          localizacao_estoque?: string | null
+          metadata?: Json | null
+          nome?: string
+          preco_unitario?: number | null
+          quantidade_estoque?: number | null
+          quantidade_minima?: number | null
+          unidade_medida?: string | null
+          updated_at?: string | null
         }
         Relationships: []
       }
@@ -396,6 +643,134 @@ export type Database = {
           },
         ]
       }
+      relatorios: {
+        Row: {
+          anexos: string[] | null
+          conteudo: string | null
+          created_at: string | null
+          data_geracao: string | null
+          formato: string | null
+          gerado_por: string | null
+          id: string
+          metadata: Json | null
+          periodo_fim: string | null
+          periodo_inicio: string | null
+          status: string | null
+          tipo: string
+          titulo: string
+        }
+        Insert: {
+          anexos?: string[] | null
+          conteudo?: string | null
+          created_at?: string | null
+          data_geracao?: string | null
+          formato?: string | null
+          gerado_por?: string | null
+          id?: string
+          metadata?: Json | null
+          periodo_fim?: string | null
+          periodo_inicio?: string | null
+          status?: string | null
+          tipo: string
+          titulo: string
+        }
+        Update: {
+          anexos?: string[] | null
+          conteudo?: string | null
+          created_at?: string | null
+          data_geracao?: string | null
+          formato?: string | null
+          gerado_por?: string | null
+          id?: string
+          metadata?: Json | null
+          periodo_fim?: string | null
+          periodo_inicio?: string | null
+          status?: string | null
+          tipo?: string
+          titulo?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "relatorios_gerado_por_fkey"
+            columns: ["gerado_por"]
+            isOneToOne: false
+            referencedRelation: "usuarios"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      servicos: {
+        Row: {
+          cliente_id: number | null
+          created_at: string | null
+          data_conclusao_prevista: string | null
+          data_conclusao_real: string | null
+          data_inicio: string | null
+          descricao: string | null
+          id: string
+          metadata: Json | null
+          preco_estimado: number | null
+          preco_final: number | null
+          prioridade: number | null
+          status: Database["public"]["Enums"]["service_status"] | null
+          tags: string[] | null
+          titulo: string
+          updated_at: string | null
+          usuario_responsavel_id: string | null
+        }
+        Insert: {
+          cliente_id?: number | null
+          created_at?: string | null
+          data_conclusao_prevista?: string | null
+          data_conclusao_real?: string | null
+          data_inicio?: string | null
+          descricao?: string | null
+          id?: string
+          metadata?: Json | null
+          preco_estimado?: number | null
+          preco_final?: number | null
+          prioridade?: number | null
+          status?: Database["public"]["Enums"]["service_status"] | null
+          tags?: string[] | null
+          titulo: string
+          updated_at?: string | null
+          usuario_responsavel_id?: string | null
+        }
+        Update: {
+          cliente_id?: number | null
+          created_at?: string | null
+          data_conclusao_prevista?: string | null
+          data_conclusao_real?: string | null
+          data_inicio?: string | null
+          descricao?: string | null
+          id?: string
+          metadata?: Json | null
+          preco_estimado?: number | null
+          preco_final?: number | null
+          prioridade?: number | null
+          status?: Database["public"]["Enums"]["service_status"] | null
+          tags?: string[] | null
+          titulo?: string
+          updated_at?: string | null
+          usuario_responsavel_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "servicos_cliente_id_fkey"
+            columns: ["cliente_id"]
+            isOneToOne: false
+            referencedRelation: "clientes"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "servicos_usuario_responsavel_id_fkey"
+            columns: ["usuario_responsavel_id"]
+            isOneToOne: false
+            referencedRelation: "usuarios"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       testimonials: {
         Row: {
           approved: boolean | null
@@ -429,6 +804,51 @@ export type Database = {
         }
         Relationships: []
       }
+      usuarios: {
+        Row: {
+          ativo: boolean | null
+          auth_id: string | null
+          avatar_url: string | null
+          created_at: string | null
+          email: string
+          id: string
+          metadata: Json | null
+          nome: string
+          role: Database["public"]["Enums"]["user_role"] | null
+          telefone: string | null
+          ultimo_login: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          ativo?: boolean | null
+          auth_id?: string | null
+          avatar_url?: string | null
+          created_at?: string | null
+          email: string
+          id?: string
+          metadata?: Json | null
+          nome: string
+          role?: Database["public"]["Enums"]["user_role"] | null
+          telefone?: string | null
+          ultimo_login?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          ativo?: boolean | null
+          auth_id?: string | null
+          avatar_url?: string | null
+          created_at?: string | null
+          email?: string
+          id?: string
+          metadata?: Json | null
+          nome?: string
+          role?: Database["public"]["Enums"]["user_role"] | null
+          telefone?: string | null
+          ultimo_login?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -437,7 +857,9 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      loyalty_tier: "bronze" | "silver" | "gold" | "platinum"
+      service_status: "pending" | "in_progress" | "completed" | "cancelled"
+      user_role: "admin" | "manager" | "employee" | "client"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -564,6 +986,10 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      loyalty_tier: ["bronze", "silver", "gold", "platinum"],
+      service_status: ["pending", "in_progress", "completed", "cancelled"],
+      user_role: ["admin", "manager", "employee", "client"],
+    },
   },
 } as const
